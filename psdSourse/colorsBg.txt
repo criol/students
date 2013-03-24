@@ -1,0 +1,4 @@
+Easy -            #ffffff
+Move -            #ececec
+Active(min-max) - #0099ff
+Active(close) -   #ff0000

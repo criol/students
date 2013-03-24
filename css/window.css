@@ -27,8 +27,8 @@
 {
 	position: relative;
 	width:500px;
-	height: 35px;
-	background:#99ccff;
+	height: 30px;
+	background:white;
 	vertical-align: top;
 	
 }
@@ -36,26 +36,53 @@ button
 {
 	position: relative;
 	float:right;
-	width: 35px;
-	height: 35px;
+	width: 30px;
+	height: 30px;
 	border:none;
 }
 .Min
 {
-	background:#99ccff url('../images/winmin.png') no-repeat top left;
+	background:url('../images/winmin1.png') no-repeat top left;
 }
 .Max
 {
-	background:#99ccff url('../images/winmax.png') no-repeat top left;
+	background:url('../images/winmax1.png') no-repeat top left;
 
 }
 .Close
 {
-	background:#ff6666 url('../images/winclose.png') no-repeat top left;
+	background:url('../images/winclose1.png') no-repeat top left;
 }
+.Min:hover
+{
+	background: #ececec url('../images/winmin1.png') no-repeat top left;
+}
+.Max:hover
+{
+	background: #ececec url('../images/winmax1.png') no-repeat top left;
+
+}
+.Close:hover
+{
+	background: #ececec url('../images/winclose1.png') no-repeat top left;
+}
+.Min:active
+{
+	background: #0099ff url('../images/winmin0.png') no-repeat top left;
+}
+.Max:active
+{
+	background: #0099ff url('../images/winmax0.png') no-repeat top left;
+
+}
+.Close:active
+{
+	background: #ff0000 url('../images/winclose0.png') no-repeat top left;
+}
+
 .labelHeader
 {
 	posiion:relative;
-	margin:5px;
+	margin:10px;
 	color:black;
 }
