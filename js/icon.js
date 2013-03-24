@@ -80,10 +80,14 @@ Icon.prototype = {
     },
 
     makeActive: function () {
-        this.root.toggleClass('active');
+    var from = document.getElementsByClassName('icon'),
+    	className = 'active';
+    	
+    	this.root.addUniqClass(from, className);
     },
 
     openWindow: function(){
+    	this.root.removeClass('active');
 		var win = new CustomWindow(this.windowOpt).init();
         //win.open();
     }

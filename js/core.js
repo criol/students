@@ -1,3 +1,8 @@
+function getClassReg(className)
+{
+	return new RegExp('(\\s|^)'+'active'+'(\\s|$)');
+}
+
 HTMLElement.prototype.addClass = function (newClass) {
     if (this.hasClass(newClass)) return this;
     else {
@@ -6,21 +11,25 @@ HTMLElement.prototype.addClass = function (newClass) {
     }
 };
 
-HTMLElement.prototype.removeClass = function (name) {
-            var reg = new RegExp('(\\s|^)'+name+'(\\s|$)');
-            this.className=this.className.replace(reg,'');
-        };
-
-HTMLElement.prototype.toggleClass = function (name) {
-    if (this.hasClass(name)) this.removeClass(name); else this.addClass(name);	
+HTMLElement.prototype.removeClass = function (className) {
+    this.className=this.className.replace(getClassReg(className),'');
 };
 
-HTMLElement.prototype.hasClass = function(name) {
-    return this.className.match(new RegExp('(\\s|^)'+name+'(\\s|$)'));
+HTMLElement.prototype.toggleClass = function (className) {
+    if (this.hasClass(className)) this.removeClass(className); else this.addClass(className);	
+};
+
+HTMLElement.prototype.hasClass = function(className) {
+	return this.className.match(getClassReg(className));
 }
 
-HTMLElement.prototype.addUniqClass = function (elems, newClass) {
-
+HTMLElement.prototype.addUniqClass = function (elems, className) {
+    for(e in elems){
+	    if(Object.prototype.toString.call(elems[e]) === "[object HTMLDivElement]" && elems[e]!=this){
+			elems[e].removeClass(className);
+		}
+		else this.toggleClass(className);
+	}
 };
 
 Array.prototype.inArray = function (elem) {
