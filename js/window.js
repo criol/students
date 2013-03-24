@@ -21,7 +21,26 @@ CustomWindow.prototype = {
     },
 
     render: function(){
-
+		var containerDiv,winHeader,btnMin,btnMax,btnClose,mainDiv;
+		
+		containerDiv = document.createElement('div');
+		containerDiv.className = 'window ' + this.type;
+		
+		winHeader = document.createElement('div');
+		winHeader.className = 'window header';
+		
+		btnMin = document.createElement('input');
+		btnMin.type = 'button';
+		btnMin.value = 'min';
+		btnMin.className = 'button min';
+		winHeader.appendChild(btnMin);
+		
+		containerDiv.appendChild(winHeader);
+		
+		this.root = containerDiv;
+		document.body.appendChild(containerDiv);
+		
+		
     }
 
 };

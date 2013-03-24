@@ -1,0 +1,15 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.window.music
+{
+	top:200px;
+	left:100px;
+	position:absolute;
+	width: 300px;
+	height: 150px;
+	border:1px solid red;
+}
