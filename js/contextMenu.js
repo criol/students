@@ -13,6 +13,7 @@ ContextMenu.prototype = {
     init: function(){
         //CMManager.menu[this.type] = this;	
         this.render();
+        this.assignEvents();
     },
 
     render: function(){
@@ -34,7 +35,6 @@ ContextMenu.prototype = {
 		
 		contextMenu.style.margin = this.y +"px 0 0 "+ this.x +"px";
 		
-		
 		this.root = contextMenu;
 		
 		//ul.innerHTML += lis0;
@@ -46,10 +46,14 @@ ContextMenu.prototype = {
 		document.body.appendChild(contextMenu);		
     },
     
+    assignEvents: function() {
+        this.root.addEventListener('click', this.destroy);
+	},
+    
     destroy: function()
     {
-    	//this = null;
-    	alert();
+    	delete this;
+    	document.body.removeChild(document.getElementsByClassName('contextMenu')[0]);
     }
 
 };

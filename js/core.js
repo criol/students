@@ -23,7 +23,8 @@ HTMLElement.prototype.hasClass = function(className) {
 	return this.className.match(getClassReg(className));
 }
 
-HTMLElement.prototype.addUniqClass = function (elems, className) {
+HTMLElement.prototype.addUniqClass = function (fromName, className) {
+    var elems = document.getElementsByClassName(fromName);
     for(e in elems){
 	    if(Object.prototype.toString.call(elems[e]) === "[object HTMLDivElement]" && elems[e]!=this){
 			elems[e].removeClass(className);

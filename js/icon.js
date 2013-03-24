@@ -80,11 +80,11 @@ Icon.prototype = {
     	this.root.addEventListener('contextmenu', this.openContextMenu.bind(this));
     },
 
-    makeActive: function () {
-    var from = document.getElementsByClassName('icon'),
-    	className = 'active';
-    	
-    	this.root.addUniqClass(from, className);
+    makeActive: function (e) {
+  		var fromName = 'icon',
+    		className = 'active';
+   		
+    	this.root.addUniqClass(fromName, className);
     },
 
     openWindow: function(){
@@ -94,6 +94,8 @@ Icon.prototype = {
     },
         
     openContextMenu: function(e){
+    	e.preventDefault();
+    	this.root.addUniqClass('icon','active');
     	var menu = new ContextMenu(e.pageX, e.pageY).init();
         //win.open();
     }
