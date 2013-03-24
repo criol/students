@@ -5,8 +5,6 @@ CWManager = {
     windows:{}
 };
 
-
-
 CustomWindow = function(obj){
     var a;
     for (a in obj){

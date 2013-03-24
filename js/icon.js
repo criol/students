@@ -79,14 +79,13 @@ Icon.prototype = {
         this.root.addEventListener('dblclick', this.openWindow.bind(this));
     },
 
-
     makeActive: function () {
-        this.root.addClass('active');
+        this.root.toggleClass('active');
     },
 
     openWindow: function(){
-        var win = new CustomWindow(this.windowOpt).init();
-       // win.open();
+		var win = new CustomWindow(this.windowOpt).init();
+        //win.open();
     }
 };
 
