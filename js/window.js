@@ -27,13 +27,28 @@ CustomWindow.prototype = {
 		containerDiv.className = 'window ' + this.type;
 		
 		winHeader = document.createElement('div');
-		winHeader.className = 'window header';
+		winHeader.className = 'header';
+		
+		btnClose = document.createElement('input');
+		btnClose.type = 'button';
+		//btnClose.value = 'close';
+		btnClose.className = 'button Close';
+		winHeader.appendChild(btnClose);
+		
+		btnMax = document.createElement('input');
+		btnMax.type = 'button';
+		btnMax.className = 'button Max';
+		winHeader.appendChild(btnMax);
 		
 		btnMin = document.createElement('input');
 		btnMin.type = 'button';
-		btnMin.value = 'min';
-		btnMin.className = 'button min';
+		//btnMin.value = 'min';
+		btnMin.className = 'button Min';
 		winHeader.appendChild(btnMin);
+		
+		
+		
+
 		
 		containerDiv.appendChild(winHeader);
 		
