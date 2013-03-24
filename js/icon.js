@@ -77,6 +77,7 @@ Icon.prototype = {
     assignEvents: function() {
         this.root.addEventListener('click', this.makeActive.bind(this));
         this.root.addEventListener('dblclick', this.openWindow.bind(this));
+    	this.root.addEventListener('contextmenu', this.openContextMenu.bind(this));
     },
 
     makeActive: function () {
@@ -89,6 +90,11 @@ Icon.prototype = {
     openWindow: function(){
     	this.root.removeClass('active');
 		var win = new CustomWindow(this.windowOpt).init();
+        //win.open();
+    },
+        
+    openContextMenu: function(e){
+    	var menu = new ContextMenu(e.pageX, e.pageY).init();
         //win.open();
     }
 };
