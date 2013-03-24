@@ -32,3 +32,8 @@ iconManager.iconSettings = {
 };
 
 iconManager.renderAll();
+
+document.addEventListener('contextmenu', function(e)
+{e.preventDefault();});
+document.addEventListener('click', function(e)
+{e.preventDefault();});

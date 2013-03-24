@@ -47,8 +47,14 @@ ContextMenu.prototype = {
     },
     
     assignEvents: function() {
-        this.root.addEventListener('click', this.destroy);
+        this.root.addEventListener('click', this.doIt.bind(this));
+        this.root.addEventListener('contextmenu', this.doIt.bind(this));
 	},
+    
+    doIt: function()
+    {
+    	this.destroy();
+    },
     
     destroy: function()
     {
