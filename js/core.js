@@ -24,5 +24,5 @@ Array.prototype.inArray = function (elem) {
         }
     }
 
-    return res;
+  //  return res;
 };
