@@ -24,7 +24,7 @@ iconManager.iconSettings = {
             height: 200,
             state: 'open',
             callback: function(){
-                alert('opened!!!');
+                alert('opened!');
             }
         }
     }
