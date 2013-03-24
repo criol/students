@@ -2,7 +2,11 @@ var CustomWindow,
     CWManager;
 
 CWManager = {
-    windows:{}
+    windows:{},
+    position:{
+    	top:100,
+    	left:100
+    }
 };
 
 CustomWindow = function(obj){
@@ -21,36 +25,37 @@ CustomWindow.prototype = {
     },
 
     render: function(){
-		var containerDiv,winHeader,btnMin,btnMax,btnClose,mainDiv;
+		var containerDiv,winHeader,btnMin,btnMax,btnClose,mainDiv,winName;
 		
 		containerDiv = document.createElement('div');
 		containerDiv.className = 'window ' + this.type;
 		
+		mainDiv = document.createElement('div');
+		mainDiv.className = 'winContent';
 		winHeader = document.createElement('div');
 		winHeader.className = 'header';
 		
-		btnClose = document.createElement('input');
-		btnClose.type = 'button';
-		//btnClose.value = 'close';
-		btnClose.className = 'button Close';
+		winName = document.createElement('label');
+		winName.className = 'labelHeader';
+		winName.textContent = this.name;
+		winHeader.appendChild(winName);
+		
+		btnClose = document.createElement('button');
+		btnClose.className = 'Close';
 		winHeader.appendChild(btnClose);
 		
-		btnMax = document.createElement('input');
-		btnMax.type = 'button';
+		btnMax = document.createElement('button');
 		btnMax.className = 'button Max';
 		winHeader.appendChild(btnMax);
 		
-		btnMin = document.createElement('input');
-		btnMin.type = 'button';
-		//btnMin.value = 'min';
+		btnMin = document.createElement('button');
 		btnMin.className = 'button Min';
 		winHeader.appendChild(btnMin);
 		
 		
-		
-
-		
 		containerDiv.appendChild(winHeader);
+		containerDiv.appendChild(mainDiv);
+		containerDiv.style.top 
 		
 		this.root = containerDiv;
 		document.body.appendChild(containerDiv);

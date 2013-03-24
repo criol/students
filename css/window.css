@@ -9,38 +9,53 @@
 	top:150px;
 	left:200px;
 	position:absolute;
-	width: 400px;
+	width: 500px;
 	height: 250px;
-	border:1px solid red;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
 }
+
+.winContent
+{
+	position:relative;
+	width:500px;
+	height:200px;
+}
+
 .header
 {
 	position: relative;
-	width:400px;
+	width:500px;
 	height: 35px;
-	background:#99ccff
-	
+	background:#99ccff;
+	vertical-align: top;
 	
 }
-.button
+button
 {
 	position: relative;
 	float:right;
 	width: 35px;
 	height: 35px;
+	border:none;
 }
-.button.Min
+.Min
 {
 	background:#99ccff url('../images/winmin.png') no-repeat top left;
 }
-.button.Max
+.Max
 {
-	background:  #99ccff url('../images/winmax.png') no-repeat top left;
+	background:#99ccff url('../images/winmax.png') no-repeat top left;
+
 }
-.button.Close
+.Close
 {
-background: #ff6666 url('../images/winclose.png') no-repeat top left;
+	background:#ff6666 url('../images/winclose.png') no-repeat top left;
 }
-
-
+.labelHeader
+{
+	posiion:relative;
+	margin:5px;
+	color:black;
 }
