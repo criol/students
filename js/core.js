@@ -1,7 +1,7 @@
 function getClassReg(className)
 {
 	return new RegExp('(\\s|^)'+'active'+'(\\s|$)');
-}
+};
 
 HTMLElement.prototype.addClass = function (newClass) {
     if (this.hasClass(newClass)) return this;
@@ -21,7 +21,7 @@ HTMLElement.prototype.toggleClass = function (className) {
 
 HTMLElement.prototype.hasClass = function(className) {
 	return this.className.match(getClassReg(className));
-}
+};
 
 HTMLElement.prototype.addUniqClass = function (fromName, className) {
     var elems = document.getElementsByClassName(fromName);
@@ -46,3 +46,13 @@ Array.prototype.inArray = function (elem) {
 
     return res;
 };
+
+Array.prototype.removeElement =  function(elem){
+	var i;
+	for(i=0;i<this.length;i+=1){
+		if(this[i]===elem){
+		console.log(elem+' is find!')
+			this.splice(i,1);
+		}
+	}
+}
