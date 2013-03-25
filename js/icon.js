@@ -77,12 +77,18 @@ Icon.prototype = {
     assignEvents: function() {
         this.root.addEventListener('click', this.makeActive.bind(this));
         this.root.addEventListener('dblclick', this.openWindow.bind(this));
+        this.root.addEventListener('click',this.toggleActive.bind(this));
     },
 
 
     makeActive: function () {
-        this.root.addClass('active');
+       this.root.addClass('active');
     },
+
+    toggleActive :function() {
+        this.root.addUniqClass( document.body,'active');
+    },
+
 
     openWindow: function(){
         var win = new CustomWindow(this.windowOpt).init();

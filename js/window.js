@@ -6,7 +6,7 @@ CWManager = {
 };
 
 
-alert('');
+//alert('');
 CustomWindow = function(obj){
     var a;
     for (a in obj){
