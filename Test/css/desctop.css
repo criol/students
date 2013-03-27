@@ -1,0 +1,58 @@
+body {
+background: url('../images/bg.jpg');
+}
+
+li {
+list-style: none;
+}
+
+.icon {
+    width: 64px;
+    height: 84px;
+    position: absolute;
+}
+
+.icon .img {
+    width: 64px;
+    height: 64px;
+}
+
+.icon .text {
+    width: 64px;
+    height: 20px;
+    text-align: center;
+}
+.icon.active {
+    border: 1px solid black;
+}
+
+
+
+
+.music .img {
+    background: url(../images/music.png) no-repeat top left;
+}
+
+.text .img {
+    background: url(../images/text.png) no-repeat top left;
+}
+
+
+
+.contextMenu{
+position: absolute;
+width: 100px;
+height: 100px;
+background-color: #f0f0f7;
+border: 1px solid #aaa;
+}
+
+.contextMenu ul{
+margin-left: 20px;
+padding: 10px;
+border-left: 1px solid #ccc;
+}
+
+.contextMenu li:hover{
+background-color: #e3e3ff;
+}

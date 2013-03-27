@@ -28,7 +28,6 @@ iconManager.iconSettings = {
             }
         }
     }
-
 };
 
 iconManager.renderAll();

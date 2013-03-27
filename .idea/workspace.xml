@@ -2,12 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/Safari.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/TrashIcon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/applelogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/applelogohover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/bg.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/itunes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/music.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/page.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/pause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/picts.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/stop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/text.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/textfile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/trash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/winclose0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/winclose1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/winmax0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/winmax1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/winmin0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/images/winmin1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/css/desctop.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/css/window.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/js/OSManager.js" afterPath="$PROJECT_DIR$/Test/js/OSManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/common.js" afterPath="$PROJECT_DIR$/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/index.html" afterPath="$PROJECT_DIR$/Test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/window.js" afterPath="$PROJECT_DIR$/js/window.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="students.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364397923127" ignored="false" />
-    <file path="/OSManager.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364401300401" ignored="false" />
+    <file path="/OSManager.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364410827437" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +58,17 @@
       <file leaf-file-name="OSManager.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test/js/OSManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="28" selection-start="961" selection-end="961" vertical-scroll-proportion="0.93939394">
-              <folding />
+            <state line="173" column="0" selection-start="3825" selection-end="3825" vertical-scroll-proportion="0.5187166">
+              <folding>
+                <element signature="e#1534#2256#0" expanded="false" />
+                <element signature="e#2386#3088#0" expanded="false" />
+                <element signature="e#3118#3362#0" expanded="false" />
+                <element signature="e#3396#3535#0" expanded="false" />
+                <element signature="e#3560#3675#0" expanded="false" />
+                <element signature="e#3706#3822#0" expanded="false" />
+                <element signature="e#4044#5584#0" expanded="false" />
+                <element signature="e#5606#6813#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,7 +76,7 @@
       <file leaf-file-name="window.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/window.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="1" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+            <state line="64" column="36" selection-start="263" selection-end="1419" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -48,7 +85,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="42" selection-end="42" vertical-scroll-proportion="-1.3076923">
+            <state line="12" column="35" selection-start="345" selection-end="345" vertical-scroll-proportion="-5.5384617">
               <folding />
             </state>
           </provider>
@@ -72,6 +109,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/js/common.js" />
+        <option value="$PROJECT_DIR$/Test/index.html" />
+        <option value="$PROJECT_DIR$/js/window.js" />
         <option value="$PROJECT_DIR$/Test/js/OSManager.js" />
       </list>
     </option>
@@ -180,6 +220,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Компьютер\Documents\AptanaProjects\desk\students\Test\js" />
+      <recent name="C:\Users\Компьютер\Documents\AptanaProjects\desk\students\Test" />
+    </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="false" name="index.html" type="JavascriptDebugSession" factoryName="Local" singleton="true" temporary="true">
@@ -226,7 +273,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -307,24 +354,68 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="25" selection-start="1324" selection-end="1330" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="551" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/css/window.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="32" selection-start="337" selection-end="337" vertical-scroll-proportion="0.54545456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Test/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="42" selection-end="42" vertical-scroll-proportion="-1.3076923">
+        <state line="12" column="35" selection-start="345" selection-end="345" vertical-scroll-proportion="-5.5384617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="19" selection-start="194" selection-end="194" vertical-scroll-proportion="0.18181819">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/js/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="125" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/window.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="1" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+        <state line="64" column="36" selection-start="263" selection-end="1419" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/js/OSManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="28" selection-start="961" selection-end="961" vertical-scroll-proportion="0.93939394">
-          <folding />
+        <state line="173" column="0" selection-start="3825" selection-end="3825" vertical-scroll-proportion="0.5187166">
+          <folding>
+            <element signature="e#1534#2256#0" expanded="false" />
+            <element signature="e#2386#3088#0" expanded="false" />
+            <element signature="e#3118#3362#0" expanded="false" />
+            <element signature="e#3396#3535#0" expanded="false" />
+            <element signature="e#3560#3675#0" expanded="false" />
+            <element signature="e#3706#3822#0" expanded="false" />
+            <element signature="e#4044#5584#0" expanded="false" />
+            <element signature="e#5606#6813#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

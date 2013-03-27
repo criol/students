@@ -55,7 +55,6 @@ CustomWindow.prototype = {
 		
 		containerDiv.appendChild(winHeader);
 		containerDiv.appendChild(mainDiv);
-		containerDiv.style.top 
 		
 		this.root = containerDiv;
 		document.body.appendChild(containerDiv);

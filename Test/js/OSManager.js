@@ -5,8 +5,9 @@ var OSManager, OSManagerModel, /*WindowsManager,*/ WindowsManagerModel, /*IconsM
 oSManagerModel = {
 	windowsManager: {},
 	iconsManager: {},
-	openWindow: function(){
-		this.windowsManager.open();
+	openWindow: function(obj){
+        //obj  -   иконка ,которая вызвала
+		this.windowsManager.open(obj);
 	},
 	closeWindow: function(){
 		this.windowsManager.close();
@@ -24,17 +25,21 @@ windowsManagerModel = {
     windows:{},
     start: function(){
         this.windows = [];
-        renderAll();
+        this.renderAll();
     },
     renderAll:function(){
 
-      for (var i = 0;i<this.windows.Length;i+=1){
+      for (var i = 0;i<this.windows.length;i+=1){
           windows[i].render();
       }
 
     },
-    open: function(){
-		console.log("Open window");    
+    open: function(obj){
+        //логика ,обрабатывающая открыто ли окно?  нужно ли создать новое?...
+        //obj  -  иконка,которая вызвала
+        var win  = new Window(obj.windowOpt).init();
+        this.windows.push(win);
+
 	},
 	close: function() 	{
 		console.log("Close window");
@@ -52,12 +57,46 @@ windowModel = {
         left:0
     }
 }
+///////////////////////////////////
+///////Модель иконки по типу///////
+////////////////////////////////////
+iconsSettings= {
+    music: {
+        name: 'deep',
+            type: 'music',
+            windowOpt: {
+                name: 'Now Playing: Deep Purple - Smoke on the water',
+                type: 'music',
+                width:300,
+                height: 200,
+                state: 'open',
+                callback: function(){
+                alert('opened!!!');
+            }
+        }
+    },
 
+    text: {
+        name: 'book',
+            type: 'text',
+            windowOpt: {
+            name: 'ololo.txt',
+                type: 'text',
+                width:300,
+                height: 200,
+                state: 'open',
+                callback: function(){
+                alert('opened!!!');
+            }
+        }
+    }
+}
 ///////////////////////////////////
 ///////Модель менеджера иконок/////
 ////////////////////////////////////
 iconsManagerModel = {
-    iconSettings: {},
+    iconSetting:{},
+
     icons: {},
 
     position: {
@@ -67,20 +106,23 @@ iconsManagerModel = {
     active: {
 
     },
-	iconSettings: {},
-	
+
+    start:function(){
+       icons = [];
+        this.iconSetting = iconsSettings;
+       this.renderAll();
+    },
 	create: function(){
-		 this.icons[0] = new Icon(this.iconSettings);
+		 var icon = new Icon(this.iconSetting.music).init(this.position);
+        icons.push(icon);
 		 console.log(this.icons[0]);
 	},
 		
     renderAll: function(){
         var a;
 
-        for (a in this.iconSettings) {
-
-            new Icon(this.iconSettings[a]).init(this.position);
-
+        for (a in this.icons) {
+            this.icons[a].init(this.position);
             this.position.top+=100;
             if (this.position.top > 500) {
                 this.position.left += 100;
@@ -143,7 +185,6 @@ Icon = function (obj) {
 
 Icon.prototype = {
     init: function(pos) {
-        iconManager.icons[this.name] = this;
         this.render(pos);
         this.assignEvents();
     },
@@ -189,7 +230,7 @@ Icon.prototype = {
 
     openWindow: function(){
     	this.root.removeClass('active');
-		var win = new CustomWindow(this.windowOpt).init();
+		os.windowsManager.open(this);
         //win.open();
     },
         
@@ -201,7 +242,52 @@ Icon.prototype = {
     }
 };
 
+Window.prototype = {
+    init: function () {
+        this.render();
+    },
+
+    render: function(){
+        var containerDiv,winHeader,btnMin,btnMax,btnClose,mainDiv,winName;
+
+        containerDiv = document.createElement('div');
+        containerDiv.className = 'window ' + this.type;
+
+        mainDiv = document.createElement('div');
+        mainDiv.className = 'winContent';
+        winHeader = document.createElement('div');
+        winHeader.className = 'header';
+
+        winName = document.createElement('label');
+        winName.className = 'labelHeader';
+        winName.textContent = this.name;
+        winHeader.appendChild(winName);
+
+        btnClose = document.createElement('button');
+        btnClose.className = 'Close';
+        winHeader.appendChild(btnClose);
+
+        btnMax = document.createElement('button');
+        btnMax.className = 'button Max';
+        winHeader.appendChild(btnMax);
+
+        btnMin = document.createElement('button');
+        btnMin.className = 'button Min';
+        winHeader.appendChild(btnMin);
+
+
+        containerDiv.appendChild(winHeader);
+        containerDiv.appendChild(mainDiv);
+
+        this.root = containerDiv;
+        document.body.appendChild(containerDiv);
+
+
+    }
+
+};
 
 var os = new OSManager(oSManagerModel);
 os.start();
+os.iconsManager.create();
 
