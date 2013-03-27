@@ -35,7 +35,7 @@ windowsManagerModel = {
 
     },
     open: function(obj){
-        //логика ,обрабатывающая открыто ли окно?  нужно ли создать новое?...
+        // todo : логика ,обрабатывающая открыто ли окно?  нужно ли создать новое?...
         //obj  -  иконка,которая вызвала
         var win  = new Window(obj.windowOpt).init();
         this.windows.push(win);
@@ -62,7 +62,7 @@ windowModel = {
 ////////////////////////////////////
 iconsSettings= {
     music: {
-        name: 'deep',
+            name: 'deep',
             type: 'music',
             windowOpt: {
                 name: 'Now Playing: Deep Purple - Smoke on the water',
@@ -170,7 +170,6 @@ IconsManager = function(obj) {
         }
     }
 };
-
 
 Icon = function (obj) {
     var a;
