@@ -1,46 +1,72 @@
 var OSManager, OSManagerModel, /*WindowsManager,*/ WindowsManagerModel, /*IconsManager,*/ IconsManagerModel;
-
-
-
-OSManagerModel = {
-	WindowsManager: {},
-	IconsManager: {},
-	OpenWindow: function(){
-		this.WM.open();
+///////////////////////////////////
+///////Модель менеджера ОС/////////
+////////////////////////////////////
+oSManagerModel = {
+	windowsManager: {},
+	iconsManager: {},
+	openWindow: function(){
+		this.windowsManager.open();
 	},
-	CloseWindow: function(){
-		this.WM.close();
+	closeWindow: function(){
+		this.windowsManager.close();
 	},
-	
+    start: function (){
+        this.windowsManager.start();
+        this.iconsManager.start();
+    }
+
 };
+ ///////////////////////////////////
+///////Модель менеджера окна/////////
+////////////////////////////////////
+windowsManagerModel = {
+    windows:{},
+    start: function(){
+        this.windows = [];
+        renderAll();
+    },
+    renderAll:function(){
 
+      for (var i = 0;i<this.windows.Length;i+=1){
+          windows[i].render();
+      }
 
-WindowsManagerModel = {
-    open: function()
-    {
+    },
+    open: function(){
 		console.log("Open window");    
 	},
-	close: function()
-	{
+	close: function() 	{
 		console.log("Close window");
 	}
 };
 
+///////////////////////////////////
+///////Модель  окна////////////////
+////////////////////////////////////
+windowModel = {
+    width:0,
+    height:0,
+    position:{
+        top:0,
+        left:0
+    }
+}
 
-IconsManagerModel = {
+///////////////////////////////////
+///////Модель менеджера иконок/////
+////////////////////////////////////
+iconsManagerModel = {
     iconSettings: {},
-
     icons: {},
 
     position: {
         top: 10,
         left: 10
     },
-
     active: {
 
     },
-	
 	iconSettings: {},
 	
 	create: function(){
@@ -71,8 +97,8 @@ OSManager = function (obj) {
             this[a] = obj[a];
         }
     }
-this.WM = new WindowsManager(WindowsManagerModel);
-this.IM = new IconsManager(IconsManagerModel);
+    this.windowsManager = new WindowsManager(windowsManagerModel);
+    this.iconsManager = new IconsManager(iconsManagerModel);
 };
 
 WindowsManager = function(obj) {
@@ -82,8 +108,17 @@ WindowsManager = function(obj) {
             this[a] = obj[a];
         }
     }
+    this.windows = [];
 };
 
+Window = function(obj){
+    var a;
+    for (a in obj){
+        if(obj.hasOwnProperty(a)){
+            this[a] = obj[a];
+        }
+    }
+}
 
 IconsManager = function(obj) {
     var a;
@@ -167,11 +202,6 @@ Icon.prototype = {
 };
 
 
-
-var os = new OSManager(OSManagerModel);
-OSManager.iconSettings = {
-        name: 'deep'
-};
-os.OpenWindow();
-
+var os = new OSManager(oSManagerModel);
+os.start();
 
