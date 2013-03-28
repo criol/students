@@ -56,3 +56,9 @@ Array.prototype.removeElement =  function(elem){
 		}
 	}
 }
+
+Array.prototype.lastElement = function (){
+    var lastElem = this.pop();
+    this.push(lastElem);
+    return lastElem;
+}
