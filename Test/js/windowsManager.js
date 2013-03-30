@@ -3,13 +3,20 @@
 ////////////////////////////////////
 windowsManagerModel = {
     windows:{},
+    position:{
+        top:40,
+        left:40
+    },
     start: function(){
         this.windows = [];
         this.renderAll();
     },
     renderAll:function(){
         for (var i = 0;i<this.windows.length;i+=1){
-            windows[i].render();
+            this.windows[i].render(this.position);
+            this.position.top+=20;
+            this.position.left+=20;
+
         }
     },
     open: function(obj){
@@ -50,8 +57,8 @@ windowsManagerModel = {
     },
     create: function (obj){
         var win  = new Window(obj.windowOpt);
-        win.init();
         this.windows.push(win);
+        this.renderAll();
     },
     close: function(obj){
         for(var win in this.windows){

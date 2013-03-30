@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/js/OSManager.js" afterPath="$PROJECT_DIR$/Test/js/OSManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/js/icon.js" afterPath="$PROJECT_DIR$/Test/js/icon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/js/iconsManager.js" afterPath="$PROJECT_DIR$/Test/js/iconsManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/js/window.js" afterPath="$PROJECT_DIR$/Test/js/window.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/js/windowsManager.js" afterPath="$PROJECT_DIR$/Test/js/windowsManager.js" />
     </list>
     <ignored path="students.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,11 +12,12 @@
     <file path="/core.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364499570684" ignored="false" />
     <file path="/index.html" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364645133908" ignored="false" />
     <file path="/icon.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364655976177" ignored="false" />
-    <file path="/window.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364647189136" ignored="false" />
-    <file path="/windowsManager.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364647099710" ignored="false" />
+    <file path="/window.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364658490841" ignored="false" />
+    <file path="/windowsManager.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364658735287" ignored="false" />
     <file path="/window.css" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364642931621" ignored="false" />
     <file path="/desctop.css" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364645666967" ignored="false" />
     <file path="/iconsManager.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364656161947" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364658740590" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="iconsManager.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="iconsManager.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/js/iconsManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="34" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.33333334">
+            <state line="34" column="19" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -68,16 +67,16 @@
       <file leaf-file-name="window.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/js/window.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="8" selection-start="1958" selection-end="2054" vertical-scroll-proportion="0.0">
+            <state line="53" column="69" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="windowsManager.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="windowsManager.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test/js/windowsManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="17" column="35" selection-start="487" selection-end="487" vertical-scroll-proportion="0.45454547">
               <folding />
             </state>
           </provider>
@@ -110,11 +109,11 @@
         <option value="$PROJECT_DIR$/Test/css/desctop.css" />
         <option value="$PROJECT_DIR$/Test/index.html" />
         <option value="$PROJECT_DIR$/Test/js/core.js" />
-        <option value="$PROJECT_DIR$/Test/js/windowsManager.js" />
-        <option value="$PROJECT_DIR$/Test/js/window.js" />
         <option value="$PROJECT_DIR$/Test/js/OSManager.js" />
         <option value="$PROJECT_DIR$/Test/js/icon.js" />
         <option value="$PROJECT_DIR$/Test/js/iconsManager.js" />
+        <option value="$PROJECT_DIR$/Test/js/window.js" />
+        <option value="$PROJECT_DIR$/Test/js/windowsManager.js" />
       </list>
     </option>
   </component>
@@ -311,7 +310,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -469,20 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/js/window.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="8" selection-start="1958" selection-end="2054" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/js/windowsManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/js/icon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="93" column="29" selection-start="2276" selection-end="2276" vertical-scroll-proportion="0.0">
@@ -492,7 +477,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/js/iconsManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="34" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.33333334">
+        <state line="34" column="19" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/js/window.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="69" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/js/windowsManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="35" selection-start="487" selection-end="487" vertical-scroll-proportion="0.45454547">
           <folding />
         </state>
       </provider>
