@@ -16,7 +16,7 @@ Window.prototype = {
 
         containerDiv = document.createElement('div');
         containerDiv.style.zIndex=this.layer;
-        containerDiv.className = 'window ' + this.type;
+        containerDiv.className = 'window ' + this.type+' '+this.state;
 
         mainDiv = document.createElement('div');
         mainDiv.className = 'winContent';
@@ -29,6 +29,7 @@ Window.prototype = {
         winHeader.appendChild(winName);
 
         btnClose = document.createElement('button');
+        btnClose.addEventListener('click',this.close.bind(this));
         btnClose.className = 'Close';
         winHeader.appendChild(btnClose);
 
@@ -38,6 +39,7 @@ Window.prototype = {
         winHeader.appendChild(btnMax);
 
         btnMin = document.createElement('button');
+        btnMin.addEventListener('click',this.minimize.bind(this));
         btnMin.className = 'button Min';
         winHeader.appendChild(btnMin);
 
@@ -48,8 +50,15 @@ Window.prototype = {
         this.root = containerDiv;
         document.body.appendChild(containerDiv);
     },
-    maximize:function(obj){
-        os.closeWindow(obj);
+    maximize:function(){
+        os.maxWindow(this);
+    },
+    minimize:function(){
+        os.minWindow(this);
+    },
+    close:function(){
+        document.body.removeChild(this.root);
+        os.closeWindow(this);
     },
     assignEvents:function(){
     }

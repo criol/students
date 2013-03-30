@@ -92,7 +92,7 @@ Icon.prototype = {
 
     openWindow: function(){
         this.root.removeClass('active');
-        os.windowsManager.open(this);
+        os.openWindow(this);
         //win.open();
     },
 

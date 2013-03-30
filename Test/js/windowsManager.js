@@ -16,26 +16,47 @@ windowsManagerModel = {
         //obj  -  иконка,которая вызвала
         var nameWin, win;
         nameWin = obj.windowOpt.name;
-        for(win in this.windows){
-            //проверка было ли открыто это окно?
-            if(win.name == nameWin) {
-                if(win.state=='hidde'){
-                   win.state == 'open';
+        if(this.windows.length!=0){
+            for(var win in this.windows){
+                //проверка было ли открыто это окно?
+                if(this.windows[win].name == nameWin) {
+                    if(this.windows[win].state=='hide'){
+                       this.windows[win].state = 'open';
+                    }
+                    win.render();
+                } else {
+                    this.create(obj);
                 }
-                win.render();
-            } else {
-                this.create(obj);
             }
+        } else {
+            this.create(obj);
         }
     },
+    minimize: function(obj){
+        for (var win in this.windows){
+            if(this.windows[win]===obj){
+                this.windows[win].state='hide';
+            }
+        }
+        this.renderAll();
+    },
+    maximize: function(obj){
+        for(var win in this.windows){
+            if(this.windows[win]==obj){
+                this.windows[win].state = 'max';
+            }
+        }
+        this.renderAll();
+    },
     create: function (obj){
-        var win  = new Window(obj.windowOpt).init();
+        var win  = new Window(obj.windowOpt);
+        win.init();
         this.windows.push(win);
     },
     close: function(obj){
         for(var win in this.windows){
-            if(win===obj){
-                this.windows.removeElement(win);
+            if(this.windows[win]===obj){
+                this.windows.removeElement(this.windows[win]);
                 this.renderAll();
             }
         }
