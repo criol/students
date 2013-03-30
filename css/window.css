@@ -4,7 +4,7 @@
 	padding: 0px;
 }
 
-.window
+.window.open
 {
 	top:150px;
 	left:200px;
@@ -12,11 +12,26 @@
 	width: 500px;
 	height: 250px;
      background-color: rgba(255, 255, 255, 0.8);
-	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* пїЅпїЅпїЅ Firefox */
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* пїЅпїЅпїЅ Safari пїЅ Chrome */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
 }
+.window.hide
+{
+    width:20px;
+    height:20px;
+    opacity:0.5;
+    top:500px;
+    left:10px;
+    border:1px solid red;
+}
+.window.max
+{
+    width: 100%;
+    height:100%;
+    border:1px solid blue;
 
+}
 .winContent
 {
 	position:relative;

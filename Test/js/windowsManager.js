@@ -19,11 +19,11 @@ windowsManagerModel = {
         if(this.windows.length!=0){
             for(var win in this.windows){
                 //проверка было ли открыто это окно?
-                if(this.windows[win].name == nameWin) {
-                    if(this.windows[win].state=='hide'){
+                if(this.windows[win].name === nameWin) {
+                    if(this.windows[win].state ==='hide'){
                        this.windows[win].state = 'open';
+                       this.windows[win].render();
                     }
-                    win.render();
                 } else {
                     this.create(obj);
                 }
@@ -36,17 +36,17 @@ windowsManagerModel = {
         for (var win in this.windows){
             if(this.windows[win]===obj){
                 this.windows[win].state='hide';
+                this.windows[win].render();
             }
         }
-        this.renderAll();
     },
     maximize: function(obj){
         for(var win in this.windows){
-            if(this.windows[win]==obj){
+            if(this.windows[win]===obj){
                 this.windows[win].state = 'max';
+                this.windows[win].render();
             }
         }
-        this.renderAll();
     },
     create: function (obj){
         var win  = new Window(obj.windowOpt);

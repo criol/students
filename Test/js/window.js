@@ -51,9 +51,11 @@ Window.prototype = {
         document.body.appendChild(containerDiv);
     },
     maximize:function(){
+        document.body.removeChild(this.root);
         os.maxWindow(this);
     },
     minimize:function(){
+        document.body.removeChild(this.root);
         os.minWindow(this);
     },
     close:function(){
