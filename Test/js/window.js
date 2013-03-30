@@ -52,16 +52,19 @@ Window.prototype = {
         //document.body.appendChild(containerDiv);
     },
     maximize:function(){
-        document.getElementById('desktop').removeChild(this.root);
+        this.removeHTML();
         os.maxWindow(this);
     },
     minimize:function(){
-        document.getElementById('desktop').removeChild(this.root);
+        this.removeHTML();
         os.minWindow(this);
     },
     close:function(){
-        document.getElementById('desktop').removeChild(this.root);
+        this.removeHTML();
         os.closeWindow(this);
+    },
+    removeHTML:function(){
+        document.getElementById('desktop').removeChild(this.root);
     },
     assignEvents:function(){
     }

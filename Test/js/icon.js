@@ -31,16 +31,30 @@ iconsSettings= {
                 alert('opened!!!');
             }
         }
-    }
+    },
+
+     unknown: {
+            name: 'unknown',
+            type: 'unknown',
+            windowOpt: {
+                name: 'unknown',
+                type: 'unknown',
+                width:300,
+                height: 200,
+                state: 'open',
+                layer:2,
+                callback: function(){
+                    alert('unknow!!!');
+                }
+            }
+        }
 }
 
 Icon = function (obj) {
     var a;
-    console.log("create icon " +obj);
     for (a in obj){
         if (obj.hasOwnProperty(a)){
             this[a] = obj[a];
-            console.log(this[a]);
         }
     }
 };
@@ -86,14 +100,12 @@ Icon.prototype = {
     makeActive: function (e) {
         var fromName = 'icon',
             className = 'active';
-
         this.root.addUniqClass(fromName, className);
     },
 
     openWindow: function(){
         this.root.removeClass('active');
         os.openWindow(this);
-        //win.open();
     },
 
     openContextMenu: function(e){
@@ -101,5 +113,9 @@ Icon.prototype = {
         this.root.addUniqClass('icon','active');
         var menu = new ContextMenu(e.pageX, e.pageY).init();
         //win.open();
-    }
+    } ,
+
+    removeHTML:function(){
+        document.getElementById('desktop').removeChild(this.root);
+    },
 };

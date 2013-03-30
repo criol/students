@@ -2,23 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/js/core.js" afterPath="$PROJECT_DIR$/Test/js/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/css/desctop.css" afterPath="$PROJECT_DIR$/Test/css/desctop.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/js/OSManager.js" afterPath="$PROJECT_DIR$/Test/js/OSManager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/js/icon.js" afterPath="$PROJECT_DIR$/Test/js/icon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/index.html" afterPath="$PROJECT_DIR$/Test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/js/iconsManager.js" afterPath="$PROJECT_DIR$/Test/js/iconsManager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/js/window.js" afterPath="$PROJECT_DIR$/Test/js/window.js" />
     </list>
     <ignored path="students.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364633612795" ignored="false" />
-    <file path="/OSManager.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364635622778" ignored="false" />
+    <file path="/OSManager.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364649864463" ignored="false" />
     <file path="/core.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364499570684" ignored="false" />
     <file path="/index.html" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364645133908" ignored="false" />
-    <file path="/icon.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364646014306" ignored="false" />
-    <file path="/window.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364646550592" ignored="false" />
-    <file path="/windowsManager.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364643052189" ignored="false" />
+    <file path="/icon.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364650625612" ignored="false" />
+    <file path="/window.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364647189136" ignored="false" />
+    <file path="/windowsManager.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364647099710" ignored="false" />
     <file path="/window.css" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364642931621" ignored="false" />
     <file path="/desctop.css" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364645666967" ignored="false" />
+    <file path="/iconsManager.js" changelist="9d86ff3a-8fae-4be5-88e2-68b7486c09d7" time="1364651092647" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +38,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OSManager.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="OSManager.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test/js/OSManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="14" selection-start="184" selection-end="194" vertical-scroll-proportion="0.0">
+            <state line="34" column="46" selection-start="816" selection-end="816" vertical-scroll-proportion="0.54545456">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="iconsManager.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/js/iconsManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="8" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icon.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/js/icon.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="110" column="20" selection-start="2785" selection-end="2785" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -50,16 +70,7 @@
       <file leaf-file-name="window.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/js/window.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="42" selection-start="2012" selection-end="2012" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="core.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Test/js/core.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="41" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.54545456">
+            <state line="67" column="8" selection-start="1958" selection-end="2054" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -68,37 +79,10 @@
       <file leaf-file-name="windowsManager.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/js/windowsManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="51" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0">
+            <state line="43" column="21" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="309" selection-end="309" vertical-scroll-proportion="-6.5384617">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="window.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/css/window.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="icon.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/js/icon.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="8" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -124,17 +108,17 @@
         <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/js/window.js" />
         <option value="$PROJECT_DIR$/js/core.js" />
-        <option value="$PROJECT_DIR$/Test/js/iconsManager.js" />
         <option value="$PROJECT_DIR$/Test/js/icon" />
-        <option value="$PROJECT_DIR$/Test/js/OSManager.js" />
         <option value="$PROJECT_DIR$/css/window.css" />
         <option value="$PROJECT_DIR$/Test/css/window.css" />
-        <option value="$PROJECT_DIR$/Test/js/windowsManager.js" />
         <option value="$PROJECT_DIR$/Test/css/desctop.css" />
         <option value="$PROJECT_DIR$/Test/index.html" />
-        <option value="$PROJECT_DIR$/Test/js/icon.js" />
-        <option value="$PROJECT_DIR$/Test/js/window.js" />
         <option value="$PROJECT_DIR$/Test/js/core.js" />
+        <option value="$PROJECT_DIR$/Test/js/windowsManager.js" />
+        <option value="$PROJECT_DIR$/Test/js/window.js" />
+        <option value="$PROJECT_DIR$/Test/js/icon.js" />
+        <option value="$PROJECT_DIR$/Test/js/iconsManager.js" />
+        <option value="$PROJECT_DIR$/Test/js/OSManager.js" />
       </list>
     </option>
   </component>
@@ -332,7 +316,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -441,15 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/js/iconsManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="2" selection-start="996" selection-end="996" vertical-scroll-proportion="0.93939394">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/window.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="45" selection-start="388" selection-end="388" vertical-scroll-proportion="0.030303031">
@@ -471,18 +446,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/js/windowsManager.js">
+    <entry file="file://$PROJECT_DIR$/Test/css/desctop.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="51" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="53" column="29" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/js/OSManager.js">
+    <entry file="file://$PROJECT_DIR$/Test/js/core.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="14" selection-start="184" selection-end="194" vertical-scroll-proportion="0.0">
+        <state line="62" column="24" selection-start="1512" selection-end="1512" vertical-scroll-proportion="0.93939394">
           <folding />
         </state>
       </provider>
@@ -494,37 +467,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/css/desctop.css">
+    <entry file="file://$PROJECT_DIR$/Test/js/windowsManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="29" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="43" column="21" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/index.html">
+    <entry file="file://$PROJECT_DIR$/Test/js/window.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="309" selection-end="309" vertical-scroll-proportion="-6.5384617">
+        <state line="67" column="8" selection-start="1958" selection-end="2054" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/js/icon.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="8" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.0">
+        <state line="110" column="20" selection-start="2785" selection-end="2785" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/js/window.js">
+    <entry file="file://$PROJECT_DIR$/Test/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="42" selection-start="2012" selection-end="2012" vertical-scroll-proportion="0.0">
+        <state line="12" column="56" selection-start="382" selection-end="382" vertical-scroll-proportion="0.3813084">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/js/core.js">
+    <entry file="file://$PROJECT_DIR$/Test/js/iconsManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="41" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.54545456">
+        <state line="35" column="8" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/js/OSManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="46" selection-start="816" selection-end="816" vertical-scroll-proportion="0.54545456">
           <folding />
         </state>
       </provider>

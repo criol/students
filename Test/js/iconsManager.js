@@ -19,10 +19,22 @@ iconsManagerModel = {
         this.iconSetting = iconsSettings;
         this.renderAll();
     },
-    create: function(){
-        var icon = new Icon(this.iconSetting.music).init(this.position);
+    create: function(type){
+        //type - тип создаваемой иконки
+        var icon;
+        switch(type){
+            case 'music':
+                icon = new Icon(this.iconSetting.music);
+                break
+            case 'text':
+                icon  = new Icon(this.iconSettings.text);
+                break
+            default :
+                icon = new Icon(this.iconSetting.unknown)
+        }
+
         icons.push(icon);
-        console.log(this.icons[0]);
+        this.renderAll();
     },
 
     renderAll: function(){
