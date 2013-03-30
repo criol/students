@@ -51,7 +51,6 @@ Array.prototype.removeElement =  function(elem){
 	var i;
 	for(i=0;i<this.length;i+=1){
 		if(this[i]===elem){
-		console.log(elem+' is find!')
 			this.splice(i,1);
 		}
 	}

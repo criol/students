@@ -48,18 +48,19 @@ Window.prototype = {
         containerDiv.appendChild(mainDiv);
 
         this.root = containerDiv;
-        document.body.appendChild(containerDiv);
+        document.getElementById('desktop').appendChild(containerDiv);
+        //document.body.appendChild(containerDiv);
     },
     maximize:function(){
-        document.body.removeChild(this.root);
+        document.getElementById('desktop').removeChild(this.root);
         os.maxWindow(this);
     },
     minimize:function(){
-        document.body.removeChild(this.root);
+        document.getElementById('desktop').removeChild(this.root);
         os.minWindow(this);
     },
     close:function(){
-        document.body.removeChild(this.root);
+        document.getElementById('desktop').removeChild(this.root);
         os.closeWindow(this);
     },
     assignEvents:function(){

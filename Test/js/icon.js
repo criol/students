@@ -73,8 +73,8 @@ Icon.prototype = {
         containerDiv.style.left = pos.left + 'px';
 
         this.root = containerDiv;
-
-        document.body.appendChild(containerDiv);
+        document.getElementById('desktop').appendChild(containerDiv);
+      //  document.body.appendChild(containerDiv);
     },
 
     assignEvents: function() {
