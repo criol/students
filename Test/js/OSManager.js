@@ -9,10 +9,19 @@ oSManagerModel = {
         //obj  -   иконка ,которая вызвала
 		this.windowsManager.open(obj);
 	},
-	closeWindow: function(){
-		this.windowsManager.close();
+	closeWindow: function(obj){
+        //obj - окно
+        this.windowsManager.close(obj);
 	},
-    start: function (){
+    maxWindow:function(obj){
+        //obj - окно
+        this.windowsManager.maximize(obj);
+    },
+    minWindow:function(obj){
+        //obj - окно
+        this.windowsManager.minimize(obj);
+    },
+    start: function(){
         this.windowsManager.start();
         this.iconsManager.start();
     }

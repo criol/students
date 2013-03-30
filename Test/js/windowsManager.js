@@ -11,17 +11,34 @@ windowsManagerModel = {
         for (var i = 0;i<this.windows.length;i+=1){
             windows[i].render();
         }
-
     },
     open: function(obj){
-        // todo : логика ,обрабатывающая открыто ли окно?  нужно ли создать новое?...
         //obj  -  иконка,которая вызвала
+        var nameWin, win;
+        nameWin = obj.windowOpt.name;
+        for(win in this.windows){
+            //проверка было ли открыто это окно?
+            if(win.name == nameWin) {
+                if(win.state=='hidde'){
+                   win.state == 'open';
+                }
+                win.render();
+            } else {
+                this.create(obj);
+            }
+        }
+    },
+    create: function (obj){
         var win  = new Window(obj.windowOpt).init();
         this.windows.push(win);
-
     },
-    close: function() 	{
-        console.log("Close window");
+    close: function(obj){
+        for(var win in this.windows){
+            if(win===obj){
+                this.windows.removeElement(win);
+                this.renderAll();
+            }
+        }
     }
 };
 

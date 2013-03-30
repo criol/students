@@ -11,11 +11,11 @@ Window.prototype = {
     init: function () {
         this.render();
     },
-
     render: function(){
         var containerDiv,winHeader,btnMin,btnMax,btnClose,mainDiv,winName;
 
         containerDiv = document.createElement('div');
+        containerDiv.style.zIndex=this.layer;
         containerDiv.className = 'window ' + this.type;
 
         mainDiv = document.createElement('div');
@@ -34,6 +34,7 @@ Window.prototype = {
 
         btnMax = document.createElement('button');
         btnMax.className = 'button Max';
+        btnMax.addEventListener('click',this.maximize.bind(this));
         winHeader.appendChild(btnMax);
 
         btnMin = document.createElement('button');
@@ -46,6 +47,11 @@ Window.prototype = {
 
         this.root = containerDiv;
         document.body.appendChild(containerDiv);
+    },
+    maximize:function(obj){
+        os.closeWindow(obj);
+    },
+    assignEvents:function(){
     }
 };
 
