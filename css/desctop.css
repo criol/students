@@ -56,3 +56,13 @@ border-left: 1px solid #ccc;
 .contextMenu li:hover{
 background-color: #e3e3ff;
 }
+
+#StartPanel
+{
+	position: absolute;
+	min-width: 100%;
+	min-height: 40px;
+	bottom: 0%;
+	left: 0%;
+	background: url('../images/bgStart.png') repeat-x;
+}
