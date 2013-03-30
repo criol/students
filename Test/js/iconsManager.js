@@ -15,7 +15,7 @@ iconsManagerModel = {
     },
 
     start:function(){
-        icons = [];
+        this.icons = [];
         this.iconSetting = iconsSettings;
         this.renderAll();
     },
@@ -27,20 +27,28 @@ iconsManagerModel = {
                 icon = new Icon(this.iconSetting.music);
                 break
             case 'text':
-                icon  = new Icon(this.iconSettings.text);
+                icon  = new Icon(this.iconSetting.text);
                 break
             default :
                 icon = new Icon(this.iconSetting.unknown)
         }
-
-        icons.push(icon);
+        this.icons.push(icon);
         this.renderAll();
     },
-
+    removeAllHTML:function(){
+        for(var icon in this.icons){
+           if(!this.icons.hasOwnProperty(icon)) continue
+           if(this.icons[icon].isRender){
+               this.icons[icon].removeHTML();
+           }
+        }
+    },
     renderAll: function(){
+        this.removeAllHTML();
+        this.setDefaultPosition();
         var a;
-
         for (a in this.icons) {
+            if (!this.icons.hasOwnProperty(a)) continue
             this.icons[a].init(this.position);
             this.position.top+=100;
             if (this.position.top > 500) {
@@ -48,6 +56,10 @@ iconsManagerModel = {
                 this.position.top = 10;
             }
         }
+    },
+    setDefaultPosition:function(){
+        this.position.left=10;
+        this.position.top=10;
     }
 };
 

@@ -5,6 +5,7 @@ iconsSettings= {
     music: {
         name: 'deep',
         type: 'music',
+        isRender:false,
         windowOpt: {
             name: 'Now Playing: Deep Purple - Smoke on the water',
             type: 'music',
@@ -20,6 +21,7 @@ iconsSettings= {
     text: {
         name: 'book',
         type: 'text',
+        isRender:false,
         windowOpt: {
             name: 'ololo.txt',
             type: 'text',
@@ -36,6 +38,7 @@ iconsSettings= {
      unknown: {
             name: 'unknown',
             type: 'unknown',
+            isRender:false,
             windowOpt: {
                 name: 'unknown',
                 type: 'unknown',
@@ -88,7 +91,7 @@ Icon.prototype = {
 
         this.root = containerDiv;
         document.getElementById('desktop').appendChild(containerDiv);
-      //  document.body.appendChild(containerDiv);
+        this.isRender = true;
     },
 
     assignEvents: function() {
