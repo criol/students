@@ -7,7 +7,6 @@ Window = function(obj){
     }
 }
 
-
 Window.prototype = {
     init: function () {
         this.render();
@@ -54,10 +53,18 @@ Window.prototype = {
 ///////Модель  окна////////////////
 ////////////////////////////////////
 windowModel = {
+    name:'',
+    type:'',
     width:0,
     height:0,
+    state:'open',
+    layer:2,
     position:{
         top:0,
         left:0
+    },
+    callback: function(){
+        alert('opened!!!');
     }
-}
+};
+

@@ -33,4 +33,3 @@ OSManager = function (obj) {
 var os = new OSManager(oSManagerModel);
 os.start();
 os.iconsManager.create();
-

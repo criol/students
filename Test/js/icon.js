@@ -26,6 +26,7 @@ iconsSettings= {
             width:300,
             height: 200,
             state: 'open',
+            layer:2,
             callback: function(){
                 alert('opened!!!');
             }

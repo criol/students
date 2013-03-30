@@ -8,7 +8,6 @@ windowsManagerModel = {
         this.renderAll();
     },
     renderAll:function(){
-
         for (var i = 0;i<this.windows.length;i+=1){
             windows[i].render();
         }
