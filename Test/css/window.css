@@ -4,6 +4,15 @@
 	padding: 0px;
 }
 
+.window.active
+{
+    z-index: 3;
+}
+
+.window{
+    z-index: 2;
+}
+
 .window.open
 {
     top:150px;

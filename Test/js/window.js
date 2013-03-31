@@ -15,7 +15,6 @@ Window.prototype = {
         var containerDiv,winHeader,btnMin,btnMax,btnClose,mainDiv,winName;
 
         containerDiv = document.createElement('div');
-        containerDiv.style.zIndex=this.layer;
         containerDiv.className = 'window ' + this.type+' '+this.state;
         if(pos!=undefined){
             containerDiv.style.top = pos.top + 'px';
@@ -52,6 +51,7 @@ Window.prototype = {
 
         this.root = containerDiv;
         document.getElementById('desktop').appendChild(containerDiv);
+        this.assignEvents();
     },
     maximize:function(){
         this.removeHTML();
@@ -68,7 +68,13 @@ Window.prototype = {
     removeHTML:function(){
         document.getElementById('desktop').removeChild(this.root);
     },
+    makeActive:function(){
+        //this.root.style.zIndex=3;
+        this.root.addUniqClass('window','active');
+
+    },
     assignEvents:function(){
+        this.root.addEventListener('click',this.makeActive.bind(this));
     }
 };
 
