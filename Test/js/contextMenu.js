@@ -22,7 +22,7 @@ var menuSettings= {list:[
 		title: 'Свойства',
 		callBack: function()
 		{
-			alert("Properties: "+this.sender.windowOpt.name+"\nType: "+this.sender.type +"\nName: "+this.sender.name);
+			alert("Name: "+this.sender.name+"\nType: "+this.sender.type);
 		}
 	}
 ],

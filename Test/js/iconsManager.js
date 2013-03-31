@@ -21,8 +21,9 @@ iconsManagerModel = {
     },
     create: function(type){
         //type - тип создаваемой иконки
+		
+		//<<<<<<<<<<<<<<<<<<<<<<<========= ЭТО
         var icon;
-		console.log(this.iconSetting);
         switch(type){
             case 'music':
                 icon = new Icon(this.iconSetting.icons[0]);
@@ -34,6 +35,9 @@ iconsManagerModel = {
                 icon = new Icon(this.iconSetting.icons[2]);
         }
         this.icons.push(icon);
+		//======================= НА
+		//this.icons = this.iconSetting.icons;
+        // ЭТО =========>>>>>>>>>>>>>>>>>>>>>>>>>>>		
         this.renderAll();
     },
     removeAllHTML:function(){
