@@ -1,14 +1,16 @@
 ///////////////////////////////////
 ///////Модель иконки по типу///////
 ////////////////////////////////////
+
+//Переключение между боевым отображением====>>>>>>>>>>>>>>>
 iconsSettings  = eval("("+serverResponse+")");
 
+//ИЛИ 
 
-/*
+//Тестовым контентом!!! VVVVVVVVVVVVVVVVVVVVVVVV
+//iconsSettings = {"icons":[{"name":"Arabic.ini","type":"text"},{"name":"desktop.ini","type":"text"},{"name":"Kerkyth.mp3","type":"music"},{"name":"Новый док.rtf","type":"text"}]} 
 
-iconsSettings = {"icons":[{"name":"C:\\Users\\Демьян\\Desktop\\Arabic.ini","type":"none"},{"name":"C:\\Users\\Демьян\\Desktop\\desktop.ini","type":"none"},{"name":"C:\\Users\\Демьян\\Desktop\\Kerkythea 2008.lnk","type":"none"},{"name":"C:\\Users\\Демьян\\Desktop\\Новый документ в формате RTF.rtf","type":"none"}]} 
-console.log(iconsSettings);
-*/
+
 Icon = function (obj) {
     var a;
     for (a in obj){
