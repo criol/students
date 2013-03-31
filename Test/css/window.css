@@ -28,6 +28,9 @@
     width: 500px;
     height: 250px;
     background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;  /* свойство для тех кто его поддерживает */
+    -moz-border-radius: 4px;  /* для firefox */
+    -webkit-border-radius: 4px;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ��� Firefox */
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ��� Safari � Chrome */
     box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ��������� ���� */
