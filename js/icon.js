@@ -86,13 +86,14 @@ Icon.prototype = {
     },
 
     toggleActive :function() {
-        this.root.addUniqClass( document.body,'active');
+        this.root.addUniqClass( iconManager.icons,'active');
     },
 
 
     openWindow: function(){
-        var win = new CustomWindow(this.windowOpt).init();
-       // win.open();
+        var win = new CustomWindow(this.windowOpt);
+        win.init();
+        win.open();
     }
 };
 

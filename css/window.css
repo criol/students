@@ -1,0 +1,148 @@
+
+body {
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+
+.window {
+    position: absolute;
+    border: 1px solid black;
+    clear: both;
+    min-height: 200px;
+    height: auto;
+    min-width: 300px;
+    overflow: hidden;
+    resize: both;
+    left: 100px;
+    top: 40px;
+}
+
+.header{
+    height: 35px;
+    clear: both;
+}
+
+.leftBorder {
+    width: 15px;
+    background: url("../images/window/left.png") repeat-y;
+    position: absolute;
+    height: 100%;
+    left: 0;
+}
+
+.cont {
+    position: absolute;
+    float: left;
+    width: 100%;
+    top: 35px;
+    bottom: 17px;
+}
+
+.rightBorder {
+    right: 0;
+    width: 15px;
+    background: url("../images/window/rightBrd.png") repeat-y;
+    position: absolute;
+    height: 100%;
+}
+
+.footer {
+    clear: both;
+    height: 15px;
+    width: 100%;
+    margin-bottom: 2px;
+    position: absolute;
+    bottom: 0;
+ }
+
+.content {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    height: 100%;
+}
+
+.topLeftCornerBorder {
+    background: url("../images/window/topLeft.png") no-repeat;
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 35px;
+}
+
+.topRightCornerBorder {
+    background: url("../images/window/topRightBrd.png") no-repeat;
+    position: absolute;
+    right: 0;
+    height: 35px;
+    width: 15px;
+}
+
+.topCentrBorder {
+    background: url("../images/window/top.png") repeat-x;
+    left: 15px;
+    right: 15px;
+    position: absolute;
+    height: 35px;
+}
+
+.windowBtns {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: 76px;
+    height: 20px;
+}
+
+.roll {
+    position: absolute;
+    right: 42px;
+    background: url("../images/window/btnRoll.png") no-repeat;
+    width: 34px;
+    height: 20px;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    background: url("../images/window/btnClose.png") no-repeat;
+    width: 42px;
+    height: 20px;
+}
+
+.bottomLeftCornerBorder {
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 100%;
+    background: url("../images/window/bottomLeft.png") no-repeat;
+}
+
+.bottomRightCornerBorder {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 15px;
+    background: url("../images/window/bottomRightBrd.png") no-repeat ;
+
+}
+
+.bottomCentrBorder {
+    left: 15px;
+    right: 15px;
+    position: absolute;
+    height: 100%;
+    background: url("../images/window/bottom.png") repeat-x;
+}
+
+.windowText {
+    position: absolute;
+    top: 10px;
+    text-align: left;
+    vertical-align: middle;
+    width: 100%;
+}
+

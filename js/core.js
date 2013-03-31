@@ -9,22 +9,28 @@ HTMLElement.prototype.addClass = function (newClass) {
     }
 };
 
+
 HTMLElement.prototype.addUniqClass = function (elems, newClass) {
 
-    var nodes = elems.querySelectorAll('.icon');
+    var classNames = [],
+        i=0;
 
-    var i= 0;
+    for (var icon in elems) {
 
-    for (i; i< nodes.length; i+=1) {
+        classNames[i]  = elems[icon].root.className;
 
-        var classNames = nodes[i].className.split(' ');
+        var selectedClass = classNames[i].split(' ')
 
-         nodes[i].className=classNames.removeActive(newClass).join(' ');
+        classNames[i] = selectedClass.removeActive(newClass).join(' ');
+
+        elems[icon].root.className = classNames[i];
+
+        i++;
     }
-
     this.className = this.className + ' ' + newClass;
-
 };
+
+
 
 Array.prototype.inArray = function (elem) {
     var res = false,
@@ -40,14 +46,16 @@ Array.prototype.inArray = function (elem) {
     return res;
 };
 
-Array.prototype.removeActive = function (elem) {
+
+
+Array.prototype.removeActive = function (newClass) {
 
     var i= 0,
         max = this.length;
 
     for (i; i < max; i+=1) {
 
-        if(elem===this[i]) {
+        if( newClass===this[i] ) {
 
             this.splice(i,1);
 
