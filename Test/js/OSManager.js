@@ -21,12 +21,27 @@ oSManagerModel = {
         //obj - окно
         this.windowsManager.minimize(obj);
     },
+	makeActiveIcon:function(obj){
+		this.iconsManager.makeActive(obj);
+	},	
     start: function(){
         this.windowsManager.start();
         this.iconsManager.start();
-    }
-
+    	this.assignEvents();
+		//alert();
+    },
+	closeContext: function(){
+		Menu.destroy();
+	},
+	assignEvents: function(){
+		window.addEventListener('click', this.closeContext.bind(this));
+	},
+	removeIcon: function(obj){
+		this.iconsManager.removeIcon(obj);
+		obj.removeHTML();
+	}
 };
+
 
 OSManager = function (obj) {
     var a;
@@ -38,6 +53,12 @@ OSManager = function (obj) {
     this.windowsManager = new WindowsManager(windowsManagerModel);
     this.iconsManager = new IconsManager(iconsManagerModel);
 };
+
+
+OSManager.prototype = {
+
+}
+	
 
 var os = new OSManager(oSManagerModel);
 os.start();

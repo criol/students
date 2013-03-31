@@ -99,16 +99,16 @@ Icon.prototype = {
     },
 
     assignEvents: function() {
-        this.root.addEventListener('click', this.makeActive.bind(this));
+        this.root.addEventListener('click', function(){os.makeActiveIcon(this)});
         this.root.addEventListener('dblclick', this.openWindow.bind(this));
         this.root.addEventListener('contextmenu', this.openContextMenu.bind(this));
     },
-
+/*
     makeActive: function (e) {
         var fromName = 'icon',
             className = 'active';
         this.root.addUniqClass(fromName, className);
-    },
+    },*/
 
     openWindow: function(){
         this.root.removeClass('active');
@@ -118,11 +118,13 @@ Icon.prototype = {
     openContextMenu: function(e){
         e.preventDefault();
         this.root.addUniqClass('icon','active');
-        var menu = new ContextMenu(e.pageX, e.pageY).init();
+        Menu = new ContextMenu(menuSettings);
+		Menu.init(e, this);
+		//console.log(menu);
         //win.open();
     } ,
 
     removeHTML:function(){
         document.getElementById('desktop').removeChild(this.root);
-    },
+    }
 };

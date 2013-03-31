@@ -59,20 +59,19 @@ list-style: none;
     box-shadow: 0 0 4px rgba(0,0,0,0.5); /* ????????? ???? */
 }
 
-.contextMenu{
+#contextMenu{
 position: absolute;
-width: 100px;
-height: 100px;
 background-color: #f0f0f7;
 border: 1px solid #aaa;
 }
 
-.contextMenu ul{
+#contextMenu ul{
 margin-left: 20px;
-padding: 10px;
+margin-right: 10px;
+padding: 12px;
 border-left: 1px solid #ccc;
 }
 
-.contextMenu li:hover{
+#contextMenu li:hover{
 background-color: #e3e3ff;
 }

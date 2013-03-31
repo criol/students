@@ -44,7 +44,7 @@ iconsManagerModel = {
         }
     },
     renderAll: function(){
-        this.removeAllHTML();
+		this.removeAllHTML();
         this.setDefaultPosition();
         var a;
         for (a in this.icons) {
@@ -60,7 +60,19 @@ iconsManagerModel = {
     setDefaultPosition:function(){
         this.position.left=10;
         this.position.top=10;
-    }
+    },
+	makeActive:function(obj){
+        var fromName = 'icon',
+            className = 'active';
+        obj.addUniqClass(fromName, className);
+	},
+	removeIcon:function(obj){
+		if(this.icons.inArray(obj))
+		{
+			this.icons.removeElement(obj);
+			this.renderAll();
+		}
+	}
 };
 
 IconsManager = function(obj) {
