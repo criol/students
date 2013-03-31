@@ -63,6 +63,4 @@ OSManager.prototype = {
 
 var os = new OSManager(oSManagerModel);
 os.start();
-os.iconsManager.create('music');
-os.iconsManager.create('text');
 os.iconsManager.create();

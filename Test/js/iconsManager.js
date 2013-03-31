@@ -19,25 +19,11 @@ iconsManagerModel = {
         this.iconSetting = iconsSettings;
         this.renderAll();
     },
-    create: function(type){
-        //type - тип создаваемой иконки
-		
-		//<<<<<<<<<<<<<<<<<<<<<<<========= ЭТО
-        var icon;
-        switch(type){
-            case 'music':
-                icon = new Icon(this.iconSetting.icons[0]);
-                break
-            case 'text':
-                icon = new Icon(this.iconSetting.icons[1]);
-                break
-            default :
-                icon = new Icon(this.iconSetting.icons[2]);
+    create: function(){
+        for(var i = 0; i<this.iconSetting.icons.length;i+=1){
+	        var icon = new Icon(this.iconSetting.icons[i]);
+            this.icons.push(icon);
         }
-        this.icons.push(icon);
-		//======================= НА
-		//this.icons = this.iconSetting.icons;
-        // ЭТО =========>>>>>>>>>>>>>>>>>>>>>>>>>>>		
         this.renderAll();
     },
     removeAllHTML:function(){
