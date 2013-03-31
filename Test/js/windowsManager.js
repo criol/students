@@ -13,7 +13,7 @@ windowsManagerModel = {
     },
     open: function(obj){
         //obj  -  иконка,которая вызвала
-        var winName = obj.windowOpt.name;
+        var winName = obj.name;
         var win = this.windowInArray(winName);
         //проверка было ли открыто это окно?
         if(win!=undefined){
@@ -43,7 +43,7 @@ windowsManagerModel = {
     },
     create: function (obj){
        //создать если такого окна не существует в массиве окон
-        var win  = new Window(obj.windowOpt);
+        var win  = new Window(obj);
         if(!this.windows.inArray(win)){
             this.windows.push(win);
             this.renderAll();

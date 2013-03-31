@@ -1,62 +1,14 @@
 ///////////////////////////////////
 ///////Модель иконки по типу///////
 ////////////////////////////////////
-iconsSettings= {
-    music: {
-        name: 'deep',
-        type: 'music',
-        isRender:false,
-        windowOpt: {
-            name: 'Now Playing: Deep Purple - Smoke on the water',
-            type: 'music',
-            width:300,
-            height: 200,
-            isRender:false,
-            state: 'open',
-            layer:2,
-            callback: function(){
-                alert('opened!!!');
-            }
-        }
-    },
+iconsSettings  = eval("("+serverResponse+")");
 
-    text: {
-        name: 'book',
-        type: 'text',
-        isRender:false,
-        windowOpt: {
-            name: 'ololo.txt',
-            type: 'text',
-            width:300,
-            isRender:false,
-            height: 200,
-            state: 'open',
-            layer:2,
-            callback: function(){
-                alert('opened!!!');
-            }
-        }
-    },
 
-     unknown: {
-            name: 'unknown',
-            type: 'unknown',
-            isRender:false,
-            windowOpt: {
-                name: 'unknown',
-                type: 'unknown',
-                width:300,
-                height: 200,
-                isRender:false,
-                state: 'open',
-                layer:2,
-                callback: function(){
-                    alert('unknow!!!');
-                }
-            }
-        }
-}
+/*
 
+iconsSettings = {"icons":[{"name":"C:\\Users\\Демьян\\Desktop\\Arabic.ini","type":"none"},{"name":"C:\\Users\\Демьян\\Desktop\\desktop.ini","type":"none"},{"name":"C:\\Users\\Демьян\\Desktop\\Kerkythea 2008.lnk","type":"none"},{"name":"C:\\Users\\Демьян\\Desktop\\Новый документ в формате RTF.rtf","type":"none"}]} 
+console.log(iconsSettings);
+*/
 Icon = function (obj) {
     var a;
     for (a in obj){

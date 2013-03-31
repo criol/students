@@ -31,6 +31,7 @@ oSManagerModel = {
 		//alert();
     },
 	closeContext: function(){
+		if(Menu=!'undefined')
 		Menu.destroy();
 	},
 	assignEvents: function(){

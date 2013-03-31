@@ -22,15 +22,16 @@ iconsManagerModel = {
     create: function(type){
         //type - тип создаваемой иконки
         var icon;
+		console.log(this.iconSetting);
         switch(type){
             case 'music':
-                icon = new Icon(this.iconSetting.music);
+                icon = new Icon(this.iconSetting.icons[0]);
                 break
             case 'text':
-                icon  = new Icon(this.iconSetting.text);
+                icon = new Icon(this.iconSetting.icons[1]);
                 break
             default :
-                icon = new Icon(this.iconSetting.unknown)
+                icon = new Icon(this.iconSetting.icons[2]);
         }
         this.icons.push(icon);
         this.renderAll();
