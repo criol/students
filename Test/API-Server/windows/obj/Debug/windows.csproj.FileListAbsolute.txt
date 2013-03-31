@@ -5,3 +5,10 @@ c:\users\демьян\documents\visual studio 2010\Projects\windows\windows\bin\
 c:\users\демьян\documents\visual studio 2010\Projects\windows\windows\obj\Debug\ResolveAssemblyReference.cache
 c:\users\демьян\documents\visual studio 2010\Projects\windows\windows\obj\Debug\windows.dll
 c:\users\демьян\documents\visual studio 2010\Projects\windows\windows\obj\Debug\windows.pdb
+C:\Users\Компьютер\Documents\AptanaProjects\desk\students\Test\API-Server\windows\bin\windows.dll
+C:\Users\Компьютер\Documents\AptanaProjects\desk\students\Test\API-Server\windows\bin\windows.pdb
+C:\Users\Компьютер\Documents\AptanaProjects\desk\students\Test\API-Server\windows\bin\EntityFramework.dll
+C:\Users\Компьютер\Documents\AptanaProjects\desk\students\Test\API-Server\windows\bin\EntityFramework.xml
+C:\Users\Компьютер\Documents\AptanaProjects\desk\students\Test\API-Server\windows\obj\Debug\windows.csprojResolveAssemblyReference.cache
+C:\Users\Компьютер\Documents\AptanaProjects\desk\students\Test\API-Server\windows\obj\Debug\windows.dll
+C:\Users\Компьютер\Documents\AptanaProjects\desk\students\Test\API-Server\windows\obj\Debug\windows.pdb

@@ -3,12 +3,12 @@
 ////////////////////////////////////
 
 //Переключение между боевым отображением====>>>>>>>>>>>>>>>
-iconsSettings  = eval("("+serverResponse+")");
+//iconsSettings  = eval("("+serverResponse+")");
 
 //ИЛИ 
 
 //Тестовым контентом!!! VVVVVVVVVVVVVVVVVVVVVVVV
-//iconsSettings = {"icons":[{"name":"Arabic.ini","type":"text"},{"name":"desktop.ini","type":"text"},{"name":"Kerkyth.mp3","type":"music"},{"name":"Новый док.rtf","type":"text"}]} 
+iconsSettings = {"icons":[{"name":"Arabic.ini","type":"text"},{"name":"desktop.ini","type":"text"},{"name":"Kerkyth.mp3","type":"music"},{"name":"Новый док.rtf","type":"text"}]}
 
 
 Icon = function (obj) {
