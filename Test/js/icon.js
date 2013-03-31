@@ -11,7 +11,9 @@ iconsSettings= {
             type: 'music',
             width:300,
             height: 200,
+            isRender:false,
             state: 'open',
+            layer:2,
             callback: function(){
                 alert('opened!!!');
             }
@@ -26,6 +28,7 @@ iconsSettings= {
             name: 'ololo.txt',
             type: 'text',
             width:300,
+            isRender:false,
             height: 200,
             state: 'open',
             layer:2,
@@ -44,6 +47,7 @@ iconsSettings= {
                 type: 'unknown',
                 width:300,
                 height: 200,
+                isRender:false,
                 state: 'open',
                 layer:2,
                 callback: function(){

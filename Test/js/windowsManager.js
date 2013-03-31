@@ -11,25 +11,18 @@ windowsManagerModel = {
         this.windows = [];
         this.renderAll();
     },
-    renderAll:function(){
-        for (var i = 0;i<this.windows.length;i+=1){
-            this.windows[i].render(this.position);
-            this.position.top+=20;
-            this.position.left+=20;
-
-        }
-    },
     open: function(obj){
         //obj  -  иконка,которая вызвала
-        var nameWin, win;
-        nameWin = obj.windowOpt.name;
+        var item,
+            winName = obj.windowOpt.name;
         if(this.windows.length!=0){
-            for(var win in this.windows){
+            for(item in this.windows){
+                if(!this.windows.hasOwnProperty(item)) continue
                 //проверка было ли открыто это окно?
-                if(this.windows[win].name === nameWin) {
+                if(this.windowInArray(winName)){
                     if(this.windows[win].state ==='hide'){
                        this.windows[win].state = 'open';
-                       this.windows[win].render();
+                       this.windows[win].renderAll();
                     }
                 } else {
                     this.create(obj);
@@ -56,9 +49,15 @@ windowsManagerModel = {
         }
     },
     create: function (obj){
+       //создать если такого окна не существует в массиве окон
         var win  = new Window(obj.windowOpt);
-        this.windows.push(win);
-        this.renderAll();
+        if(!this.windows.inArray(win)){
+            this.windows.push(win);
+            this.renderAll();
+        }else {
+            delete win;
+        }
+
     },
     close: function(obj){
         for(var win in this.windows){
@@ -67,6 +66,35 @@ windowsManagerModel = {
                 this.renderAll();
             }
         }
+    },
+    removeAllHTML:function(){
+        for(var i=0;i<this.windows.length;i+=1){
+            if(this.windows[i].isRender){
+                this.windows[i].removeHTML();
+            }
+        }
+    },
+    renderAll:function(){
+        this.removeAllHTML();
+        this.setDefaultPosition();
+        for (var i = 0;i<this.windows.length;i+=1){
+            this.windows[i].render(this.position);
+            this.position.top+=30;
+            this.position.left+=30;
+        }
+    },
+    setDefaultPosition:function(){
+        this.position.top = 40;
+        this.position.left = 40;
+    },
+    windowInArray:function(winName){
+        var i= 0,res=false;
+        for(var i=0;i<this.windows.length;i+=1){
+            if(this.windows[i].name===winName){
+                res=true;
+            }
+        }
+        return res;
     }
 };
 

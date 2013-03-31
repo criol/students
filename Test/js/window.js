@@ -46,9 +46,9 @@ Window.prototype = {
         btnMin.className = 'button Min';
         winHeader.appendChild(btnMin);
 
-
         containerDiv.appendChild(winHeader);
         containerDiv.appendChild(mainDiv);
+        this.isRender = true;
 
         this.root = containerDiv;
         document.getElementById('desktop').appendChild(containerDiv);
@@ -83,6 +83,7 @@ windowModel = {
     top:0,
     left:0,
     state:'open',
+    isRender:false,
     layer:2,
     position:{
         top:0,
