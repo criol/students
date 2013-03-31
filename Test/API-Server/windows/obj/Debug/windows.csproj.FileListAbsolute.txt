@@ -1,0 +1,7 @@
+c:\users\демьян\documents\visual studio 2010\Projects\windows\windows\bin\windows.dll
+c:\users\демьян\documents\visual studio 2010\Projects\windows\windows\bin\windows.pdb
+c:\users\демьян\documents\visual studio 2010\Projects\windows\windows\bin\EntityFramework.dll
+c:\users\демьян\documents\visual studio 2010\Projects\windows\windows\bin\EntityFramework.xml
+c:\users\демьян\documents\visual studio 2010\Projects\windows\windows\obj\Debug\ResolveAssemblyReference.cache
+c:\users\демьян\documents\visual studio 2010\Projects\windows\windows\obj\Debug\windows.dll
+c:\users\демьян\documents\visual studio 2010\Projects\windows\windows\obj\Debug\windows.pdb

@@ -1,0 +1,17 @@
+﻿@model windows.Models.Obj
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Ты тут: @Model.Name</h2>
+
+
+@foreach (var f in Model.bmpfiles)
+{
+    <div style="background: #aaa">@("D:\\TTT\\" + f.Name.ToString())</div>
+}
+@foreach (var fs in Model.dirs)
+{
+    <div style="background: yellow"><a href="@Url.Action("Details", new { path=fs })">@fs</div>
+}
+<div><a href="@Url.Action("Details", new { path=Model.parent })">back</a></div>

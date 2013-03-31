@@ -1,0 +1,159 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" type="text/css" href="content/new.css">
+<link rel="stylesheet" type="text/css" href="content/main.css">
+<center>
+<h1>SDDS - SDDS Denis Demyan Sultan</h1>
+<h2>API Documentation:</h2>
+</center>
+<section class="card endpoint">
+        <header>
+            <h2>
+                <span class="ep-type">GET</span>
+                <code>/Api/GetDir</code>
+            </h2>
+        </header>
+
+        <div class="card-info">
+            <ul class="actions">
+                <li><a class="endpoint button" onclick="$('#get_media_search_response').slideToggle()"><b>Response</b></a></li>
+            </ul>
+            <code>ddd.somee.com/sdds/Api/GetDir?path=D:/msmu</code>
+        </div>
+
+        
+        <div class="card-info-more ep-response" id="get_media_search_response" style="display: block;">
+            <div class="codehilite"><pre><code><span class="p">{</span>
+    <span class="nt">"files"</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">"Name":</span> <span class="mi">"Eminem.mp3",</span>
+        <span class="nt">"Type":</span> <span class="mi">"Music"</span>
+    <span class="p">},{
+        <span class="nt">"Name":</span> <span class="mi">"Rock",</span>
+        <span class="nt">"Type":</span> <span class="mi">"Dir"</span>
+    <span class="p">},</span>
+    <span class="err">...</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+        </div>
+        
+
+        <div class="card-description ep-description">
+            <p>
+                Search for files in a root directory. The default path is set "D:/".   
+            </p>
+
+            
+            <table>
+                <caption><strong>Parameters</strong><i></i></caption>
+                <tbody>
+                    
+                    <tr>
+                        <th>Path</th>
+                        <td>Путь к каталогу из которого нужно получить файлы.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+
+<section class="card endpoint">
+        <header>
+            <h2>
+                <span class="ep-type">GET</span>
+                <code>/Api/GetDesktop</code>
+            </h2>
+        </header>
+
+        <div class="card-info">
+            <ul class="actions">
+                <li><a class="endpoint button" onclick="$('#get_media_search_response').slideToggle()"><b>Response</b></a></li>
+            </ul>
+            <code>ddd.somee.com/sdds/Api/GetDesktop</code>
+        </div>
+
+        
+        <div class="card-info-more ep-response" id="get_media_search_response" style="display: block;">
+            <div class="codehilite"><pre><code><span class="p">{</span>
+    <span class="nt">"files"</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">"Name":</span> <span class="mi">"Eminem.mp3",</span>
+        <span class="nt">"Type":</span> <span class="mi">"Music"</span>
+    <span class="p">},{
+        <span class="nt">"Name":</span> <span class="mi">"Rock",</span>
+        <span class="nt">"Type":</span> <span class="mi">"Dir"</span>
+    <span class="p">},</span>
+    <span class="err">...</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+        </div>
+        
+
+        <div class="card-description ep-description">
+            <p>
+                Search for files in a Desktop directory.   
+            </p>
+
+            
+            <table>
+                <caption><strong>Parameters</strong><i></i></caption>
+                <tbody>
+                    
+                    <tr>
+                        <th>None</th>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+<section class="card endpoint">
+        <header>
+            <h2>
+                <span class="ep-type">GET</span>
+                <code>/Api/RemoveFile</code>
+            </h2>
+        </header>
+
+        <div class="card-info">
+            <ul class="actions">
+                <li><a class="endpoint button" onclick="$('#get_media_search_response').slideToggle()"><b>Response</b></a></li>
+            </ul>
+            <code>ddd.somee.com/sdds/Api/RemoveFile</code>
+        </div>
+
+        
+        <div class="card-info-more ep-response" id="get_media_search_response" style="display: block;">
+            <div class="codehilite"><pre><code><span class="p">{</span>
+    <span class="nt">"status"</span><span class="p">:</span> <span class="p">"ok"</span>
+<span class="p">}</span>
+</code></pre></div>
+
+        </div>
+        
+
+        <div class="card-description ep-description">
+            <p>
+                Remove file in FS.
+            </p>
+
+            
+            <table>
+                <caption><strong>Parameters</strong><i></i></caption>
+                <tbody>
+                    
+                    <tr>
+                        <th>Path</th>
+                        <td>Путь к файлу или папке требующих удаления</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
