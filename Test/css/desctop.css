@@ -60,18 +60,24 @@ list-style: none;
 }
 
 #contextMenu{
-position: absolute;
-background-color: #f0f0f7;
-border: 1px solid #aaa;
+	position: absolute;
+	background-color: #f0f0f7;
+	border: 1px solid #aaa;
 }
 
 #contextMenu ul{
-margin-left: 20px;
-margin-right: 10px;
-padding: 12px;
-border-left: 1px solid #ccc;
+	margin-left: 20px;
+	margin-right: 10px;
+	padding: 12px;
+	border-left: 1px solid #ccc;
 }
 
 #contextMenu li:hover{
-background-color: #e3e3ff;
+	background-color: #e3e3ff;
+}
+
+#contextMenu li
+{
+	color: #000 !important;
+	text-shadow: #fff 0 0 0px !important;
 }
