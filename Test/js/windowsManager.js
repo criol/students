@@ -13,24 +13,17 @@ windowsManagerModel = {
     },
     open: function(obj){
         //obj  -  иконка,которая вызвала
-        var item,
+        var win,
             winName = obj.windowOpt.name;
-        if(this.windows.length!=0){
-            for(item in this.windows){
-                if(!this.windows.hasOwnProperty(item)) continue
-                //проверка было ли открыто это окно?
-                if(this.windowInArray(winName)){
-                    if(this.windows[win].state ==='hide'){
-                       this.windows[win].state = 'open';
-                       this.windows[win].renderAll();
-                    }
-                } else {
-                    this.create(obj);
-                }
+        //проверка было ли открыто это окно?
+        if(this.windowInArray(winName)){
+            if(this.windows[win].state ==='hide'){
+               this.windows[win].state = 'open';
+               this.windows[win].renderAll();
             }
-        } else {
-            this.create(obj);
-        }
+            } else {
+               this.create(obj);
+            }
     },
     minimize: function(obj){
         for (var win in this.windows){
