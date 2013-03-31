@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af7a5bc6-8203-43b7-af5c-1f139d1cc189" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/window.css" afterPath="$PROJECT_DIR$/css/window.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/core.js" afterPath="$PROJECT_DIR$/js/core.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/window.js" afterPath="$PROJECT_DIR$/js/window.js" />
     </list>
     <list id="3712825f-b448-4919-8b69-c2bae1ff7c05" name="Rejected commit: Default" comment="Add ToggleActive ( for Icon )" />
@@ -63,25 +63,25 @@
       <file leaf-file-name="window.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/window.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="25" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.0">
+            <state line="108" column="23" selection-start="1805" selection-end="1805" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="window.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="window.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/window.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="0" selection-start="3407" selection-end="3407" vertical-scroll-proportion="0.7855856">
+            <state line="141" column="49" selection-start="3770" selection-end="3770" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="core.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/core.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="716" selection-end="796" vertical-scroll-proportion="0.0">
+            <state line="38" column="44" selection-start="968" selection-end="968" vertical-scroll-proportion="0.35675675">
               <folding />
             </state>
           </provider>
@@ -90,7 +90,7 @@
       <file leaf-file-name="icon.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/icon.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="17" selection-start="2061" selection-end="2061" vertical-scroll-proportion="0.0">
+            <state line="94" column="19" selection-start="2043" selection-end="2043" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,12 +119,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/core.js" />
         <option value="$PROJECT_DIR$/js/icon.js" />
         <option value="$PROJECT_DIR$/css/desctop.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/window.js" />
         <option value="$PROJECT_DIR$/css/window.css" />
+        <option value="$PROJECT_DIR$/js/core.js" />
+        <option value="$PROJECT_DIR$/js/window.js" />
       </list>
     </option>
   </component>
@@ -388,23 +388,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/icon.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="17" selection-start="2061" selection-end="2061" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="6" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="716" selection-end="796" vertical-scroll-proportion="0.0">
+        <state line="15" column="35" selection-start="453" selection-end="453" vertical-scroll-proportion="-9.807693">
           <folding />
         </state>
       </provider>
@@ -416,23 +402,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="35" selection-start="453" selection-end="453" vertical-scroll-proportion="-9.807693">
+        <state line="14" column="6" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/icon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="19" selection-start="2043" selection-end="2043" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/window.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="25" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.0">
+        <state line="108" column="23" selection-start="1805" selection-end="1805" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/window.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="0" selection-start="3407" selection-end="3407" vertical-scroll-proportion="0.7855856">
+        <state line="141" column="49" selection-start="3770" selection-end="3770" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="44" selection-start="968" selection-end="968" vertical-scroll-proportion="0.35675675">
           <folding />
         </state>
       </provider>

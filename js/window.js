@@ -25,6 +25,7 @@ CustomWindow.prototype = {
     init: function () {
         CWManager.windows[this.type] = this;
         this.render();
+        this.assignEvents()
     },
 
     render: function(){
@@ -102,8 +103,6 @@ CustomWindow.prototype = {
         footerRightBorder.className = 'bottomRightCornerBorder';
 
 
-
-
         headerBtnGroup.appendChild(btnRoll);
         headerBtnGroup.appendChild(btnClose);
 
@@ -129,12 +128,18 @@ CustomWindow.prototype = {
         newWindow.appendChild(footer);
 
         this.root = newWindow;
-
     },
 
     open: function () {
-
         document.body.appendChild(this.root);
+    },
+
+    assignEvents: function() {
+        this.root.getElementsByClassName('close').item(0).addEventListener('click',this.close.bind(this));
+    },
+
+    close: function() {
+        this.root.closeWindow(CWManager.windows);
     }
 };
 

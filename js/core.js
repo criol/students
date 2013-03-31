@@ -30,6 +30,17 @@ HTMLElement.prototype.addUniqClass = function (elems, newClass) {
     this.className = this.className + ' ' + newClass;
 };
 
+HTMLElement.prototype.closeWindow = function (windowsList) {
+    console.log(windowsList);
+    var a
+    for ( a in windowsList) {
+        if (windowsList[a].root == this) {
+            delete windowsList[a];
+            document.body.removeChild(this);
+        }
+    }
+};
+
 
 
 Array.prototype.inArray = function (elem) {
