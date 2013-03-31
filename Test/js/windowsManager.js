@@ -13,13 +13,13 @@ windowsManagerModel = {
     },
     open: function(obj){
         //obj  -  иконка,которая вызвала
-        var win,
-            winName = obj.windowOpt.name;
+        var winName = obj.windowOpt.name;
+        var win = this.windowInArray(winName);
         //проверка было ли открыто это окно?
-        if(this.windowInArray(winName)){
+        if(win!=undefined){
             if(this.windows[win].state ==='hide'){
                this.windows[win].state = 'open';
-               this.windows[win].renderAll();
+               this.windows[win].render();
             }
             } else {
                this.create(obj);
@@ -80,11 +80,12 @@ windowsManagerModel = {
         this.position.top = 40;
         this.position.left = 40;
     },
+    //ищет окно в массиве, если находит, то возвращает его номер
     windowInArray:function(winName){
-        var i= 0,res=false;
+        var i= 0,res;
         for(var i=0;i<this.windows.length;i+=1){
             if(this.windows[i].name===winName){
-                res=true;
+                res=i;
             }
         }
         return res;
