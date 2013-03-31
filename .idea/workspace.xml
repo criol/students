@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af7a5bc6-8203-43b7-af5c-1f139d1cc189" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Sparko\Documents\GitHub\students\images\bg.jpeg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/Thumbs.db" afterPath="$PROJECT_DIR$/images/Thumbs.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/desctop.css" afterPath="$PROJECT_DIR$/css/desctop.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/core.js" afterPath="$PROJECT_DIR$/js/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/icon.js" afterPath="$PROJECT_DIR$/js/icon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/window.css" afterPath="$PROJECT_DIR$/css/window.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/window.js" afterPath="$PROJECT_DIR$/js/window.js" />
     </list>
     <list id="3712825f-b448-4919-8b69-c2bae1ff7c05" name="Rejected commit: Default" comment="Add ToggleActive ( for Icon )" />
@@ -60,25 +54,25 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="72" selection-start="162" selection-end="162" vertical-scroll-proportion="-2.6153846">
+            <state line="15" column="35" selection-start="453" selection-end="453" vertical-scroll-proportion="-9.807693">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="window.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="window.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/window.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="21" selection-start="137" selection-end="137" vertical-scroll-proportion="0.15315315">
+            <state line="115" column="25" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="window.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="window.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/window.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
+            <state line="129" column="0" selection-start="3407" selection-end="3407" vertical-scroll-proportion="0.7855856">
               <folding />
             </state>
           </provider>
@@ -127,9 +121,9 @@
       <list>
         <option value="$PROJECT_DIR$/js/core.js" />
         <option value="$PROJECT_DIR$/js/icon.js" />
-        <option value="$PROJECT_DIR$/js/window.js" />
         <option value="$PROJECT_DIR$/css/desctop.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/window.js" />
         <option value="$PROJECT_DIR$/css/window.css" />
       </list>
     </option>
@@ -401,16 +395,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/core.js">
+    <entry file="file://$PROJECT_DIR$/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="716" selection-end="796" vertical-scroll-proportion="0.0">
+        <state line="14" column="6" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/common.js">
+    <entry file="file://$PROJECT_DIR$/js/core.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="6" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
+        <state line="33" column="0" selection-start="716" selection-end="796" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -424,21 +418,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="72" selection-start="162" selection-end="162" vertical-scroll-proportion="-2.6153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/window.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
+        <state line="15" column="35" selection-start="453" selection-end="453" vertical-scroll-proportion="-9.807693">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/window.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="21" selection-start="137" selection-end="137" vertical-scroll-proportion="0.15315315">
+        <state line="115" column="25" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="0" selection-start="3407" selection-end="3407" vertical-scroll-proportion="0.7855856">
           <folding />
         </state>
       </provider>

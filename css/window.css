@@ -33,7 +33,7 @@ body {
     left: 0;
 }
 
-.cont {
+.contentBlock {
     position: absolute;
     float: left;
     width: 100%;
@@ -138,11 +138,12 @@ body {
     background: url("../images/window/bottom.png") repeat-x;
 }
 
-.windowText {
+.headerText {
     position: absolute;
     top: 10px;
     text-align: left;
     vertical-align: middle;
-    width: 100%;
+    right: 80px;
+    left: 0;
 }
 

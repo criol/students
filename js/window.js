@@ -29,46 +29,106 @@ CustomWindow.prototype = {
 
     render: function(){
 
-        var windowText,
-            windowMusic,
-            containerDiv,
-            cDHeader,
+        var newWindow,
+            header,
             btnClose,
             headerText,
             headerBtnGroup,
             leftBorder,
             rightBorder,
-            bottomBorder,
-            btnRollUp;
+            footerBorder,
+            footerLeftBorder,
+            footerRightBorder,
+            headerBorder,
+            headerLeftBorder,
+            headerRightBorder,
+            btnRoll,
+            footer,
+            content,
+            contentBlock;
 
 
-        containerDiv = document.createElement('div');
-        containerDiv.className = 'window ' + this.type;
 
-        cDHeader = document.createElement('div');
-        cDHeader.className = 'windowHeader';
+        newWindow = document.createElement('div');
+        newWindow.className = 'window ' + this.type;
+
+        header = document.createElement('div');
+        header.className = 'header';
+
+        headerLeftBorder = document.createElement('div');
+        headerLeftBorder.className = 'topLeftCornerBorder';
+
+        headerRightBorder = document.createElement('div');
+        headerRightBorder.className = 'topRightCornerBorder';
+
+        headerBorder = document.createElement('div');
+        headerBorder.className = 'topCentrBorder';
+
+        headerBtnGroup = document.createElement('div');
+        headerBtnGroup.className = 'windowBtns';
 
         btnClose = document.createElement('div');
-        btnClose.className = 'btnClose';
+        btnClose.className = 'close';
 
-        windowText = document.createElement('div');
-        windowText.className = '';
-
-        btnRollUp = document.createElement('div');
-        btnRollUp.className = 'btnRollUp';
+        btnRoll = document.createElement('div');
+        btnRoll.className = 'roll';
 
         headerText = document.createElement('div');
         headerText.className ='headerText';
         headerText.innerHTML = this.name;
 
-        cDHeader.appendChild(headerText);
-        cDHeader.appendChild(btnRollUp);
-        cDHeader.appendChild(btnClose);
+        contentBlock = document.createElement('div');
+        contentBlock.className = 'contentBlock';
 
-        containerDiv.appendChild(cDHeader);
-        containerDiv.appendChild(windowText);
+        leftBorder = document.createElement('div');
+        leftBorder.className = 'leftBorder';
 
-        this.root = containerDiv;
+        rightBorder = document.createElement('div');
+        rightBorder.className = 'rightBorder';
+
+        content = document.createElement('div');
+        content.className = 'content';
+
+        footer = document.createElement('div');
+        footer.className = 'footer';
+
+        footerLeftBorder = document.createElement('div');
+        footerLeftBorder.className = 'bottomLeftCornerBorder';
+
+        footerBorder = document.createElement('div');
+        footerBorder.className = 'bottomCentrBorder';
+
+        footerRightBorder = document.createElement('div');
+        footerRightBorder.className = 'bottomRightCornerBorder';
+
+
+
+
+        headerBtnGroup.appendChild(btnRoll);
+        headerBtnGroup.appendChild(btnClose);
+
+        headerBorder.appendChild(headerText);
+        headerBorder.appendChild(headerBtnGroup);
+
+        header.appendChild(headerLeftBorder);
+        header.appendChild(headerBorder);
+        header.appendChild(headerRightBorder);
+
+        newWindow.appendChild(header);
+
+        contentBlock.appendChild(leftBorder);
+        contentBlock.appendChild(content);
+        contentBlock.appendChild(rightBorder);
+
+        newWindow.appendChild(contentBlock);
+
+        footer.appendChild(footerLeftBorder);
+        footer.appendChild(footerBorder);
+        footer.appendChild(footerRightBorder);
+
+        newWindow.appendChild(footer);
+
+        this.root = newWindow;
 
     },
 
