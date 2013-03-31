@@ -61,14 +61,14 @@ ContextMenu.prototype = {
 		{
 			if (!this.list.hasOwnProperty(i)) continue
 			li = document.createElement('li');
-			li.innerText = this.list[i].title;
+			li.innerHTML = this.list[i].title;
 			li.id = this.list[i].name;
 			this.sender = obj;
 			li.addEventListener('click', this.list[i].callBack.bind(this));
 			ul.appendChild(li);
 		}
 	
-		contextMenu.style.margin = e.y+"px 0 0 "+e.x+"px";
+		contextMenu.style.margin = e.clientY+"px 0 0 "+e.clientX+"px";
 		this.root = contextMenu;
 		
 		contextMenu.appendChild(ul);
