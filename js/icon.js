@@ -86,7 +86,7 @@ Icon.prototype = {
     },
 
     toggleActive :function() {
-        this.root.addUniqClass( iconManager.icons,'active');
+        this.root.addUniqClass('icon','active');
     },
 
 

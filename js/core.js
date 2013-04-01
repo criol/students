@@ -10,29 +10,20 @@ HTMLElement.prototype.addClass = function (newClass) {
 };
 
 
-HTMLElement.prototype.addUniqClass = function (elems, newClass) {
+HTMLElement.prototype.addUniqClass = function (shareClass, newClass) {
 
-    var classNames = [],
-        i=0;
+    var i= 0,
+        elems = document.querySelectorAll('.' + shareClass);
 
-    for (var icon in elems) {
-
-        classNames[i]  = elems[icon].root.className;
-
-        var selectedClass = classNames[i].split(' ')
-
-        classNames[i] = selectedClass.removeActive(newClass).join(' ');
-
-        elems[icon].root.className = classNames[i];
-
-        i++;
+    for (i; i<elems.length; i+=1) {
+        elems[i].className = elems[i].className.split(' ').removeActive(newClass).join(' ');
     }
+
     this.className = this.className + ' ' + newClass;
 };
 
 HTMLElement.prototype.closeWindow = function (windowsList) {
-    console.log(windowsList);
-    var a
+    var a;
     for ( a in windowsList) {
         if (windowsList[a].root == this) {
             delete windowsList[a];
