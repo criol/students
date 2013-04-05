@@ -13,11 +13,15 @@ iconsManagerModel = {
     active: {
 
     },
-
     start:function(){
         this.icons = [];
         this.iconSetting = iconsSettings;
         this.renderAll();
+    },
+    openFolder:function(){
+        this.removeAllHTML();
+        this.start();
+        this.create();
     },
     create: function(){
         for(var i = 0; i<this.iconSetting.icons.length;i+=1){

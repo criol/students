@@ -33,6 +33,22 @@ list-style: none;
 .text .img {
     background: url(../images/text.png) no-repeat top left;
 }
+
+.folder .img {
+    background: url(../images/folder.png) no-repeat top left;
+}
+
+.html .img {
+    background: url(../images/Firefox.png) no-repeat top left;
+}
+
+.link .img {
+    background: url(../images/link.png) no-repeat top left;
+}
+
+.none .img {
+    background: url(../images/none.png) no-repeat top left;
+}
 #main
 {
     position:absolute;

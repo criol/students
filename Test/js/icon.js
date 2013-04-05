@@ -3,12 +3,12 @@
 ////////////////////////////////////
 
 //Переключение между боевым отображением====>>>>>>>>>>>>>>>
-//iconsSettings  = eval("("+serverResponse+")");
+iconsSettings  = eval("("+serverResponse+")");
 
 //ИЛИ 
 
 //Тестовым контентом!!! VVVVVVVVVVVVVVVVVVVVVVVV
-iconsSettings = {"icons":[{"name":"Arabic.ini","type":"text"},{"name":"desktop.ini","type":"text"},{"name":"Kerkyth.mp3","type":"music"},{"name":"Новый док.rtf","type":"text"}]}
+//iconsSettings = {"icons":[{"name":"Arabic.ini","type":"text"},{"name":"desktop.ini","type":"text"},{"name":"Kerkyth.mp3","type":"music"},{"name":"Новый док.rtf","type":"text"}]}
 
 
 Icon = function (obj) {
@@ -66,6 +66,16 @@ Icon.prototype = {
 
     openWindow: function(){
         this.root.removeClass('active');
+		if(this.type=="folder")
+		{
+			api = "http://localhost:51204/Api/GetDektop?path="+this.path;
+			getApi(api);
+            iconsSettings  = eval("("+serverResponse+")");
+            //os.iconsManager.iconSetting = iconsSettings;
+
+            os.iconsManager.openFolder();
+           // os.iconsManager.renderAll();
+		}
         os.openWindow(this);
     },
 
@@ -79,6 +89,10 @@ Icon.prototype = {
     } ,
 
     removeHTML:function(){
+	try{
         document.getElementById('desktop').removeChild(this.root);
-    }
-};
+		}
+		
+		catch(e){}
+		}
+	};
