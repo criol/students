@@ -1,0 +1,88 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.window
+{
+	top:150px;
+	left:200px;
+	position:absolute;
+	width: 500px;
+	height: 250px;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+}
+
+.winContent
+{
+	position:relative;
+	width:500px;
+	height:200px;
+}
+
+.header
+{
+	position: relative;
+	width:500px;
+	height: 30px;
+	background:white;
+	vertical-align: top;
+	
+}
+button
+{
+	position: relative;
+	float:right;
+	width: 30px;
+	height: 30px;
+	border:none;
+}
+.Min
+{
+	background:url('../images/winmin1.png') no-repeat top left;
+}
+.Max
+{
+	background:url('../images/winmax1.png') no-repeat top left;
+
+}
+.Close
+{
+	background:url('../images/winclose1.png') no-repeat top left;
+}
+.Min:hover
+{
+	background: #ececec url('../images/winmin1.png') no-repeat top left;
+}
+.Max:hover
+{
+	background: #ececec url('../images/winmax1.png') no-repeat top left;
+
+}
+.Close:hover
+{
+	background: #ececec url('../images/winclose1.png') no-repeat top left;
+}
+.Min:active
+{
+	background: #0099ff url('../images/winmin0.png') no-repeat top left;
+}
+.Max:active
+{
+	background: #0099ff url('../images/winmax0.png') no-repeat top left;
+
+}
+.Close:active
+{
+	background: #ff0000 url('../images/winclose0.png') no-repeat top left;
+}
+
+.labelHeader
+{
+	posiion:relative;
+	margin:10px;
+	color:black;
+}

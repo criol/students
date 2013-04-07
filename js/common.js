@@ -28,7 +28,26 @@ iconManager.iconSettings = {
             }
         }
     }
-
+	//paint: {
+    //    name: 'picture',
+    //    type: 'img',
+    //    windowOpt: {
+    //        name: 'img1.jpg',
+    //        type: 'img',
+    //        width:300,
+    //        height: 200,
+    //        state: 'open',
+    //        callback: function(){
+    //            alert('opened!!!');
+    //        }
+    //    }
+    //}
+    //
 };
 
 iconManager.renderAll();
+
+document.addEventListener('contextmenu', function(e)
+{e.preventDefault();});
+document.addEventListener('click', function(e)
+{e.preventDefault();});

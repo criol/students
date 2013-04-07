@@ -5,8 +5,6 @@ CWManager = {
     windows:{}
 };
 
-
-alert('');
 CustomWindow = function(obj){
     var a;
     for (a in obj){
@@ -22,11 +20,77 @@ CustomWindow.prototype = {
         this.render();
     },
 
-    render: function(){
+    render: function(pos){
+		 var winTop,
+			 winText,
+			 winClose,
+			 winMin,
+			 winContainerDiv;
 
+			winContainerDiv = document.createElement('div');
+			winContainerDiv.className = 'win' +' ' + this.type;
+
+			winTop = document.createElement('div');
+			winTop.className = 'winTop';
+			winTop.innerHTML = this.name;
+			
+			winClose = document.createElement('div');
+			winClose.className = 'winButton'+' '+'winClose';
+			winClose.innerHTML = 'x';
+		
+			winMin = document.createElement('div');
+			winMin.className = 'winButton'+' '+'winMin';
+			winMin.innerHTML = '_';
+					
+			winText = document.createElement('div');
+			winText.className ='winText';
+
+			winContainerDiv.appendChild(winTop);
+			winContainerDiv.appendChild(winText);
+			
+			winTop.appendChild(winClose);
+			winTop.appendChild(winMin);
+
+
+			this.root = winContainerDiv;
+			
+			document.body.appendChild(winContainerDiv);
     }
-
 };
 
-
-
+//document.oncontextmenu = function()
+//{   var i=0;
+//    if (i=0)
+//    {   onClickr(this.t);
+//    }
+//    else
+//    {
+//        HideError(this.t);
+//    }
+//};
+//
+//function onClickr(t)
+//{
+//    var polX,
+//    polY,
+//    contextWin;
+//
+//    polX = event.clientX;
+//    polY = event.clientY;
+//
+//    contextWin = document.createElement('div');
+//    contextWin.className ='context';
+//    contextWin.style.top=polY+"px";
+//    contextWin.style.left=polX+"px";
+//    console.log(polX+"s"+polY);
+//
+//    document.body.appendChild(contextWin);
+//
+//    return false;
+//};
+//
+//function HideError(t)
+//{
+//    elem = document.getElementById(divId);
+//    document.body.removeChild(elem);
+//};

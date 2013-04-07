@@ -77,16 +77,27 @@ Icon.prototype = {
     assignEvents: function() {
         this.root.addEventListener('click', this.makeActive.bind(this));
         this.root.addEventListener('dblclick', this.openWindow.bind(this));
+    	this.root.addEventListener('contextmenu', this.openContextMenu.bind(this));
     },
 
-
-    makeActive: function () {
-        this.root.addClass('active');
+    makeActive: function (e) {
+  		var fromName = 'icon',
+    		className = 'active';
+   		
+    	this.root.addUniqClass(fromName, className);
     },
 
     openWindow: function(){
-        var win = new CustomWindow(this.windowOpt).init();
-       // win.open();
+    	this.root.removeClass('active');
+		var win = new CustomWindow(this.windowOpt).init();
+        //win.open();
+    },
+        
+    openContextMenu: function(e){
+    	e.preventDefault();
+    	this.root.addUniqClass('icon','active');
+    	var menu = new ContextMenu(e.pageX, e.pageY).init();
+        //win.open();
     }
 };
 
