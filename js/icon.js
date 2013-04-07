@@ -70,8 +70,7 @@ Icon.prototype = {
         containerDiv.style.left = pos.left + 'px';
 
         this.root = containerDiv;
-
-        document.body.appendChild(containerDiv);
+		document.body.appendChild(containerDiv);
     },
 
     assignEvents: function() {
@@ -81,7 +80,7 @@ Icon.prototype = {
 
 
     makeActive: function () {
-        this.root.addClass('active');
+        this.root.toggleClass('active');
     },
 
     openWindow: function(){

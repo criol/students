@@ -1,7 +1,20 @@
+*
+{
+margin:0px 0px 0px 0px;
+}
+
+
+body
+{
+    background: url('../images/bg.jpg');
+}
+
 .icon {
     width: 64px;
     height: 84px;
-    position: absolute;
+	margin:10px 10px 10px 10px;
+    //position: absolute;
+	
 }
 
 .icon .img {
@@ -13,19 +26,106 @@
     width: 64px;
     height: 20px;
     text-align: center;
+    color:white;
 }
 .icon.active {
-    border: 1px solid black;
+    border: 1px double black;
 }
 
+.win 
+{
+    width:400px;
+    height:200px;
+    top:100px;
+    left:200px;
+    border:1px solid black;
+    position:absolute;
+}
+.winTop
+{
+    height:15%;
+    text-align:center;
+    background:url('../images/bgStart.png');
+    color:white;
 
+}
+.winText
+{
+    height:85%;
+}
+.winButton
+{
+	width:21px;
+	height:21px;
+	float:right;
+	border:1px solid black;
+	margin:3px 3px 0px 0px;
+	background:#acacac;
+}
 
+.winClose
+{
+	background:#ac0000;
+}
 
+.img .img{
+    background: url(../images/page.png) no-repeat top left;
+}
 .music .img {
     background: url(../images/music.png) no-repeat top left;
 }
-
 .text .img {
     background: url(../images/text.png) no-repeat top left;
 }
 
+.panelStart
+{
+    height:30px;
+    width:100%;
+    position: absolute;
+    bottom:0;
+    background:url('../images/bgStart.png');
+}
+
+.panelStart .buttonStart
+{
+ 	width:30px;
+	height:30px;
+	background:url('../images/bStart.png');
+	float:left;
+
+}
+
+.buttonStart:hover .menuStart
+{
+    margin:-184px 0px 0px 0px;
+    width:150px;
+    height:180px;
+    border:2px solid #acacac;
+    background:#acacac;
+}
+
+.buttonStart:hover
+{
+    background:url('../images/bcStart.png');
+}
+
+.panelStart .workStart
+{
+	float:left;
+}
+
+.panelStart .oclokStart
+{
+	width:7%;
+	height:100%;
+	float:right;
+}
+
+.context
+{
+    width:150px;
+    height:200px;
+    position: absolute;
+    background: #acacac;
+}
