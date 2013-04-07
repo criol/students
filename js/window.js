@@ -2,11 +2,7 @@ var CustomWindow,
     CWManager;
 
 CWManager = {
-    windows:{},
-    position:{
-    	top:100,
-    	left:100
-    }
+    windows:{}
 };
 
 CustomWindow = function(obj){
@@ -24,47 +20,77 @@ CustomWindow.prototype = {
         this.render();
     },
 
-    render: function(){
-		var containerDiv,winHeader,btnMin,btnMax,btnClose,mainDiv,winName;
-		
-		containerDiv = document.createElement('div');
-		containerDiv.className = 'window ' + this.type;
-		
-		mainDiv = document.createElement('div');
-		mainDiv.className = 'winContent';
-		winHeader = document.createElement('div');
-		winHeader.className = 'header';
-		
-		winName = document.createElement('label');
-		winName.className = 'labelHeader';
-		winName.textContent = this.name;
-		winHeader.appendChild(winName);
-		
-		btnClose = document.createElement('button');
-		btnClose.className = 'Close';
-		winHeader.appendChild(btnClose);
-		
-		btnMax = document.createElement('button');
-		btnMax.className = 'button Max';
-		winHeader.appendChild(btnMax);
-		
-		btnMin = document.createElement('button');
-		btnMin.className = 'button Min';
-		winHeader.appendChild(btnMin);
-		
-		
-		containerDiv.appendChild(winHeader);
-		containerDiv.appendChild(mainDiv);
-		containerDiv.style.top 
-		
-		this.root = containerDiv;
-		document.body.appendChild(containerDiv);
-		
-		
-    }
+    render: function(pos){
+		 var winTop,
+			 winText,
+			 winClose,
+			 winMin,
+			 winContainerDiv;
 
+			winContainerDiv = document.createElement('div');
+			winContainerDiv.className = 'win' +' ' + this.type;
+
+			winTop = document.createElement('div');
+			winTop.className = 'winTop';
+			winTop.innerHTML = this.name;
+			
+			winClose = document.createElement('div');
+			winClose.className = 'winButton'+' '+'winClose';
+			winClose.innerHTML = 'x';
+		
+			winMin = document.createElement('div');
+			winMin.className = 'winButton'+' '+'winMin';
+			winMin.innerHTML = '_';
+					
+			winText = document.createElement('div');
+			winText.className ='winText';
+
+			winContainerDiv.appendChild(winTop);
+			winContainerDiv.appendChild(winText);
+			
+			winTop.appendChild(winClose);
+			winTop.appendChild(winMin);
+
+
+			this.root = winContainerDiv;
+			
+			document.body.appendChild(winContainerDiv);
+    }
 };
 
-
-
-//test push from aptana
+//document.oncontextmenu = function()
+//{   var i=0;
+//    if (i=0)
+//    {   onClickr(this.t);
+//    }
+//    else
+//    {
+//        HideError(this.t);
+//    }
+//};
+//
+//function onClickr(t)
+//{
+//    var polX,
+//    polY,
+//    contextWin;
+//
+//    polX = event.clientX;
+//    polY = event.clientY;
+//
+//    contextWin = document.createElement('div');
+//    contextWin.className ='context';
+//    contextWin.style.top=polY+"px";
+//    contextWin.style.left=polX+"px";
+//    console.log(polX+"s"+polY);
+//
+//    document.body.appendChild(contextWin);
+//
+//    return false;
+//};
+//
+//function HideError(t)
+//{
+//    elem = document.getElementById(divId);
+//    document.body.removeChild(elem);
+//};

@@ -1,46 +1,39 @@
-function getClassReg(className)
-{
-	return new RegExp('(\\s|^)'+'active'+'(\\s|$)');
-}
-
 HTMLElement.prototype.addClass = function (newClass) {
-    if (this.hasClass(newClass)) return this;
-    else {
+    var classNames = this.className.split(' ');
+
+    if (classNames.inArray(newClass)){
+        return this;
+    } else {
         this.className = this.className + ' ' + newClass;
         return this;
     }
 };
 
-HTMLElement.prototype.removeClass = function (className) {
-    this.className=this.className.replace(getClassReg(className),'');
-};
+HTMLElement.prototype.toggleClass = function (newClass) {
+var classNames = this.className.split(' ');
 
-HTMLElement.prototype.toggleClass = function (className) {
-    if (this.hasClass(className)) this.removeClass(className); else this.addClass(className);	
-};
+    if (classNames.inArray(newClass)){
+	//	alert(classNames.inArray([2]));
+	}
+	else {
+		this.addClass(newClass);
+      //  alert(classNames.inArray([1]));
 
-HTMLElement.prototype.hasClass = function(className) {
-	return this.className.match(getClassReg(className));
-}
-
-HTMLElement.prototype.addUniqClass = function (fromName, className) {
-    var elems = document.getElementsByClassName(fromName);
-    for(e in elems){
-	    if(Object.prototype.toString.call(elems[e]) === "[object HTMLDivElement]" && elems[e]!=this){
-			elems[e].removeClass(className);
-		}
-		else this.toggleClass(className);
 	}
 };
 
+HTMLElement.prototype.addClass = function (elems, newClass) {
+
+};
+
 Array.prototype.inArray = function (elem) {
-    var res = false,
+    var res = true,
         i = 0,
         max = this.length;
 
     for (i; i<max; i+=1){
         if (elem === this[i]){
-            res = true;
+            res = false;
         }
     }
 
