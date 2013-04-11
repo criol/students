@@ -22,7 +22,7 @@ CustomWindow.prototype = {
         this.render();
     },
 
-    render: function(){
+    render: function(pos){
 		 var winTop,
 			 winText,
 			 winClose,

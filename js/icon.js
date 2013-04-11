@@ -85,7 +85,6 @@ Icon.prototype = {
 
     openWindow: function(){
         var win = new CustomWindow(this.windowOpt).init();
-		newIconStart();
        // win.open();
     }
 };
