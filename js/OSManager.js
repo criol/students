@@ -5,6 +5,8 @@ var OSManager;
 oSManagerModel = {
 	windowsManager: {},
 	iconsManager: {},
+    startManager:{},
+
 	openWindow: function(obj){
         //obj  -   иконка ,которая вызвала
 		this.windowsManager.open(obj);
@@ -27,6 +29,7 @@ oSManagerModel = {
     start: function(){
         this.windowsManager.start();
         this.iconsManager.start();
+        this.startManager.start();
     	this.assignEvents();
 		//alert();
     },
@@ -53,14 +56,12 @@ OSManager = function (obj) {
     }
     this.windowsManager = new WindowsManager(windowsManagerModel);
     this.iconsManager = new IconsManager(iconsManagerModel);
+    this.startManager = new StartManager(startManagerModel);
 };
 
 
 OSManager.prototype = {
 
 }
-	
-
 var os = new OSManager(oSManagerModel);
 os.start();
-os.iconsManager.create();

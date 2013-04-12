@@ -1,4 +1,4 @@
-iconManager.iconSettings = {
+/*iconManager.iconSettings = {
     music: {
         name: 'deep',
         type: 'music',
@@ -35,4 +35,4 @@ iconManager.renderAll();
 document.addEventListener('contextmenu', function(e)
 {e.preventDefault();});
 document.addEventListener('click', function(e)
-{e.preventDefault();});
+{e.preventDefault();});*/

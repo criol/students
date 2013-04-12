@@ -91,8 +91,7 @@ Icon.prototype = {
     removeHTML:function(){
 	try{
         document.getElementById('desktop').removeChild(this.root);
-		}
-		
-		catch(e){}
-		}
-	};
+	}
+	catch(e){}
+	}
+};

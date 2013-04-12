@@ -6,6 +6,38 @@ li {
 list-style: none;
 }
 
+.btnStart{
+    position:relative;
+    margin-top: 3px;
+    width:  50px;
+    height: 35px;
+    border: 1px solid red;
+    float:left;
+}
+.btnStart .img
+{
+    position: relative;
+    width:35px;
+    height:35px;
+    margin:0 7px;
+    border:1px solid green;
+}
+.iconStart {
+    position: relative;
+    margin-top: 3px;
+    width:50px;
+    heght:35px;
+    border:1px solid blue;
+    float:left;
+}
+
+.iconStart .imgStart {
+    width: 35px;
+    margin: 0 7px;
+    height: 35px;
+    border:1px solid greenyellow;
+}
+
 .icon {
     width: 64px;
     height: 84px;
@@ -49,6 +81,7 @@ list-style: none;
 .none .img {
     background: url(../images/none.png) no-repeat top left;
 }
+
 #main
 {
     position:absolute;

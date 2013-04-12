@@ -16,7 +16,7 @@ iconsManagerModel = {
     start:function(){
         this.icons = [];
         this.iconSetting = iconsSettings;
-        this.renderAll();
+        this.create();
     },
     openFolder:function(){
         this.removeAllHTML();
