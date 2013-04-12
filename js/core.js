@@ -22,7 +22,7 @@ var classNames = this.className.split(' ');
 	}
 };
 
-HTMLElement.prototype.addUniqClass = function (elems, newClass) {
+HTMLElement.prototype.addClass = function (elems, newClass) {
 
 };
 

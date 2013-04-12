@@ -28,6 +28,7 @@
 	this.root = panelStart;
 	document.body.appendChild(panelStart);
 };
+
 desctorStart();
 
 function newIconStart(){
@@ -48,7 +49,7 @@ function newIconStart(){
 	};
 	
 	var newIc = function(from) {
-		newIcon = document.createElement('div'),
+		newIcon = document.createElement('div');
 		r = document.getElementsByClassName('workStart')[0];
 		newIcon.className = 'imgIcon';
 		r.appendChild(newIcon);

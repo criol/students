@@ -52,7 +52,18 @@ body
 .winText
 {
     height:85%;
+    width:98%;
+    background:url('../images/bgStart.png');
+    padding:0 1%;
 }
+
+.embwinText
+{
+    height:98%;
+    width:100%;
+    background:white;
+}
+
 .winButton
 {
 	width:21px;

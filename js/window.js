@@ -5,8 +5,6 @@ CWManager = {
     windows:{}
 };
 
-
-
 CustomWindow = function(obj){
     var a;
     for (a in obj){
@@ -22,12 +20,25 @@ CustomWindow.prototype = {
         this.render();
     },
 
+    delet: function(win){
+
+            win.addEventListener('click', function(e){
+            var delett = e.target.parentNode.parentNode;
+            document.body.removeChild(delett);
+            var r=document.getElementsByClassName('imgIcon')[0];
+                console.log(r);
+                r.remove('imgIcon')
+
+           });
+    },
+
     render: function(){
 		 var winTop,
 			 winText,
 			 winClose,
 			 winMin,
-			 winContainerDiv;
+             embWinText,
+             winContainerDiv;
 
 			winContainerDiv = document.createElement('div');
 			winContainerDiv.className = 'win' +' ' + this.type;
@@ -47,8 +58,11 @@ CustomWindow.prototype = {
 			winText = document.createElement('div');
 			winText.className ='winText';
 
-			
-			
+            embWinText = document.createElement('div');
+            embWinText.className ='embwinText';
+
+            winText.appendChild(embWinText);
+
 			winContainerDiv.appendChild(winTop);
 			winContainerDiv.appendChild(winText);
 			
@@ -60,12 +74,8 @@ CustomWindow.prototype = {
 			
 			document.body.appendChild(winContainerDiv);
 
-            winClose.click =function()
-            {
-                 document.body.removeChild(winContainerDiv);
-            };
+            this.delet(winClose);
     }
-
 };
 
 document.oncontextmenu = function()
@@ -87,7 +97,32 @@ document.oncontextmenu = function()
     return false;
 };
 
-document.click= function()
-{
-    document.body.removeChild('div');
-};
+
+//размер
+//document.body.onmousedown = function(e)
+//{
+//    if (e.target.className == "winText")
+//    {
+//        var polX,
+//        polY,
+//        sch= 0,
+//        polStX,
+//        polStY;
+//
+//        polX = event.clientX;
+//        polY = event.clientY;
+//        //if(sch==0)
+//        //{
+//        //    sch=1;
+//        //    polStX=e.target.style.width;
+//        //    polStY=e.target.style.height;
+//        //}
+//        //polX=polX-polStX;
+//        //polY=polY-polStY;
+//
+//        e.target.style.width=+polX+"px";
+//        e.target.style.height=+polY+"px";
+//        console.log(polX+"s"+polY);
+//    }
+//
+//};
