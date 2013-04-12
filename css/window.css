@@ -2,17 +2,36 @@
 {
 	margin: 0px;
 	padding: 0px;
+        font-family: 'Tahoma', Times, serif;
+	font-style: normal;
+	font-size: 8pt;
+	color: #fff;
+	text-shadow: #000  0   0   4px,
+		     #000  1px 1px 1px, #000 -1px -1px 1px,
+		     #000 -1px 1px 1px, #000  1px -1px 1px;
+}
+
+.window.active
+{
+    z-index: 3;
+}
+
+.window{
+	z-index: 2;
 }
 
 .window.open
 {
-	top:150px;
-	left:200px;
-	position:absolute;
-	width: 500px;
-	height: 250px;
-     background-color: rgba(255, 255, 255, 0.8);
-	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ��� Firefox */
+    top:150px;
+    left:200px;
+    position:absolute;
+    width: 500px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;  /* свойство для тех кто его поддерживает */
+    -moz-border-radius: 4px;  /* для firefox */
+    -webkit-border-radius: 4px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ��� Firefox */
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ��� Safari � Chrome */
     box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ��������� ���� */
 }
@@ -32,6 +51,7 @@
     border:1px solid blue;
 
 }
+
 .winContent
 {
 	position:relative;
@@ -99,7 +119,9 @@ button
 
 .labelHeader
 {
-	posiion:relative;
+	position:absolute;
 	margin:10px;
-	color:black;
+	margin-top:10px !important;
+	color: #000 !important;
+	text-shadow: #fff 0 0 0px !important;
 }

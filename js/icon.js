@@ -1,39 +1,18 @@
-var Icon,
-    iconManager;
+///////////////////////////////////
+///////Модель иконки по типу///////
+////////////////////////////////////
 
-iconManager = {
-    iconSettings: {},
+//Переключение между боевым отображением====>>>>>>>>>>>>>>>
+//iconsSettings  = eval("("+serverResponse+")");
 
-    icons: {},
+//ИЛИ 
 
-    position: {
-        top: 10,
-        left: 10
-    },
+//Тестовым контентом!!! VVVVVVVVVVVVVVVVVVVVVVVV
+iconsSettings = {"icons":[{"name":"Arabic.ini","type":"text"},{"name":"desktop.ini","type":"text"},{"name":"Kerkyth.mp3","type":"music"},{"name":"Новый док.rtf","type":"text"}]}
 
-    active: {
-
-    },
-
-    renderAll: function(){
-        var a;
-
-        for (a in this.iconSettings) {
-
-            new Icon(this.iconSettings[a]).init(this.position);
-
-            this.position.top+=100;
-            if (this.position.top > 500) {
-                this.position.left += 100;
-                this.position.top = 10;
-            }
-        }
-    }
-};
 
 Icon = function (obj) {
     var a;
-
     for (a in obj){
         if (obj.hasOwnProperty(a)){
             this[a] = obj[a];
@@ -43,7 +22,6 @@ Icon = function (obj) {
 
 Icon.prototype = {
     init: function(pos) {
-        iconManager.icons[this.name] = this;
         this.render(pos);
         this.assignEvents();
     },
@@ -70,35 +48,51 @@ Icon.prototype = {
         containerDiv.style.left = pos.left + 'px';
 
         this.root = containerDiv;
-
-        document.body.appendChild(containerDiv);
+        document.getElementById('desktop').appendChild(containerDiv);
+        this.isRender = true;
     },
 
     assignEvents: function() {
-        this.root.addEventListener('click', this.makeActive.bind(this));
+        this.root.addEventListener('click', function(){os.makeActiveIcon(this)});
         this.root.addEventListener('dblclick', this.openWindow.bind(this));
-    	this.root.addEventListener('contextmenu', this.openContextMenu.bind(this));
+        this.root.addEventListener('contextmenu', this.openContextMenu.bind(this));
     },
-
+/*
     makeActive: function (e) {
-  		var fromName = 'icon',
-    		className = 'active';
-   		
-    	this.root.addUniqClass(fromName, className);
-    },
+        var fromName = 'icon',
+            className = 'active';
+        this.root.addUniqClass(fromName, className);
+    },*/
 
     openWindow: function(){
-    	this.root.removeClass('active');
-		var win = new CustomWindow(this.windowOpt).init();
-        //win.open();
+        this.root.removeClass('active');
+		if(this.type=="folder")
+		{
+			api = "http://localhost:51204/Api/GetDektop?path="+this.path;
+			getApi(api);
+            iconsSettings  = eval("("+serverResponse+")");
+            //os.iconsManager.iconSetting = iconsSettings;
+
+            os.iconsManager.openFolder();
+           // os.iconsManager.renderAll();
+		}
+        os.openWindow(this);
     },
-        
+
     openContextMenu: function(e){
-    	e.preventDefault();
-    	this.root.addUniqClass('icon','active');
-    	var menu = new ContextMenu(e.pageX, e.pageY).init();
+        e.preventDefault();
+        this.root.addUniqClass('icon','active');
+        Menu = new ContextMenu(menuSettings);
+		Menu.init(e, this);
+		//console.log(menu);
         //win.open();
-    }
-};
+    } ,
 
-
+    removeHTML:function(){
+	try{
+        document.getElementById('desktop').removeChild(this.root);
+		}
+		
+		catch(e){}
+		}
+	};
