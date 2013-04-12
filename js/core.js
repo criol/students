@@ -1,6 +1,6 @@
 function getClassReg(className)
 {
-	return new RegExp('(\\s|^)'+'active'+'(\\s|$)');
+	return new RegExp('(\\s|^)'+className+'(\\s|$)');
 };
 
 HTMLElement.prototype.addClass = function (newClass) {

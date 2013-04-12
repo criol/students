@@ -19,7 +19,11 @@ windowsManagerModel = {
         if(win!=undefined){
             if(this.windows[win].state ==='hide'){
                this.windows[win].state = 'open';
-               this.windows[win].render();
+               this.windows[win].showWindow();
+            } else {
+                this.windows[win].state = 'hide';
+                this.windows[win].removeHTML();
+                this.windows[win].render();
             }
             } else {
                this.create(obj);

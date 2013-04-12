@@ -10,10 +10,12 @@ oSManagerModel = {
 	openWindow: function(obj){
         //obj  -   иконка ,которая вызвала
 		this.windowsManager.open(obj);
+        this.startManager.open(obj);
 	},
 	closeWindow: function(obj){
         //obj - окно
         this.windowsManager.close(obj);
+        this.startManager.close(obj);
 	},
     maxWindow:function(obj){
         //obj - окно

@@ -6,10 +6,6 @@ startManagerModel = {
     iconsStart: {},
     iconStartSetting:{},
 
-    position: {
-        top: 0,
-        left: 0
-    },
     start:function(){
         this.iconsStart = [];
         this.iconStartSetting = iconsStartSettings;
@@ -24,6 +20,35 @@ startManagerModel = {
         }
         this.renderAll();
     },
+    createIconStart:function(obj){
+        //obj is ico
+        iconStartModel.name=obj.name;
+        iconStartModel.type=obj.type;
+        var icoStart = new IconStart(iconStartModel);
+        icoStart.render();
+        icoStart.makeActive();
+        this.iconsStart.push(icoStart);
+    },
+    open:function(obj){
+        //obj  -  иконка,которая вызвала
+        var name = obj.name;
+        var ico = this.iconStartInArray(name);
+        if(ico!=undefined){
+                this.iconsStart[ico].makeActive();
+        } else {
+            this.createIconStart(obj);
+        }
+    },
+    close:function(obj){
+        //obj is win
+        var name = obj.name,
+            ico=this.iconStartInArray(name);
+        if(ico!=undefined){
+            this.iconsStart.removeElement(this.iconsStart[ico]);
+        }
+        this.removeAllHTML();
+        this.renderAll();
+    },
     removeAllHTML:function(){
         for(var iconStart in this.iconsStart){
             if(!this.iconsStart.hasOwnProperty(iconStart)) continue
@@ -34,23 +59,26 @@ startManagerModel = {
     },
     renderAll: function(){
         this.removeAllHTML();
-        this.setDefaultPosition();
         var a;
         for (a in this.iconsStart) {
             if (!this.iconsStart.hasOwnProperty(a)) continue
-            this.iconsStart[a].init(this.position);
-            this.position.left+=40;
-            if (this.position.left >800) continue
+            this.iconsStart[a].init();
         }
-    },
-    setDefaultPosition:function(){
-        this.position.left=0;
-        this.position.top=0;
     },
     makeActive:function(obj){
         var fromName = 'iconStart',
             className = 'active';
         obj.addUniqClass(fromName, className);
+    },
+    //ищет иконку в массиве, если находит, то возвращает ее номер
+    iconStartInArray:function(name){
+        var i= 0,res;
+        for(var i=0;i<this.iconsStart.length;i+=1){
+            if(this.iconsStart[i].name===name){
+                res=i;
+            }
+        }
+        return res;
     },
     removeIconStart:function(obj){
         if(this.iconsStart.inArray(obj))

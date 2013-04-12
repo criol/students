@@ -21,23 +21,18 @@ list-style: none;
     height:35px;
     margin:0 7px;
     border:1px solid green;
+    background-size: 35px 35px;
 }
 .iconStart {
     position: relative;
     margin-top: 3px;
     width:50px;
     heght:35px;
-    border:1px solid blue;
     float:left;
 }
-
-.iconStart .imgStart {
-    width: 35px;
-    margin: 0 7px;
-    height: 35px;
-    border:1px solid greenyellow;
+.iconStart.active {
+    border: 1px solid black;
 }
-
 .icon {
     width: 64px;
     height: 84px;
@@ -129,4 +124,11 @@ list-style: none;
 {
 	color: #000 !important;
 	text-shadow: #fff 0 0 0px !important;
+}
+.iconStart .img {
+    width: 35px;
+    margin: 0 7px;
+    height: 35px;
+    border:1px solid greenyellow;
+    background-size: 35px 35px;
 }

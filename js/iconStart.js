@@ -8,7 +8,12 @@
 ///////////////////////////////////
 ///////Модель иконки в меню ПУСК///
 ////////////////////////////////////
-iconsStartSettings = {"iconsStart":[{"name":"Kerkyth.mp3","type":"music"}]}
+iconsStartSettings = {"iconsStart":[{"name":"Kerkyth.mp3","type":"music"}]};
+
+iconStartModel = {
+    name:'',
+    type:''
+};
 
 IconStart = function (obj) {
     var a;
@@ -20,12 +25,12 @@ IconStart = function (obj) {
 };
 
 IconStart.prototype = {
-    init: function(pos) {
-        this.render(pos);
+    init: function() {
+        this.render();
         this.assignEvents();
     },
 
-    render: function (pos) {
+    render: function () {
         var iconImg,
             containerDiv;
 
@@ -33,11 +38,8 @@ IconStart.prototype = {
         containerDiv.className = 'iconStart ' + this.type;
 
         iconImg = document.createElement('div');
-        iconImg.className = 'imgStart';
+        iconImg.className = 'img';
         containerDiv.appendChild(iconImg);
-
-        containerDiv.style.top = pos.top + 'px';
-        containerDiv.style.left = pos.left + 'px';
 
         this.root = containerDiv;
         document.getElementById('StartPanel').appendChild(containerDiv);
@@ -45,11 +47,12 @@ IconStart.prototype = {
     },
 
     assignEvents: function() {
-        this.root.addEventListener('click', function(){os.makeActiveIcon(this)});
-        this.root.addEventListener('dblclick', this.openWindow.bind(this));
+        this.root.addEventListener('click', this.openWindow.bind(this));
         this.root.addEventListener('contextmenu', this.openContextMenu.bind(this));
     },
-
+    makeActive: function(){
+        this.root.addClass('active');
+    },
     openWindow: function(){
         this.root.removeClass('active');
       /*  if(this.type=="folder")

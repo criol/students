@@ -37,12 +37,7 @@
 }
 .window.hide
 {
-    width:20px;
-    height:20px;
-    opacity:0.5;
-    top:500px;
-    left:10px;
-    border:1px solid red;
+    display:none;
 }
 .window.max
 {

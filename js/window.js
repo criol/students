@@ -33,7 +33,6 @@ Window.prototype = {
     },
     render: function(pos){
         var containerDiv,winHeader,btnMin,btnMax,btnClose,mainDiv,winName;
-
         containerDiv = document.createElement('div');
         containerDiv.className = 'window ' + this.type+' '+this.state;
         if(pos!=undefined){
@@ -72,6 +71,11 @@ Window.prototype = {
         this.root = containerDiv;
         document.getElementById('desktop').appendChild(containerDiv);
         this.assignEvents();
+    },
+    showWindow:function(){
+        this.root.removeClass('hide');
+        this.root.addClass('open');
+        this.root.style.display='block';
     },
     maximize:function(){
         this.removeHTML();
