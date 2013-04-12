@@ -1,8 +1,28 @@
+///////////////////////////////////
+///////Модель  окна////////////////
+////////////////////////////////////
+windowModel = {
+    name:'',
+    type:'',
+    width:400,
+    height:200,
+    top:50,
+    left:50,
+    state:'open',
+    isRender:false,
+    layer:2,
+    callback: function(){
+        alert('opened!!!');
+    }
+};
+
 Window = function(obj){
+    windowModel.name = obj.name;
+    windowModel.type = obj.type;
     var a;
-    for (a in obj){
-        if(obj.hasOwnProperty(a)){
-            this[a] = obj[a];
+    for (a in windowModel){
+        if(windowModel.hasOwnProperty(a)){
+            this[a] = windowModel[a];
         }
     }
 }
@@ -77,26 +97,3 @@ Window.prototype = {
         this.root.addEventListener('click',this.makeActive.bind(this));
     }
 };
-
-///////////////////////////////////
-///////Модель  окна////////////////
-////////////////////////////////////
-windowModel = {
-    name:'',
-    type:'',
-    width:0,
-    height:0,
-    top:0,
-    left:0,
-    state:'open',
-    isRender:false,
-    layer:2,
-    position:{
-        top:0,
-        left:0
-    },
-    callback: function(){
-        alert('opened!!!');
-    }
-};
-
