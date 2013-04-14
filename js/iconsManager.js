@@ -61,16 +61,8 @@ iconsManagerModel = {
             className = 'active';
         obj.addUniqClass(fromName, className);
 	},
-	removeIcon:function(obj){
-		if(this.icons.inArray(obj))
-		{		
-			this.icons.removeElement(obj);
-			var forSer = {};
-			
-			console.log(this.icons);  
-			
-			//console.log(forSer);
-			//console.log(localStorage.getItem('testObject'));
+	writeStorage:function(){
+	var forSer = {icons:[]};
 			for(var i=0; i<this.icons.length; i++)
 			{
 				var obj = {};
@@ -81,14 +73,35 @@ iconsManagerModel = {
                         if(a!="root"){
                             obj[a]=icon[a];
                         }
-                    }
+                    }	
 				}
+				forSer.icons.push(obj);
 			}
-			JSON.stringify(this.icons)
-			//localStorage.setItem('testObject', );
-			console.log(this.icons);
+			localStorage.setItem('testObject', JSON.stringify(forSer));
+	},
+	removeIcon:function(obj){
+		if(this.icons.inArray(obj))
+		{		
+			this.icons.removeElement(obj);
+			this.writeStorage();
 			this.renderAll();
 		}
+	},
+	renameIcon:function(obj){
+		if(this.icons.inArray(obj))
+		{		
+			if(confirm("Rename Icon?"+obj.name))
+			{
+			obj.name = "RENAMED!!! " +obj.name;
+			this.writeStorage();
+			this.renderAll();
+			}
+		}
+	},
+	addIcon:function(obj){
+		this.icons.push(new Icon({name:"olollo", type:"html", data:"oooooooo"}));
+			this.writeStorage();
+			this.renderAll();
 	}
 };
 

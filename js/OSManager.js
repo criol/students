@@ -36,7 +36,7 @@ oSManagerModel = {
 		//alert();
     },
 	closeContext: function(){
-		if(Menu=!'undefined')
+		//if(Menu=!'undefined'&&Menu!=false)
 		Menu.destroy();
 	},
 	assignEvents: function(){
@@ -46,6 +46,12 @@ oSManagerModel = {
 	removeIcon: function(obj){
 		this.iconsManager.removeIcon(obj);
 		obj.removeHTML();
+	},
+	renameIcon: function(obj){
+		this.iconsManager.renameIcon(obj);
+	},
+	addIcon: function(){
+		this.iconsManager.addIcon();
 	},
 	openContext: function(e)
 	{

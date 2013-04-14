@@ -3,7 +3,7 @@ var Menu;
 var menuIconSettings= {list:[
    { 
 		name: 'Destroy',
-		title: 'Удалить',
+		title: 'Уда<u>л</u>ить',
 		callBack: function()
 		{
 			os.removeIcon(this.sender);
@@ -11,15 +11,31 @@ var menuIconSettings= {list:[
 	},
 	{
 		name: 'Open',
-		title: 'Открыть',
+		title: '<u>О</u>ткрыть',
 		callBack: function()
 		{
 			os.openWindow(this.sender);
 		}
 	},
 	{
+		name: 'Rename',
+		title: 'Пере<u>и</u>меновать',
+		callBack: function()
+		{
+			os.renameIcon(this.sender);
+		}
+	},
+	{
+		name: 'copy',
+		title: 'Ко<u>п</u>ировать',
+		callBack: function()
+		{
+			os.addIcon();
+		}
+	},
+	{
 		name: 'prop',
-		title: 'Свойства',
+		title: '<u>С</u>войства',
 		callBack: function()
 		{
 			alert("Name: "+this.sender.name+"\nType: "+this.sender.type);
@@ -36,7 +52,7 @@ var menuDesktopSettings= {list:[
 		title: 'Создать >',
 		callBack: function()
 		{
-			
+			os.addIcon();
 		}
 	},
 	{

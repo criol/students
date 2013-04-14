@@ -10,7 +10,7 @@
 //Тестовым контентом!!! VVVVVVVVVVVVVVVVVVVVVVVV
 
 // Put the object into storage
-if(localStorage.getItem('testObject')==null)
+if(localStorage.getItem('testObject')==null || JSON.parse(localStorage.getItem('testObject')).icons.length==0)
 {
 alert("You First Time!!!");
 var testObject = {"icons":[{"name":"Arabic.ini","type":"text","data":"Title  = Ethernet-Adaptertreiber, Description = Ethernet-Adaptertreiber installieren."},{"name":"desktop.ini","type":"text","data":"[Desktop] On MacBook Pro"},{"name":"Avetis.mp3","type":"music", "data":"Avetis.mp3"},{"name":"dema.html","type":"html", "data":"dema.html"},{"name":"Новый док.rtf","type":"text", "data":"Инфографика ИТАР-ТАСС. Иллюстрированные сведения о продолжительности новогодних и майских праздников в 2013 г. и переносе выходных дней, Минтруд предложил назначить россиянам 10-дневные каникулы в январе и девять выходных в мае."},{"name":"Ne budite spyaschih.mp3","type":"music", "data":"Ne budite spyaschih.mp3"},{"name":"Девочка огонь.mp4","type":"video", "data":"lie to me.mp4"},{"name":"Sofuri","type":"html", "data":"_start.html"}]}
@@ -52,6 +52,7 @@ Icon.prototype = {
         iconText = document.createElement('div');
         iconText.className = 'text';
         iconText.innerHTML = this.name;
+		iconText.addEventListener('dblclick', this.renameIcon.bind(this));
 
         containerDiv.appendChild(iconImg);
         containerDiv.appendChild(iconText);
@@ -68,6 +69,9 @@ Icon.prototype = {
         this.root.addEventListener('click', function(){os.makeActiveIcon(this)});
         this.root.addEventListener('dblclick', this.openWindow.bind(this));
         this.root.addEventListener('contextmenu', this.openContextMenu.bind(this));
+    },
+    renameIcon: function() {
+        os.renameIcon(this);
     },
 /*
     makeActive: function (e) {
