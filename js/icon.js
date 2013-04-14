@@ -8,7 +8,19 @@
 //ИЛИ 
 
 //Тестовым контентом!!! VVVVVVVVVVVVVVVVVVVVVVVV
-iconsSettings = {"icons":[{"name":"Arabic.ini","type":"text","data":"Title  = Ethernet-Adaptertreiber, Description = Ethernet-Adaptertreiber installieren."},{"name":"desktop.ini","type":"text","data":"[Desktop] On MacBook Pro"},{"name":"Avetis.mp3","type":"music", "data":"Avetis.mp3"},{"name":"dema.html","type":"html", "data":"dema.html"},{"name":"Новый док.rtf","type":"text", "data":"Инфографика ИТАР-ТАСС. Иллюстрированные сведения о продолжительности новогодних и майских праздников в 2013 г. и переносе выходных дней, Минтруд предложил назначить россиянам 10-дневные каникулы в январе и девять выходных в мае."},{"name":"Ne budite spyaschih.mp3","type":"music", "data":"Ne budite spyaschih.mp3"},{"name":"Девочка огонь.mp4","type":"video", "data":"lie to me.mp4"},{"name":"Sofuri","type":"html", "data":"_start.html"}]}
+
+// Put the object into storage
+if(localStorage.getItem('testObject')==null)
+{
+alert("You First Time!!!");
+var testObject = {"icons":[{"name":"Arabic.ini","type":"text","data":"Title  = Ethernet-Adaptertreiber, Description = Ethernet-Adaptertreiber installieren."},{"name":"desktop.ini","type":"text","data":"[Desktop] On MacBook Pro"},{"name":"Avetis.mp3","type":"music", "data":"Avetis.mp3"},{"name":"dema.html","type":"html", "data":"dema.html"},{"name":"Новый док.rtf","type":"text", "data":"Инфографика ИТАР-ТАСС. Иллюстрированные сведения о продолжительности новогодних и майских праздников в 2013 г. и переносе выходных дней, Минтруд предложил назначить россиянам 10-дневные каникулы в январе и девять выходных в мае."},{"name":"Ne budite spyaschih.mp3","type":"music", "data":"Ne budite spyaschih.mp3"},{"name":"Девочка огонь.mp4","type":"video", "data":"lie to me.mp4"},{"name":"Sofuri","type":"html", "data":"_start.html"}]}
+localStorage.setItem('testObject', JSON.stringify(testObject));
+}
+
+// Retrieve the object from storage
+var retrievedObject = localStorage.getItem('testObject');
+
+iconsSettings = JSON.parse(retrievedObject);
 
 
 Icon = function (obj) {

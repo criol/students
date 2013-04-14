@@ -63,8 +63,31 @@ iconsManagerModel = {
 	},
 	removeIcon:function(obj){
 		if(this.icons.inArray(obj))
-		{
+		{		
 			this.icons.removeElement(obj);
+			var forSer = {};
+			
+			console.log(this.icons);  
+			
+			//console.log(forSer);
+			//console.log(localStorage.getItem('testObject'));
+			for(var i=0; i<this.icons.lenght; i++)
+			{alert("lll");
+				var obj = {};
+				for(a in this.icons[i])
+				{
+				if (this.icons[i].hasOwnProperty(a))
+					{
+					if(a!="root"){
+					alert(a);
+						obj[a]=this.icons[i][a];
+						}
+					}					
+				}
+			}
+			JSON.stringify(this.icons)
+			//localStorage.setItem('testObject', );
+			console.log(this.icons);
 			this.renderAll();
 		}
 	}

@@ -12,3 +12,10 @@ C:\Users\Компьютер\Documents\AptanaProjects\desk\students\Test\API-Serv
 C:\Users\Компьютер\Documents\AptanaProjects\desk\students\Test\API-Server\windows\obj\Debug\windows.csprojResolveAssemblyReference.cache
 C:\Users\Компьютер\Documents\AptanaProjects\desk\students\Test\API-Server\windows\obj\Debug\windows.dll
 C:\Users\Компьютер\Documents\AptanaProjects\desk\students\Test\API-Server\windows\obj\Debug\windows.pdb
+C:\Users\Демьян\Documents\GitHub\students\API-Server\windows\bin\windows.dll
+C:\Users\Демьян\Documents\GitHub\students\API-Server\windows\bin\windows.pdb
+C:\Users\Демьян\Documents\GitHub\students\API-Server\windows\bin\EntityFramework.dll
+C:\Users\Демьян\Documents\GitHub\students\API-Server\windows\bin\EntityFramework.xml
+C:\Users\Демьян\Documents\GitHub\students\API-Server\windows\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Демьян\Documents\GitHub\students\API-Server\windows\obj\Debug\windows.dll
+C:\Users\Демьян\Documents\GitHub\students\API-Server\windows\obj\Debug\windows.pdb
