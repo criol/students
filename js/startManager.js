@@ -24,6 +24,7 @@ startManagerModel = {
         //obj is ico
         iconStartModel.name=obj.name;
         iconStartModel.type=obj.type;
+        iconStartModel.isStartPanel = false;
         var icoStart = new IconStart(iconStartModel);
         icoStart.render();
         icoStart.makeActive();
@@ -44,10 +45,14 @@ startManagerModel = {
         var name = obj.name,
             ico=this.iconStartInArray(name);
         if(ico!=undefined){
-            this.iconsStart.removeElement(this.iconsStart[ico]);
+            if(this.iconsStart[ico].isStartPanel){
+               this.iconsStart[ico].makeDeactive();
+            }else{
+                this.iconsStart[ico].removeHTML();
+                this.iconsStart.removeElement(this.iconsStart[ico]);
+            }
+            this.renderAll();
         }
-        this.removeAllHTML();
-        this.renderAll();
     },
     removeAllHTML:function(){
         for(var iconStart in this.iconsStart){

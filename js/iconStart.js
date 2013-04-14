@@ -8,11 +8,12 @@
 ///////////////////////////////////
 ///////Модель иконки в меню ПУСК///
 ////////////////////////////////////
-iconsStartSettings = {"iconsStart":[{"name":"Avetis.mp3","type":"music", "data":"Avetis.mp3"}]};
+iconsStartSettings = {"iconsStart":[{"name":"Avetis.mp3","type":"music", "data":"Avetis.mp3",isStartPanel:true}]};
 
 iconStartModel = {
     name:'',
-    type:''
+    type:'',
+    isStartPanel:false
 };
 
 IconStart = function (obj) {
@@ -54,7 +55,7 @@ IconStart.prototype = {
         this.root.addClass('active');
     },
     openWindow: function(){
-        this.root.removeClass('active');
+        this.makeActive();
       /*  if(this.type=="folder")
         {
             api = "http://localhost:51204/Api/GetDektop?path="+this.path;
@@ -63,6 +64,9 @@ IconStart.prototype = {
             os.iconsManager.openFolder();
         }  */
         os.openWindow(this);
+    },
+    makeDeactive:function(){
+        this.root.removeClass('active');
     },
 
     openContextMenu: function(e){
