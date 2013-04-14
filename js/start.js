@@ -35,6 +35,7 @@ PanelPusc = function (obj) {
         }
     }
 };
+var adre ;
 
 PanelPusc.prototype = {
  desctorStart: function(){
@@ -42,7 +43,11 @@ PanelPusc.prototype = {
 	buttonStart,
 	workStart,
 	oclokStart,
-    panelStart;
+    panelStart,
+    close,replay,controlDiv,user,
+    stringText,
+    stringMusic,IM,PM,IT,PT,
+    embmenuStart;
 
 	panelStart = document.createElement('div');
 	panelStart.className = 'panelStart';
@@ -55,11 +60,65 @@ PanelPusc.prototype = {
 	
 	oclokStart = document.createElement('div');
 	oclokStart.className = 'oclokStart';
-	
+
+
 	menuStart = document.createElement('div');
 	menuStart.className = 'menuStart';
 
-	buttonStart.appendChild(menuStart);
+
+    embmenuStart = document.createElement('div');
+    embmenuStart.className = 'embmenuStart';
+
+    close = document.createElement('div');
+    close.className = 'close';
+    close.addEventListener('click',function(){window.close(true)});
+
+
+     user = document.createElement('div');
+    user.className = 'user';
+
+    controlDiv = document.createElement('div');
+    controlDiv.className = 'control';
+
+    replay = document.createElement('div');
+    replay.className = 'replay';
+     replay.addEventListener('click',function(){window.location.reload(true)});
+
+    stringText = document.createElement('div');
+    stringText.className = 'stringText'
+
+    stringMusic = document.createElement('div');
+    stringMusic.className = 'stringMusic';
+
+     IM = document.createElement('div');
+     IM.className = 'IM';
+
+     PM = document.createElement('div');
+     PM.className ='PM';
+     PM.innerHTML='Music';
+
+     IT = document.createElement('div');
+     IT.className = 'IT';
+
+     PT = document.createElement('div');
+     PT.className = 'PT';
+     PT.innerHTML='Text';
+
+    stringMusic.appendChild(IM);
+    stringMusic.appendChild(PM);
+
+    stringText.appendChild(IT);
+    stringText.appendChild(PT);
+
+    embmenuStart.appendChild(stringMusic);
+    embmenuStart.appendChild(stringText);
+
+    menuStart.appendChild(embmenuStart);
+    menuStart.appendChild(user);
+    menuStart.appendChild(controlDiv);
+    controlDiv.appendChild(close);
+    controlDiv.appendChild(replay);
+    buttonStart.appendChild(menuStart);
 	panelStart.appendChild(buttonStart);
 	panelStart.appendChild(workStart);
 	panelStart.appendChild(oclokStart);
@@ -67,12 +126,29 @@ PanelPusc.prototype = {
 	document.body.appendChild(panelStart);
 },
 
-delIcon: function(names){
+ delIcon: function(names){
        var k = document.getElementsByClassName('workStart')[0],
            l = document.getElementsByClassName(names+'imgIcon')[0];
            k.removeChild(l);
-       //r.substring(0, r.length - 3);
-       //console.log(r);
+},
+
+ minIcn: function(polo,min){
+     var i,adres,minim;
+     if(polo!='min')
+     {
+        adre=polo;
+     }
+     else
+     {
+         minim=polo;
+     }
+     adre.addEventListener('click', function (){
+     if(minim=='min')
+     {   adres=min;
+         adres.style.display='block';
+         minim='max';
+     }
+     });
 
 },
 
@@ -94,13 +170,14 @@ delIcon: function(names){
         };
 
         var newIc = function(from) {
-        	newIcon = document.createElement('div');
+            var newIcon,
+                r;
+            newIcon = document.createElement('div');
         	r = document.getElementsByClassName('workStart')[0];
         	newIcon.className =iconc.type+'imgIcon'
             r.appendChild(newIcon);
-        	this.room=r;
-
-
+        	this.root=r;
+            PanelPusc.prototype.minIcn(newIcon,r);
         };
 
         newIc.subscribe(Icon);

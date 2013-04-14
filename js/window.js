@@ -30,10 +30,10 @@ CustomWindow.prototype = {
     },
     minWin:function (min){
            min.addEventListener('click',function(e){
-              var min = e.target.parentNode.parentNode,
-                  polo = 'min';
-              min.style.display='none';
-              PanelPusc.prototype.newIconStart(polo);
+           var min = e.target.parentNode.parentNode,
+               polo = 'min';
+           min.style.display='none';
+           PanelPusc.prototype.minIcn(polo,min);
 
            });
 
@@ -47,7 +47,7 @@ CustomWindow.prototype = {
              polY = event.clientY;
 
              contextWin = document.createElement('div');
-             contextWin.className ='context';
+             contextWin.className ='contex';
              contextWin.style.top=polY+"px";
              contextWin.style.left=polX+"px";
              console.log(polX+"s"+polY);
@@ -106,14 +106,14 @@ CustomWindow.prototype = {
 
 document.oncontextmenu = function(e)
 {
-    if((e.target.className== 'img')||(e.target.className== 'text'))
+        if((e.target.className== 'img')||(e.target.className== 'text'))
         {
             Icon.prototype.context(e);
             return false;
         }
         else
         {
-            if(e.target== document.body)
+            if(e.target.tagName=='HTML')
             {
                 CustomWindow.prototype.contex(e);
                 return false;
@@ -124,6 +124,14 @@ document.oncontextmenu = function(e)
             }
         }
 };
+
+
+
+
+
+
+
+
 
 
 //размер

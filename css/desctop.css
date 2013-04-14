@@ -7,13 +7,14 @@ margin:0px 0px 0px 0px;
 body
 {
     background: url('../images/bg.jpg');
+
 }
 
 .icon {
     width: 64px;
     height: 84px;
 	margin:10px 10px 10px 10px;
-    //position: absolute;
+    position: absolute;
 	
 }
 
@@ -32,7 +33,7 @@ body
     border: 1px double black;
 }
 
-.win 
+.win
 {
     width:400px;
     height:200px;
@@ -40,6 +41,8 @@ body
     left:200px;
     border:1px solid black;
     position:absolute;
+    border-radius: 7px;
+    border-radius: 7px;
 }
 .winTop
 {
@@ -47,6 +50,8 @@ body
     text-align:center;
     background:url('../images/bgStart.png');
     color:white;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 
 }
 .winText
@@ -56,6 +61,8 @@ body
     background:url('../images/bgStart.png');
     padding:0 1%;
     cursor:move;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
 }
 
 .embwinText
@@ -64,6 +71,8 @@ body
     width:100%;
     background:white;
     cursor:default;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .winButton
@@ -107,6 +116,9 @@ body
     width:30px;
     height:28px;
     float:left;
+    cursor:pointer;
+    margin:0px 0px 3px 0px;
+
 }
 
 .text .img
@@ -120,6 +132,9 @@ body
     width:30px;
     height:28px;
     float:left;
+    cursor:pointer;
+    margin:0px 0px 3px 0px;
+
 }
 
 .panelStart
@@ -142,11 +157,23 @@ body
 
 .buttonStart:hover .menuStart
 {
-    margin:-184px 0px 0px 0px;
-    width:150px;
-    height:180px;
+    margin:-253px 0px 0px 0px;
+    width:240px;
+    height:220px;
     border:2px solid #acacac;
-    background:#acacac;
+    background:url('../images/bgStart.png');
+    padding:50% 0px;
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+}
+
+.buttonStart:hover .embmenuStart
+{
+    border-radius:5px;
+    width:150px;
+    height:220px;
+    border:2px solid #acacac;
+    background:#ffffff;
 }
 
 .buttonStart:hover
@@ -168,18 +195,11 @@ body
 
 .workStart
 {
+    margin:0px 0px 0px 10px;
 	width:500px;
 	height:30px;
 	float:left;
 
-}
-
-.context
-{
-    width:150px;
-    height:200px;
-    position: absolute;
-    background: #acacac;
 }
 
 .imgIcon
@@ -189,11 +209,131 @@ height:26px;
 float:left;
 border:2px double #aaaaac;
 margin: 0px 0px 0px 5px;
+
 }
 
+.buttonStart:hover .close
+{
+    background:url('../images/close2.png');
+    float:left;
+    width: 30px;
+    height:30px;
+    border:1px solid #acacac;
+    cursor:pointer;
+}
+.buttonStart:hover .replay
+{
+    background:url('../images/replay2.png');
+    float:left;
+    width: 30px;
+    height:30px;
+    margin:0px 0px 0px 8px;
+    border:1px solid #acacac;
+    cursor:pointer;
+
+}
+.buttonStart:hover .control
+{
+   float:right;
+   width:80px;
+   height:38px;
+   margin:-34px 0px 50px 50px;
+}
+
+.buttonStart:hover .user
+{
+    background:url('../images/user.png');
+    float:right;
+    width:35px;
+    height:35px;
+    margin:-222px 24px 50px 50px;
+    cursor:pointer;
+}
+
+.buttonStart:hover .IM{
+    background: url(../images/itunesIcon.png) no-repeat top left;
+    float:left;
+    width:30px;
+    margin:2px 0px 0px 1px;
+    height:30px;
+}
+.PM{
+    display:none;
+}
+
+.PT{
+    display:none;
+}
+.buttonStart:hover .PM{
+    float:left;
+    margin:3px 0px 0px 7px;
+    display:block;
+}
+
+.buttonStart:hover .IT{
+    background: url(../images/textIcon.png) no-repeat top left;
+    float:left;
+    margin:2px 0px 0px 1px;
+    width:30px;
+    height:30px;
+
+}
+
+.buttonStart:hover .PT{
+    float:left;
+    margin:3px 0px 0px 7px;
+    display:block;
+}
+
+.buttonStart:hover .stringText{
+    height:32px;
+    width:140px;
+    margin:5px 0px 0px 5px;
+    border:1px solid #ffffff;
+
+}
+.stringText:hover
+{
+    background: #d2d2d2;
+    cursor:pointer;
+    border-radius: 3px;
+    border:1px solid #c2c2c2;
 
 
+}
+.buttonStart:hover .stringMusic{
+    height:32px;
+    width:140px;
+    margin:5px 0px 0px 5px;
+    border:1px solid #ffffff;
 
+}
+.stringMusic:hover
+{
+    background: #d2d2d2;
+    cursor:pointer;
+    border-radius: 3px;
+    border:1px solid #c2c2c2;
+}
 
+.winMin{
+    cursor:pointer;
+}
+
+.context
+{
+    width:100px;
+    height:150px;
+    background:#acacac;
+    position: absolute;
+}
+
+.contex
+{
+    width:150px;
+    height:200px;
+    background:#ffffff;
+    position:absolute;
+}
 
 
