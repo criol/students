@@ -46,6 +46,25 @@ Icon.prototype = {
         iconManager.icons[this.name] = this;
         this.render(pos);
         this.assignEvents();
+
+    },
+    context: function(e){
+        var polX,
+            polY,
+            contextWin;
+
+        polX = event.clientX;
+        polY = event.clientY;
+
+        contextWin = document.createElement('div');
+        contextWin.className ='context';
+        contextWin.style.top=polY+"px";
+        contextWin.style.left=polX+"px";
+        console.log(polX+"s"+polY);
+
+        document.body.appendChild(contextWin);
+
+        return false;
     },
 
     render: function (pos) {
@@ -85,7 +104,7 @@ Icon.prototype = {
 
     openWindow: function(){
         var win = new CustomWindow(this.windowOpt).init();
-		newIconStart();
+		PanelPusc.prototype.newIconStart(this.windowOpt);
        // win.open();
     }
 };

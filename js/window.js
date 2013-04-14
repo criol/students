@@ -21,17 +21,42 @@ CustomWindow.prototype = {
     },
 
     delet: function(win){
-
             win.addEventListener('click', function(e){
-            var delett = e.target.parentNode.parentNode;
+            var delett = e.target.parentNode.parentNode,
+                name = e.target.parentNode.parentNode;
             document.body.removeChild(delett);
-            var r=document.getElementsByClassName('imgIcon')[0];
-                console.log(r);
-                r.remove('imgIcon')
-
+            PanelPusc.prototype.delIcon(name.classList[1])
            });
     },
+    minWin:function (min){
+           min.addEventListener('click',function(e){
+              var min = e.target.parentNode.parentNode,
+                  polo = 'min';
+              min.style.display='none';
+              PanelPusc.prototype.newIconStart(polo);
 
+           });
+
+    },
+
+    contex: function(e){
+             var polX,
+                 polY,
+                 contextWin;
+             polX = event.clientX;
+             polY = event.clientY;
+
+             contextWin = document.createElement('div');
+             contextWin.className ='context';
+             contextWin.style.top=polY+"px";
+             contextWin.style.left=polX+"px";
+             console.log(polX+"s"+polY);
+
+             document.body.appendChild(contextWin);
+
+             return false;
+
+    },
     render: function(){
 		 var winTop,
 			 winText,
@@ -75,26 +100,29 @@ CustomWindow.prototype = {
 			document.body.appendChild(winContainerDiv);
 
             this.delet(winClose);
+            this.minWin(winMin);
     }
 };
 
-document.oncontextmenu = function()
-{   var polX,
-    polY,
-    contextWin;
-
-    polX = event.clientX;
-    polY = event.clientY;
-
-    contextWin = document.createElement('div');
-    contextWin.className ='context';
-    contextWin.style.top=polY+"px";
-    contextWin.style.left=polX+"px";
-    console.log(polX+"s"+polY);
-
-    document.body.appendChild(contextWin);
-
-    return false;
+document.oncontextmenu = function(e)
+{
+    if((e.target.className== 'img')||(e.target.className== 'text'))
+        {
+            Icon.prototype.context(e);
+            return false;
+        }
+        else
+        {
+            if(e.target== document.body)
+            {
+                CustomWindow.prototype.contex(e);
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+        }
 };
 
 
