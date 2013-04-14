@@ -1,0 +1,295 @@
+body
+{
+	margin: 0;
+}
+
+body, *
+{
+	font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+	font-size: 11px;
+	color: #2B587A;
+}
+
+a:hover
+{
+	text-decoration: underline !important;
+}
+
+table
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0 0 0 0;
+	border-collapse: collapse;
+	letter-spacing: 0;
+}
+
+table td
+{
+	vertical-align: top;
+}
+
+#topMenu
+{
+	margin: 0 auto;
+}
+
+#topMenu .left, #topMenu .right
+{
+	height: 40px;
+	width: 6px;
+}
+
+#topMenu .left
+{
+	background: url('img/topMenuCL.png') no-repeat;
+}
+
+#topMenu .right
+{
+	background: url('img/topMenuCR.png') no-repeat;
+}
+
+#topMenu .center
+{
+	width: 770px;
+	background: url('img/topMenuBG.png');
+}
+
+#topMenu .logo
+{
+	margin: 5px 0 0 0px;
+}
+
+#topMenu .search
+{
+	margin: 7px 0 0 12px;
+	color: #7C90A6;
+	height: 23px;
+	width: 173px;
+	padding-left: 24px;
+	border: none;
+	background: url('img/search.png') no-repeat;
+}
+
+#topMenu *
+{
+	float: left;
+}
+
+#topMenu ul
+{
+	margin: 1px 0 0 16px;
+}
+
+#topMenu ul li
+{
+	display: inline-block;
+	color: #E8EFF7;
+	font-weight: bold;
+	padding: 10px;
+}
+
+#mainWrapper
+{
+	width: 730px;
+}
+
+#leftMenu
+{
+	width: 130px;
+}
+
+#leftMenu ul
+{
+margin: 0;
+padding: 0;
+}
+
+#leftMenu ul li
+{
+	list-style: none;
+	padding: 4px 0px;
+}
+
+#leftMenu ul li a 
+{
+	text-decoration: none;
+}
+
+.panelLiteBlue
+{
+	width: 100%;
+	background-color: #E9EDF1;
+	line-height: 140%;
+	padding: 7px 10px;
+}
+
+.panelLiteBlue table td
+{
+	color: #607387 !important;
+	font-weight: bold !important;
+	font-size: 11px;
+}
+
+.panelLiteBlue table td span
+{
+	color: #AAB7C5 !important;
+}
+
+.panelVeryLiteBlue
+{
+	padding: 7px;
+	background-color: #F1F1F1;
+}
+
+.panelVeryLiteBlue input
+{
+	padding: 3px;
+	width: 392px;
+	height: 22px;
+	color: #888888;
+}
+
+#mainBlock
+{
+	border-left: 1px solid #D9E0E7;
+	border-right: 1px solid #D9E0E7;
+}
+
+#ava
+{
+	padding: 10px 10px;
+}
+
+#left ul
+{
+	margin: 0 0 0 15px;
+	padding: 0;
+}
+
+#left ul li
+{
+	list-style: none;
+	line-height: 22px;
+}
+
+#left ul li a
+{
+	text-decoration: none;
+}
+
+#right
+{
+	width: 400px;
+	padding-top: 10px;
+}
+
+#right h3
+{
+	float: left;
+	font-size: 13px;
+	padding: 0;
+	margin: 0;
+}
+
+#right span
+{
+	color: black
+}
+
+#right .university
+{
+	margin-left: 53%;
+}
+
+#right .seperator
+{
+	border-bottom: 1px solid #E8EBEE;
+	height: 0px;
+}
+
+#right .info
+{
+margin-top: 10px;
+}
+
+#right .info td, th
+{
+	padding: 3px 0;
+}
+
+#right .info th
+{
+	color: #666666;
+	width: 130px;
+	font-weight: normal;
+	text-align: left;
+}
+
+.btn
+{
+	margin-left: 16px;
+	width: 200px;
+	height: 32px;
+	border: none;
+	color: white;
+	background: url('img/btn.png')no-repeat;
+}
+
+.record
+{
+	width: 100%;
+}
+
+.record a
+{	
+	font-weight: bold;
+	margin-left: 10px;
+	text-decoration: none;
+}
+
+.record td
+{
+	padding: 14px 0;
+}
+
+.record tr
+{	
+	border-bottom: 1px solid #c7cDf1;
+}
+
+.record pre
+{
+	margin: 5px 0 0 10px;
+	color: black;
+}
+
+.record p
+{
+	color: grey;
+	margin: 2px 0 0 9px;
+}
+
+.record span
+{
+	color: grey !important;
+	font-size: 10px;
+	font-weight: normal;
+	margin: 5px 0 0 10px;
+	float: left;
+}
+
+.record .like
+{	
+	color: #aaaacc;
+	font-size: 10px;
+	font-weight: normal;
+	margin: 0px 0 0 180px;
+}
+
+.record .like:hover
+{	
+	text-decoration: none;
+	color: #666699;
+}
