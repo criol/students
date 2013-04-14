@@ -71,18 +71,17 @@ iconsManagerModel = {
 			
 			//console.log(forSer);
 			//console.log(localStorage.getItem('testObject'));
-			for(var i=0; i<this.icons.lenght; i++)
-			{alert("lll");
+			for(var i=0; i<this.icons.length; i++)
+			{
 				var obj = {};
-				for(a in this.icons[i])
+                var icon = this.icons[i];
+				for(var a in icon)
 				{
-				if (this.icons[i].hasOwnProperty(a))
-					{
-					if(a!="root"){
-					alert(a);
-						obj[a]=this.icons[i][a];
-						}
-					}					
+                    if (icon.hasOwnProperty(a)){
+                        if(a!="root"){
+                            obj[a]=icon[a];
+                        }
+                    }
 				}
 			}
 			JSON.stringify(this.icons)
