@@ -1,0 +1,16 @@
+<style>
+#wrapper
+{
+width: 100%;
+margin: 0 auto;
+}
+
+.github
+{
+	background: red;
+}
+</style>
+<div id="wrapper">
+<div class="github">
+</div>
+</div>

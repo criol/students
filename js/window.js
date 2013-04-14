@@ -57,6 +57,10 @@ Window.prototype = {
 		{
 			mainDiv.innerHTML = '<iframe width="560" height="315" src="http://www.youtube.com/embed/ew6ZVNJU5_4" frameborder="0" allowfullscreen></iframe>';
 		}
+		else if(this.type=="html")
+		{
+			mainDiv.innerHTML = '<iframe src="'+this.data+'" frameborder="0"></iframe>';
+		}
         winHeader = document.createElement('div');
         winHeader.className = 'header';
 
