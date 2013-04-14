@@ -82,15 +82,18 @@ iconsManagerModel = {
 	removeIcon:function(obj){
 		if(this.icons.inArray(obj))
 		{		
+			if(confirm("Вы уверены что хотите удалить: "+obj.name+"?"))
+			{
 			this.icons.removeElement(obj);
 			this.writeStorage();
 			this.renderAll();
+			}
 		}
 	},
 	renameIcon:function(obj){
 		if(this.icons.inArray(obj))
-		{		
-			if(confirm("Rename Icon?"+obj.name))
+		{	
+			if(confirm("Вы уверены что хотите переименовать: "+obj.name+"?"))
 			{
 			obj.name = "RENAMED!!! " +obj.name;
 			this.writeStorage();
