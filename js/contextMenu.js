@@ -1,6 +1,6 @@
 var Menu;
 
-var menuSettings= {list:[
+var menuIconSettings= {list:[
    { 
 		name: 'Destroy',
 		title: 'Удалить',
@@ -28,6 +28,49 @@ var menuSettings= {list:[
 ],
 sender: {}
 }
+	
+
+var menuDesktopSettings= {list:[
+   { 
+		name: 'Create',
+		title: 'Создать >',
+		callBack: function()
+		{
+			
+		}
+	},
+	{
+		name: 'Refresh',
+		title: 'Обновить',
+		callBack: function()
+		{
+			
+		}
+	},
+	{
+		name: 'prop',
+		title: 'Свойства',
+		callBack: function()
+		{
+		    var ua = navigator.userAgent, brow, date;
+			if (ua.search(/MSIE/) > 0) brow = 'Internet Explorer';
+			if (ua.search(/Firefox/) > 0) brow = 'Firefox';
+			if (ua.search(/Opera/) > 0) brow = 'Opera';
+			if (ua.search(/Chrome/) > 0) brow = 'Google Chrome';
+			if (ua.search(/Safari/) > 0) brow = 'Safari';
+			
+			var d=new Date();
+			var day=d.getDate();
+			var month=d.getMonth() + 1;
+			var year=d.getFullYear();
+			date = day + "/" + month + "/" + year;
+			
+			alert("Ваш браузер: "+brow+"\n Дата: "+date);
+		}
+	}
+],
+sender: {}
+}	
 	
 ContextMenu = function (obj) {
     var a;

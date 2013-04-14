@@ -9,6 +9,7 @@ btnStartModel={
     state:'hide',
     init:function(){
         this.render();
+		this.assignEvents();
     },
     render:function(){
         var containerDiv,contentImg;
@@ -22,7 +23,10 @@ btnStartModel={
 
         this.root = containerDiv;
         document.getElementById('StartPanel').appendChild(containerDiv);
-    }
+    },
+	assignEvents:function(){
+		this.root.addEventListener('click', function(){os.openStart});
+	}
 }
 BtnStart =  function(obj){
     var a;

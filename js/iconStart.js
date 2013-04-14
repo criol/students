@@ -8,7 +8,7 @@
 ///////////////////////////////////
 ///////Модель иконки в меню ПУСК///
 ////////////////////////////////////
-iconsStartSettings = {"iconsStart":[{"name":"Kerkyth.mp3","type":"music"}]};
+iconsStartSettings = {"iconsStart":[{"name":"Avetis.mp3","type":"music", "data":"Avetis.mp3"}]};
 
 iconStartModel = {
     name:'',

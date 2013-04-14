@@ -137,3 +137,9 @@ list-style: none;
     border:1px solid greenyellow;
     background-size: 35px 35px;
 }
+
+.widget.clock
+{
+position: fixed;
+right: 10px;
+}

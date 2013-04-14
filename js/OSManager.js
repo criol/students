@@ -36,15 +36,28 @@ oSManagerModel = {
 		//alert();
     },
 	closeContext: function(){
-		if(Menu=!'undefined')
+		//if(Menu=!'undefined')
 		Menu.destroy();
 	},
 	assignEvents: function(){
-		window.addEventListener('click', this.closeContext.bind(this));
+		window.addEventListener('click', this.closeContext);
+		//window.addEventListener('contextmenu', this.openContext);
 	},
 	removeIcon: function(obj){
 		this.iconsManager.removeIcon(obj);
 		obj.removeHTML();
+	},
+	openContext: function(e)
+	{
+	    e.preventDefault();
+        Menu = new ContextMenu(menuDesktopSettings);
+		Menu.init(e, this);
+	},
+	openStart: function(e)
+	{
+	alert();
+        Start = new StartMenu(menuStartSettings);
+		Start.init(e, this);
 	}
 };
 
