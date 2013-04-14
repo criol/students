@@ -8,7 +8,7 @@
 //ИЛИ 
 
 //Тестовым контентом!!! VVVVVVVVVVVVVVVVVVVVVVVV
-iconsSettings = {"icons":[{"name":"Arabic.ini","type":"text"},{"name":"desktop.ini","type":"text"},{"name":"Kerkyth.mp3","type":"music"},{"name":"Новый док.rtf","type":"text"}]}
+iconsSettings = {"icons":[{"name":"Arabic.ini","type":"text","data":"Title  = Ethernet-Adaptertreiber, Description = Ethernet-Adaptertreiber installieren."},{"name":"desktop.ini","type":"text","data":"[Desktop] On MacBook Pro"},{"name":"Kerkyth.mp3","type":"music", "data":"Avetis.mp3"},{"name":"Новый док.rtf","type":"text", "data":"Инфографика ИТАР-ТАСС. Иллюстрированные сведения о продолжительности новогодних и майских праздников в 2013 г. и переносе выходных дней, Минтруд предложил назначить россиянам 10-дневные каникулы в январе и девять выходных в мае."},{"name":"Ne budite spyaschih.mp3","type":"music", "data":"Ne budite spyaschih.mp3"},{"name":"lie to me.mp4","type":"video", "data":"lie to me.mp4"}]}
 
 
 Icon = function (obj) {

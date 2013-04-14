@@ -4,13 +4,14 @@
 windowModel = {
     name:'',
     type:'',
-    width:400,
-    height:200,
+    width:380,
+    height:250,
     top:50,
     left:50,
     state:'open',
     isRender:false,
     layer:2,
+	data:'',
     callback: function(){
         alert('opened!!!');
     }
@@ -19,6 +20,7 @@ windowModel = {
 Window = function(obj){
     windowModel.name = obj.name;
     windowModel.type = obj.type;
+    windowModel.data = obj.data;
     var a;
     for (a in windowModel){
         if(windowModel.hasOwnProperty(a)){
@@ -32,7 +34,7 @@ Window.prototype = {
         this.render();
     },
     render: function(pos){
-        var containerDiv,winHeader,btnMin,btnMax,btnClose,mainDiv,winName;
+        var containerDiv,winHeader,btnMin,btnMax,btnClose,mainDiv,winName,textArea;
         containerDiv = document.createElement('div');
         containerDiv.className = 'window ' + this.type+' '+this.state;
         if(pos!=undefined){
@@ -41,6 +43,20 @@ Window.prototype = {
         }
         mainDiv = document.createElement('div');
         mainDiv.className = 'winContent';
+		if(this.type=="text")
+		{
+			textArea = document.createElement('textarea');
+			textArea.innerHTML = this.data;
+			mainDiv.appendChild(textArea);
+		}
+		else if(this.type=="music")
+		{
+			mainDiv.innerHTML = '<object type="application/x-shockwave-flash" data="http://xflash.ucoz.ru/raznoe/153.swf" width="500" height="240"><param name="bgcolor" value="#ffffff" /><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="wmode" value="transparent" /><param name="movie" value="" /><param name="flashvars" value="st=;file=" /></object><audio src="'+this.data+'" controls autoplay></audio>';
+		}
+		else if(this.type=="video")
+		{
+			mainDiv.innerHTML = '<iframe width="560" height="315" src="http://www.youtube.com/embed/ew6ZVNJU5_4" frameborder="0" allowfullscreen></iframe>';
+		}
         winHeader = document.createElement('div');
         winHeader.className = 'header';
 

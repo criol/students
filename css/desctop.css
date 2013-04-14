@@ -77,6 +77,11 @@ list-style: none;
     background: url(../images/none.png) no-repeat top left;
 }
 
+.video .img {
+    background: url(../images/video.jpg) no-repeat top left;
+    background-size: 64px 64px;
+}
+
 #main
 {
     position:absolute;
