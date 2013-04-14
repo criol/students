@@ -20,8 +20,8 @@ list-style: none;
     width:35px;
     height:35px;
     margin:0 7px;
-    border:1px solid green;
     background-size: 35px 35px;
+    background: url('../images/SP.png');
 }
 .iconStart {
     position: relative;
