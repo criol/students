@@ -45,6 +45,9 @@ IconStart.prototype = {
         this.root = containerDiv;
         document.getElementById('StartPanel').appendChild(containerDiv);
         this.isRender = true;
+        if(!this.isStartPanel){
+            this.makeActive();
+        }
     },
 
     assignEvents: function() {
