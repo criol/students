@@ -21,7 +21,11 @@ list-style: none;
     height:35px;
     margin:0 7px;
     background-size: 35px 35px;
-    background: url('../images/SP.png');
+    background: url('../images/StartPanel.png');
+}
+.btnStart .img:hover
+{
+    background: url('../images/StartPanelActive.png');
 }
 .iconStart {
     position: relative;
