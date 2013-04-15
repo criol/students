@@ -48,6 +48,7 @@ IconStart.prototype = {
         if(!this.isStartPanel){
             this.makeActive();
         }
+        this.assignEvents();
     },
 
     assignEvents: function() {

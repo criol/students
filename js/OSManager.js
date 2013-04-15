@@ -40,7 +40,7 @@ oSManagerModel = {
 		Menu.destroy();
 	},
 	assignEvents: function(){
-		window.addEventListener('click', this.closeContext);
+		//window.addEventListener('click', this.closeContext);
 		//window.addEventListener('contextmenu', this.openContext);
 	},
 	removeIcon: function(obj){

@@ -18,10 +18,12 @@
 
 .window{
 	z-index: 2;
+
 }
 
 .window.open
 {
+    resize: both;
     top:150px;
     left:200px;
     position:absolute;
@@ -34,6 +36,8 @@
     -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ��� Firefox */
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ��� Safari � Chrome */
     box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ��������� ���� */
+    overflow: hidden;
+    resize: both;
 }
 .window.hide
 {
@@ -79,16 +83,19 @@
 
 .header
 {
-	position: relative;
+	position: absolute;
 	width:500px;
 	height: 30px;
+    left:0px;
+    right:0px;
 	vertical-align: top;
 	
 }
 button
 {
-	position: relative;
-	float:right;
+	position: absolute;
+	//float:right;
+    right:50px;
 	width: 30px;
 	height: 30px;
 	border:none;
