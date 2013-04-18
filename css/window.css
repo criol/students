@@ -83,19 +83,16 @@
 
 .header
 {
-	position: absolute;
+	position: relative;
 	width:500px;
 	height: 30px;
-    left:0px;
-    right:0px;
 	vertical-align: top;
 	
 }
 button
 {
-	position: absolute;
-	//float:right;
-    right:50px;
+	position: relative;
+	float:right;
 	width: 30px;
 	height: 30px;
 	border:none;
