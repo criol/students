@@ -123,16 +123,7 @@ Window.prototype = {
         winHeader.addEventListener('mousedown',dnd.dragStart);
         document.body.addEventListener('mousemove',dnd.drag);
         document.body.addEventListener('mouseup',dnd.dragFinish);
-        if (this.root.addEventListener)
-        {
-            this.root.addEventListener('mouseup', hook, false);
-            this.root.addEventListener('mousemove', move, false);
-        }
-        else if (this.root.attachEvent)
-        {
-            this.root.attachEvent('onmouseup', hook);
-            this.root.attachEvent('onmousemove', move);
-        }
+
 
     }
 };
