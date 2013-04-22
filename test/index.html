@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/desctop.css" />
+    <title>windows</title>
+</head>
+<body>
+
+    <script src="js/icon.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/window.js"></script>
+    <script src="js/start.js"></script>
+    <script src="js/common.js"></script>
+    <!--Шаблон иконки -->
+    <script type="text/html" id="icon">
+        <div id="<%= id %>">
+           <div class="img"></div>
+           <div class="itext>"></div>
+        </div>
+    </script>
+
+
+    <!--Шаблон текста-->
+    <script type="text/html" id="text">
+       <div class="<%= className %>"></div>
+    </script>
+</body>
+</html>
