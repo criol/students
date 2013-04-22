@@ -70,7 +70,8 @@ Icon.prototype = {
         this.root.addEventListener('dblclick', this.openWindow.bind(this));
         this.root.addEventListener('contextmenu', this.openContextMenu.bind(this));
     },
-    renameIcon: function() {
+    renameIcon: function(e) {
+		e.stopPropagation();
         os.renameIcon(this);
     },
 /*

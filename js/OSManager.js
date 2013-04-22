@@ -36,11 +36,11 @@ oSManagerModel = {
 		//alert();
     },
 	closeContext: function(){
-		//if(Menu=!'undefined'&&Menu!=false)
+		if(Menu!='undefined' && typeof(Menu)==='object')
 		Menu.destroy();
 	},
 	assignEvents: function(){
-		//window.addEventListener('click', this.closeContext);
+		window.addEventListener('click', this.click.bind(this));
 		//window.addEventListener('contextmenu', this.openContext);
 	},
 	removeIcon: function(obj){
@@ -64,6 +64,11 @@ oSManagerModel = {
 	alert();
         Start = new StartMenu(menuStartSettings);
 		Start.init(e, this);
+	},
+	click: function()
+	{
+		this.closeContext();
+		this.iconsManager.renameIcon();
 	}
 };
 

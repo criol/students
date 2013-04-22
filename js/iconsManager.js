@@ -93,12 +93,28 @@ iconsManagerModel = {
 	renameIcon:function(obj){
 		if(this.icons.inArray(obj))
 		{	
-			if(confirm("Вы уверены что хотите переименовать: "+obj.name+"?"))
+			console.log(obj.root);
+			obj.root.getElementsByClassName('text')[0].setAttribute('ContentEditable', 'true');
+			console.log(obj.root);
+			/*if(confirm("Вы уверены что хотите переименовать: "+obj.name+"?"))
 			{
 			obj.name = "RENAMED!!! " +obj.name;
 			this.writeStorage();
 			this.renderAll();
-			}
+			}*/
+		}
+		else
+		{
+			for (var i = 0; i < this.icons.length; i++)
+			{
+				if (this.icons[i].root.getElementsByClassName('text')[0].getAttribute('contenteditable'))
+				{
+					this.icons[i].root.getElementsByClassName('text')[0].setAttribute('ContentEditable', 'false');
+					this.icons[i].name = this.icons[i].root.getElementsByClassName('text')[0].innerHTML;
+					this.writeStorage();
+					this.renderAll();
+				}
+			}	
 		}
 	},
 	addIcon:function(obj){
