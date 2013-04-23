@@ -71,6 +71,7 @@ Icon.prototype = {
         this.root.addEventListener('click', function(){os.makeActiveIcon(this)});
         this.root.addEventListener('dblclick', this.openWindow.bind(this));
         this.root.addEventListener('contextmenu', this.openContextMenu.bind(this));
+        this.root.addEventListener('mousedown',dnd.dragStart);
     },
     renameIcon: function(e) {
 		e.stopPropagation();

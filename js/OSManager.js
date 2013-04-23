@@ -105,8 +105,12 @@ OSManager = function (obj) {
 
 
 OSManager.prototype = {
-
+     assignEvent:function(){
+         document.body.addEventListener('mousemove',dnd.drag);
+         document.body.addEventListener('mouseup',dnd.dragFinish);
+     }
 }
 var os = new OSManager(oSManagerModel);
 os.start();
+os.assignEvent();
 
