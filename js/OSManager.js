@@ -60,7 +60,6 @@ oSManagerModel = {
 	},
 	openStart: function(e)
 	{
-	alert();
         Start = new StartMenu(menuStartSettings);
 		Start.init(e, this);
 	},

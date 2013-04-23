@@ -25,7 +25,7 @@ btnStartModel={
         document.getElementById('StartPanel').appendChild(containerDiv);
     },
 	assignEvents:function(){
-		this.root.addEventListener('click', function(){os.openStart});
+		this.root.addEventListener('click', os.openStart);
 	}
 }
 BtnStart =  function(obj){
