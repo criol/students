@@ -76,6 +76,17 @@ oSManagerModel = {
 		this.closeContext();
 		this.iconsManager.renameIcon();
 
+	},
+	selectFiles: function(x1, y1, x2, y2)
+	{
+		for(i in this.iconsManager.icons)
+		{
+            if(!this.iconsManager.icons.hasOwnProperty(i)) continue
+			if(parseInt(this.iconsManager.icons[i].root.style.top)<y2 && parseInt(this.iconsManager.icons[i].root.style.top)>y1 && parseInt(this.iconsManager.icons[i].root.style.left)<x2 && parseInt(this.iconsManager.icons[i].root.style.left)>x1)
+			{
+				this.iconsManager.makeNotUniqActive(this.iconsManager.icons[i].root);
+			}
+		}
 	}
 };
 

@@ -61,6 +61,9 @@ iconsManagerModel = {
             className = 'active';
         obj.addUniqClass(fromName, className);
 	},
+	makeNotUniqActive:function(obj){
+        obj.addClass('active');
+	},
 	writeStorage:function(){
 	var forSer = {icons:[]};
 			for(var i=0; i<this.icons.length; i++)

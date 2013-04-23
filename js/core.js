@@ -117,30 +117,32 @@ start: function(e)
 move: function(e)
 	{
 		if(select.on)
-		{
-		if((e.clientX - select.x)>0){
-			document.getElementById('select').style.width = e.clientX - select.x + "px";
-		}
-		else
-		{
-			document.getElementById('select').style.left = e.clientX + "px";
-			document.getElementById('select').style.width = select.x - e.clientX + "px";
-		}
-		
-		if((e.clientY - select.y)>0){
-			document.getElementById('select').style.height = e.clientY - select.y + "px";
-		}
-		else
-		{
-			document.getElementById('select').style.top = e.clientY + "px";
-			document.getElementById('select').style.height = select.y - e.clientY + "px";
-		}
+		{		
+			select.divStyle = document.getElementById('select').style;
+			if((e.clientX - select.x)>0){
+				select.divStyle.width = e.clientX - select.x + "px";
+			}
+			else
+			{
+				select.divStyle.left = e.clientX + "px";
+				select.divStyle.width = select.x - e.clientX + "px";
+			}
+			
+			if((e.clientY - select.y)>0){
+				select.divStyle.height = e.clientY - select.y + "px";
+			}
+			else
+			{
+				select.divStyle.top = e.clientY + "px";
+				select.divStyle.height = select.y - e.clientY + "px";
+			}
 		}
 	},
 stop: function(e)
 	{
 		document.getElementById('desktop').removeChild(document.getElementById('select'));
 		select.on = false;
+		os.selectFiles(parseInt(select.divStyle.left), parseInt(select.divStyle.top), parseInt(select.divStyle.width), parseInt(select.divStyle.height));
 	}
 }
 
