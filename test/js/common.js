@@ -1,9 +1,9 @@
 startOS.OSSettings = {
     music: {
         name: 'deep',
-        type: 'music',
+        type: 'musicIcon',
         itext:'music',
-        img:'url(../images/music.png) no-repeat top left',
+        img:'imgMusic',
         windowOpt: {
             name: 'Now Playing: Deep Purple - Smoke on the water',
             type: 'music',
@@ -15,12 +15,11 @@ startOS.OSSettings = {
             }
         }
     },
-
     text: {
         name: 'book',
-        type: 'text',
-        itext:'itext',
-        img:'url(../images/text.png) no-repeat top left',
+        type: 'textIcon',
+        itext:'text',
+        img:'imgText',
         windowOpt: {
             name: 'ololo.txt',
             type: 'text',
@@ -32,7 +31,5 @@ startOS.OSSettings = {
             }
         }
     }
-
 };
-
 startOS.renderAll();

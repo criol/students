@@ -20,10 +20,10 @@ CustomWindow.prototype = {
         this.render(this.type);
     },
 
-    render: function(e){
-      // console.log(e);
-      // document.body.innerHTML = tmpl('icon')({id:'icon'+' '+e, img:'img', text:'itext'});
-      // iconManager.renderAll();
+    newWindows: function(e){
+      console.log(e);
+      document.body.innerHTML = tmpl('windows')({id:'icon'+' '+e, img:'img', text:'itext'});
+        iconManager.renderAll();
     }
 };
 

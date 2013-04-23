@@ -1,0 +1,41 @@
+*
+{
+    margin:0px 0px 0px 0px;
+}
+body
+{
+    background: url('../images/bg.jpg');
+
+}
+.musicIcon{
+    width:64px;
+    height:84px;
+}
+.musicText{
+    width:64px;
+    height:84px;
+}
+
+
+.imgMusic{
+    width:64px;
+    height:64px;
+    background: url(../images/music.png);
+}
+
+.imgText{
+    width:64px;
+    height:64px;
+    background: url(../images/text.png);
+}
+.music
+{
+    text-align:center;
+    width:64px;
+    height:20px;
+}
+.text{
+    text-align:center;
+    width:64px;
+    height:20px;
+}

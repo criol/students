@@ -4,27 +4,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="css/desctop.css" />
+    <link rel="stylesheet" href="css/panelStart.css" />
     <title>windows</title>
 </head>
 <body>
+
+    <!--Блок с иконками-->
+    <div id="wrapperIcon"></div>
+
+    <!--Блок с окнами-->
+    <div id="wrapperWindows"></div>
+
+    <!--Шаблон иконки -->
+    <script type="text/html" id="icon">
+        <div id="<%= id %>">
+            <div class="<%= img %>"></div>
+            <div class="<%= itext %>"><%= itext %></div>
+        </div>
+    </script>
+
+    <!--Шаблон окна-->
+    <script type="text/html" id="windows">
+        <div class="<%= idWindows %>">
+            <div class="<%= nameWindows %>">
+                <div class="<%= butMin %>"></div>
+                <div class="<%= butMax %>"></div>
+                <div class="<%= butClose %>"></div>
+            </div>
+            <div class="<%= divZoom %>">
+                <div class="<%= divWindowSoder %>"></div>
+            </div>
+        </div>
+    </script>
+
 
     <script src="js/icon.js"></script>
     <script src="js/core.js"></script>
     <script src="js/window.js"></script>
     <script src="js/start.js"></script>
     <script src="js/common.js"></script>
-    <!--Шаблон иконки -->
-    <script type="text/html" id="icon">
-        <div id="<%= id %>">
-           <div class="img"></div>
-           <div class="itext>"></div>
+
+    <div id='panelStart'>
+        <div id='buttonStart'>
+            <div id='menuStart'>
+                <div id='embmenuStart'></div>
+                <div id='user'></div>
+                <div id='control'>
+                    <div id='close'></div>
+                    <div id='replay'></div>
+                </div>
+            </div>
         </div>
-    </script>
+        <div id='workStart'></div>
+        <div id='oclokStart'></div>
+    </div>
 
-
-    <!--Шаблон текста-->
-    <script type="text/html" id="text">
-       <div class="<%= className %>"></div>
-    </script>
 </body>
 </html>

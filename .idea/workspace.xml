@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae807c05-1e46-4a6b-b688-2c006c77dd25" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my/.idea/workspace.xml" afterPath="$PROJECT_DIR$/my/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="ae807c05-1e46-4a6b-b688-2c006c77dd25" name="Default" comment="" />
     <ignored path="students.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366553443523" ignored="false" />
+    <file path="/Dummy.txt" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366708900310" ignored="false" />
     <file path="/window.js" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366553963706" ignored="false" />
-    <file path="/desctop.css" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366553899600" ignored="false" />
+    <file path="/desctop.css" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366710597111" ignored="false" />
     <file path="/start.js" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1365973014484" ignored="false" />
-    <file path="/index.html" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366553598111" ignored="false" />
+    <file path="/index.html" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366710234619" ignored="false" />
     <file path="/icon.js" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1365950549670" ignored="false" />
     <file path="D:/students/css/desctop.css" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366553908128" ignored="false" />
     <file path="D:/students/js/window.js" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366553967761" ignored="false" />
     <file path="D:/students/index.html" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366553598111" ignored="false" />
+    <file path="$USER_HOME$/Desktop/test/index.html" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366710240460" ignored="false" />
+    <file path="$USER_HOME$/Desktop/test/css/panelStart.css" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366710359876" ignored="false" />
+    <file path="/panelStart.css" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366710359876" ignored="false" />
+    <file path="$USER_HOME$/Desktop/test/css/desctop.css" changelist="ae807c05-1e46-4a6b-b688-2c006c77dd25" time="1366710889190" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +39,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="-5.8846154">
+            <state line="9" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="-5.769231">
               <folding />
             </state>
           </provider>
@@ -73,7 +75,7 @@
       <file leaf-file-name="start.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/start.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="58" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0">
+            <state line="80" column="35" selection-start="1647" selection-end="1654" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -91,7 +93,7 @@
       <file leaf-file-name="desctop.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/desctop.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="19" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.72727275">
+            <state line="6" column="0" selection-start="32" selection-end="82" vertical-scroll-proportion="0.24878049">
               <folding />
             </state>
           </provider>
@@ -126,9 +128,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="32" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="y" value="-8" />
+    <option name="width" value="1040" />
+    <option name="height" value="616" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -265,14 +267,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1040" height="616" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25757575" sideWeight="0.6013629" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2638037" sideWeight="0.6013629" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863715" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -313,7 +315,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -427,6 +429,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="6" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/window.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="115" column="38" selection-start="2833" selection-end="2833" vertical-scroll-proportion="0.0">
@@ -436,28 +445,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/start.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="58" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="6" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
+        <state line="80" column="35" selection-start="1647" selection-end="1654" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="-5.8846154">
+        <state line="9" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="-5.769231">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/desctop.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="19" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.72727275">
+        <state line="6" column="0" selection-start="32" selection-end="82" vertical-scroll-proportion="0.24878049">
           <folding />
         </state>
       </provider>

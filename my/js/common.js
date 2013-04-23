@@ -8,6 +8,7 @@ iconManager.iconSettings = {
             width:300,
             height: 200,
             state: 'open',
+			delet: 'notDelet',
             iconState:'open',
             callback: function(){
                 alert('opened!!!');
@@ -24,6 +25,7 @@ iconManager.iconSettings = {
             width:300,
             height: 200,
             state: 'open',
+			delet: 'notDelet',
             iconState:'open',
             callback: function(){
                 alert('opened!!!');

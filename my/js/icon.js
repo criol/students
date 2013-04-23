@@ -11,17 +11,12 @@ iconManager = {
         left: 10
     },
 
-    active: {
-
-    },
+    active: {},
 
     renderAll: function(){
         var a;
-
         for (a in this.iconSettings) {
-
             new Icon(this.iconSettings[a]).init(this.position);
-
             this.position.top+=100;
             if (this.position.top > 500) {
                 this.position.left += 100;
@@ -33,7 +28,6 @@ iconManager = {
 
 Icon = function (obj) {
     var a;
-
     for (a in obj){
         if (obj.hasOwnProperty(a)){
             this[a] = obj[a];
@@ -46,7 +40,6 @@ Icon.prototype = {
         iconManager.icons[this.name] = this;
         this.render(pos);
         this.assignEvents();
-
     },
 
     render: function (pos) {
@@ -71,7 +64,7 @@ Icon.prototype = {
         containerDiv.style.left = pos.left + 'px';
 
         this.root = containerDiv;
-		document.body.appendChild(containerDiv);
+		document.body.appendChild(containerDiv);		
     },
 
     assignEvents: function() {
@@ -79,16 +72,13 @@ Icon.prototype = {
         this.root.addEventListener('dblclick', this.openWindow.bind(this));
     },
 
-
-    makeActive: function () {
-        this.root.toggleClass('active');
-    },
+    //makeActive: function () {
+    //    this.root.toggleClass('active');
+    //},
 
     openWindow: function(){
         var win = new CustomWindow(this.windowOpt).init();
-		PanelPusc.prototype.newIconStart(this.windowOpt);
-
-    }
+	}
 };
 
 

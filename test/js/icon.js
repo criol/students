@@ -11,7 +11,7 @@ Icon = function(obj){
 
 Icon.prototype= {
     newIcon: function(obj){
-    console.log(obj);
+        document.getElementById('wrapperIcon').innerHTML += tmpl('icon')({id:obj.type, img:obj.img, itext:obj.itext});
     },
 
     openWindow: function(){
