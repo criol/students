@@ -57,10 +57,9 @@ oSManagerModel = {
         Menu = new ContextMenu(menuDesktopSettings);
 		Menu.init(e, this);
 	},
-	openStart: function(e)
+	openStart: function()
 	{
-        Start = new StartMenu(menuStartSettings);
-		Start.init(e, this);
+        this.startManager.openStartMenu();
 	},
 	click: function(e)
 	{
@@ -70,7 +69,7 @@ oSManagerModel = {
 	},
 	selectFiles: function(x1, y1, x2, y2)
 	{
-		for(i in this.iconsManager.icons)
+		for(var i in this.iconsManager.icons)
 		{
             if(!this.iconsManager.icons.hasOwnProperty(i)) continue
 			if(parseInt(this.iconsManager.icons[i].root.style.top)<y2 && parseInt(this.iconsManager.icons[i].root.style.top)>y1 && parseInt(this.iconsManager.icons[i].root.style.left)<x2 && parseInt(this.iconsManager.icons[i].root.style.left)>x1)

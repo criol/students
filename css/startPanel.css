@@ -1,0 +1,12 @@
+.startMenu
+{
+    position: absolute;
+    width: 30%;
+    height: 1000%; /*не знаю почему такое значение*/
+    bottom: 0%;
+    left:0%;
+    z-index: 5;
+    margin-bottom: 38px;
+
+    border:1px solid red;
+}

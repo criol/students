@@ -15,7 +15,7 @@ btnStartModel={
         var containerDiv,contentImg;
 
         containerDiv = document.createElement('div');
-        containerDiv.className = 'btnStart ' + this.state;
+        containerDiv.className = 'btnStart';
 
         contentImg = document.createElement('div');
         contentImg.className = 'img';
@@ -24,8 +24,11 @@ btnStartModel={
         this.root = containerDiv;
         document.getElementById('StartPanel').appendChild(containerDiv);
     },
+    openStart:function(){
+        os.openStart();
+    },
 	assignEvents:function(){
-		this.root.addEventListener('click', os.openStart);
+		this.root.addEventListener('click', this.openStart);
 	}
 }
 BtnStart =  function(obj){

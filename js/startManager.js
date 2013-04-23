@@ -5,11 +5,13 @@ startManagerModel = {
     btnStart:{},
     iconsStart: {},
     iconStartSetting:{},
+    startMenu:{},
 
     start:function(){
         this.iconsStart = [];
         this.iconStartSetting = iconsStartSettings;
         this.btnStart = new BtnStart(btnStartModel);
+        this.startMenu = new StartMenu(menuStartSettings);
         this.btnStart.init();
         this.create();
     },
@@ -29,6 +31,16 @@ startManagerModel = {
         icoStart.render();
         icoStart.makeActive();
         this.iconsStart.push(icoStart);
+    },
+    openStartMenu:function(){
+        var state = this.btnStart.state;
+        if(state=='open'){
+            this.startMenu.hide();
+            this.btnStart.state='hide';
+        } else {
+            this.startMenu.open();
+            this.btnStart.state='open';
+        }
     },
     open:function(obj){
         //obj  -  иконка,которая вызвала
