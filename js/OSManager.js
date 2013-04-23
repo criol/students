@@ -35,7 +35,6 @@ oSManagerModel = {
         this.iconsManager.start();
         this.startManager.start();
     	this.assignEvents();
-		//alert();
     },
 	closeContext: function(){
 		if(Menu!='undefined' && typeof(Menu)==='object')
@@ -79,7 +78,16 @@ oSManagerModel = {
 				this.iconsManager.makeNotUniqActive(this.iconsManager.icons[i].root);
 			}
 		}
-	}
+	},
+    assignEvents:function(){
+        document.body.addEventListener('mousemove',dnd.drag);
+        document.body.addEventListener('mouseup',dnd.dragFinish);
+        window.addEventListener('click', this.click.bind(this));
+        window.addEventListener('contextmenu', this.openContext);
+        window.addEventListener('mousedown', select.start);
+        window.addEventListener('mouseup', select.stop);
+        window.addEventListener('mousemove', select.move);
+    }
 };
 
 
@@ -97,17 +105,8 @@ OSManager = function (obj) {
 
 
 OSManager.prototype = {
-     assignEvent:function(){
-         document.body.addEventListener('mousemove',dnd.drag);
-         document.body.addEventListener('mouseup',dnd.dragFinish);
-         window.addEventListener('click', this.click.bind(this));
-         window.addEventListener('contextmenu', this.openContext);
-         window.addEventListener('mousedown', select.start);
-         window.addEventListener('mouseup', select.stop);
-         window.addEventListener('mousemove', select.move);
-     }
+
 }
 var os = new OSManager(oSManagerModel);
 os.start();
-os.assignEvent();
 
