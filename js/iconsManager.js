@@ -87,9 +87,10 @@ iconsManagerModel = {
 		{		
 			if(confirm("Вы уверены что хотите удалить: "+obj.name+"?"))
 			{
-			this.icons.removeElement(obj);
-			this.writeStorage();
-			this.renderAll();
+				obj.removeHTML();
+				this.icons.removeElement(obj);
+				this.writeStorage();
+				this.renderAll();
 			}
 		}
 	},

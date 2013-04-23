@@ -71,6 +71,7 @@ var dnd = {
     //node  - узел, который двигаем
     dragStart:function(e,node){
         //координата узла
+		e.stopPropagation();
         var rect;
         dnd.canDrag=true;
         dnd.objTarget=node||e.target.parentNode;

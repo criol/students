@@ -42,7 +42,6 @@ oSManagerModel = {
 	},
 	removeIcon: function(obj){
 		this.iconsManager.removeIcon(obj);
-		obj.removeHTML();
 	},
 	renameIcon: function(obj){
 		this.iconsManager.renameIcon(obj);
