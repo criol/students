@@ -41,13 +41,6 @@ oSManagerModel = {
 		if(Menu!='undefined' && typeof(Menu)==='object')
 		Menu.destroy();
 	},
-	assignEvents: function(){
-		window.addEventListener('click', this.click.bind(this));
-		window.addEventListener('contextmenu', this.openContext);
-		window.addEventListener('mousedown', select.start);
-		window.addEventListener('mouseup', select.stop);
-		window.addEventListener('mousemove', select.move);
-	},
 	removeIcon: function(obj){
 		this.iconsManager.removeIcon(obj);
 		obj.removeHTML();
@@ -108,6 +101,11 @@ OSManager.prototype = {
      assignEvent:function(){
          document.body.addEventListener('mousemove',dnd.drag);
          document.body.addEventListener('mouseup',dnd.dragFinish);
+         window.addEventListener('click', this.click.bind(this));
+         window.addEventListener('contextmenu', this.openContext);
+         window.addEventListener('mousedown', select.start);
+         window.addEventListener('mouseup', select.stop);
+         window.addEventListener('mousemove', select.move);
      }
 }
 var os = new OSManager(oSManagerModel);
