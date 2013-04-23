@@ -5,9 +5,27 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="css/desctop.css" />
     <link rel="stylesheet" href="css/panelStart.css" />
+    <link rel="stylesheet" href="css/iconPysk.css" />
     <title>windows</title>
 </head>
 <body>
+
+    <!--Меню пуск-->
+    <div id='panelStart'>
+        <div id='buttonStart'>
+            <div id='menuStart'>
+                <div id='embmenuStart'></div>
+                <div id='user'></div>
+                <div id='control'>
+                    <div id='close'></div>
+                    <div id='replay'></div>
+                </div>
+            </div>
+        </div>
+        <div id='workStart'></div>
+        <div id='oclokStart'></div>
+    </div>
+
 
     <!--Блок с иконками-->
     <div id="wrapperIcon"></div>
@@ -15,7 +33,7 @@
     <!--Блок с окнами-->
     <div id="wrapperWindows"></div>
 
-    <!--Шаблон иконки -->
+    <!--Шаблон иконки на рабочем столе -->
     <script type="text/html" id="icon">
         <div id="<%= id %>">
             <div class="<%= img %>"></div>
@@ -23,7 +41,15 @@
         </div>
     </script>
 
-    <!--Шаблон окна-->
+    <!--Шаблон иконки в меню пуск -->
+    <script type="text/html" id="iconPysk">
+        <div id="<%= id %>">
+            <div class="<%= img %>"></div>
+            <div class="<%= itext %>"><%= itext %></div>
+        </div>
+    </script>
+
+    <!--Шаблон окна на рабочем окне-->
     <script type="text/html" id="windows">
         <div class="<%= idWindows %>">
             <div class="<%= nameWindows %>">
@@ -44,20 +70,7 @@
     <script src="js/start.js"></script>
     <script src="js/common.js"></script>
 
-    <div id='panelStart'>
-        <div id='buttonStart'>
-            <div id='menuStart'>
-                <div id='embmenuStart'></div>
-                <div id='user'></div>
-                <div id='control'>
-                    <div id='close'></div>
-                    <div id='replay'></div>
-                </div>
-            </div>
-        </div>
-        <div id='workStart'></div>
-        <div id='oclokStart'></div>
-    </div>
+
 
 </body>
 </html>

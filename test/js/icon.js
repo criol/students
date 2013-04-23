@@ -12,6 +12,8 @@ Icon = function(obj){
 Icon.prototype= {
     newIcon: function(obj){
         document.getElementById('wrapperIcon').innerHTML += tmpl('icon')({id:obj.type, img:obj.img, itext:obj.itext});
+        document.getElementById('embmenuStart').innerHTML += tmpl('iconPysk')({id:obj.type+'Pysk', img:obj.img+'Pysk', itext:obj.windowOpt.type});
+
     },
 
     openWindow: function(){

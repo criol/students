@@ -27,6 +27,13 @@
     border-top-right-radius:5px;
     border-top-left-radius:5px;
 }
+#buttonStart:hover #musicIconPysk{
+    display:block;
+}
+
+#buttonStart:hover #textIconPysk{
+    display:block;
+}
 
 #buttonStart:hover #embmenuStart
 {

@@ -7,13 +7,19 @@ body
     background: url('../images/bg.jpg');
 
 }
-.musicIcon{
+#musicIcon{
     width:64px;
     height:84px;
+    margin:10px 0 0 10px;
+    cursor: pointer;
 }
-.musicText{
+
+#textIcon{
     width:64px;
     height:84px;
+    margin:10px 0 0 10px;
+    cursor: pointer;
+
 }
 
 
@@ -33,9 +39,11 @@ body
     text-align:center;
     width:64px;
     height:20px;
+    color:white;
 }
 .text{
     text-align:center;
     width:64px;
     height:20px;
+    color:white;
 }

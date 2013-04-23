@@ -6,7 +6,7 @@ startOS.OSSettings = {
         img:'imgMusic',
         windowOpt: {
             name: 'Now Playing: Deep Purple - Smoke on the water',
-            type: 'music',
+            type: 'Audio',
             width: 300,
             height: 200,
             state: 'open',
@@ -22,7 +22,7 @@ startOS.OSSettings = {
         img:'imgText',
         windowOpt: {
             name: 'ololo.txt',
-            type: 'text',
+            type: 'Text',
             width: 300,
             height: 200,
             state: 'open',
