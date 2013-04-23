@@ -1,8 +1,8 @@
-.startMenu
+﻿.startMenu
 {
     position: absolute;
     width: 30%;
-    height: 1000%; /*не знаю почему такое значение*/
+    height: 1000%; /*не знаю почему такое значение*/ /*ахах, прикольно*/
     bottom: 0%;
     left:0%;
     z-index: 5;
