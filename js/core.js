@@ -101,6 +101,49 @@ var dnd = {
     }
 }
 
+var select = {
+start: function(e)
+	{		
+        e.preventDefault();
+		select.root = document.createElement('div');
+        select.root.id = 'select';
+		select.root.style.top = e.clientY-7+"px";
+		select.root.style.left = e.clientX-7+"px";
+		select.y = (e.clientY-7);
+		select.x = (e.clientX-7);
+		document.getElementById('desktop').appendChild(select.root);
+		select.on = true;
+	},
+move: function(e)
+	{
+		if(select.on)
+		{
+		if((e.clientX - select.x)>0){
+			document.getElementById('select').style.width = e.clientX - select.x + "px";
+		}
+		else
+		{
+			document.getElementById('select').style.left = e.clientX + "px";
+			document.getElementById('select').style.width = select.x - e.clientX + "px";
+		}
+		
+		if((e.clientY - select.y)>0){
+			document.getElementById('select').style.height = e.clientY - select.y + "px";
+		}
+		else
+		{
+			document.getElementById('select').style.top = e.clientY + "px";
+			document.getElementById('select').style.height = select.y - e.clientY + "px";
+		}
+		}
+	},
+stop: function(e)
+	{
+		document.getElementById('desktop').removeChild(document.getElementById('select'));
+		select.on = false;
+	}
+}
+
 function tmpl(str){
 	var fn = new Function("obj",
 		"var p=[],print=function(){p.push.apply(p,arguments);};" +

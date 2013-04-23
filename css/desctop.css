@@ -162,3 +162,11 @@ outline: 3px solid yellow;
 position: fixed;
 right: 10px;
 }
+
+#select
+{
+position: absolute;
+border: 1px solid blue;
+background-color: #ccccff;
+opacity: 0.3;
+}

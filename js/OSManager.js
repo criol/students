@@ -6,7 +6,9 @@ oSManagerModel = {
 	windowsManager: {},
 	iconsManager: {},
     startManager:{},
-
+	onSelect: {},
+	x: {},
+	y: {},
 	openWindow: function(obj){
         //obj  -   иконка ,которая вызвала
 		this.windowsManager.open(obj);
@@ -42,6 +44,9 @@ oSManagerModel = {
 	assignEvents: function(){
 		window.addEventListener('click', this.click.bind(this));
 		window.addEventListener('contextmenu', this.openContext);
+		window.addEventListener('mousedown', select.start);
+		window.addEventListener('mouseup', select.stop);
+		window.addEventListener('mousemove', select.move);
 	},
 	removeIcon: function(obj){
 		this.iconsManager.removeIcon(obj);
@@ -66,10 +71,11 @@ oSManagerModel = {
         Start = new StartMenu(menuStartSettings);
 		Start.init(e, this);
 	},
-	click: function()
+	click: function(e)
 	{
 		this.closeContext();
 		this.iconsManager.renameIcon();
+
 	}
 };
 
