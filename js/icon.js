@@ -53,6 +53,7 @@ Icon.prototype = {
         iconText.className = 'text';
         iconText.innerHTML = this.name;
 		iconText.addEventListener('dblclick', this.renameIcon.bind(this));
+		iconText.addEventListener('click', this.selectFocus);
 
         containerDiv.appendChild(iconImg);
         containerDiv.appendChild(iconText);
@@ -74,6 +75,11 @@ Icon.prototype = {
 		e.stopPropagation();
         os.renameIcon(this);
     },
+	selectFocus: function(e)
+	{
+		e.stopPropagation();
+	},
+
 /*
     makeActive: function (e) {
         var fromName = 'icon',
@@ -97,12 +103,11 @@ Icon.prototype = {
     },
 
     openContextMenu: function(e){
+		e.stopPropagation();
         e.preventDefault();
         this.root.addUniqClass('icon','active');
         Menu = new ContextMenu(menuIconSettings);
 		Menu.init(e, this);
-		//console.log(menu);
-        //win.open();
     } ,
 
     removeHTML:function(){

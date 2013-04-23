@@ -41,7 +41,7 @@ oSManagerModel = {
 	},
 	assignEvents: function(){
 		window.addEventListener('click', this.click.bind(this));
-		//window.addEventListener('contextmenu', this.openContext);
+		window.addEventListener('contextmenu', this.openContext);
 	},
 	removeIcon: function(obj){
 		this.iconsManager.removeIcon(obj);
@@ -50,12 +50,13 @@ oSManagerModel = {
 	renameIcon: function(obj){
 		this.iconsManager.renameIcon(obj);
 	},
-	addIcon: function(){
-		this.iconsManager.addIcon();
+	addIcon: function(type){
+		this.iconsManager.addIcon(type);
 	},
 	openContext: function(e)
 	{
 	    e.preventDefault();
+		e.stopPropagation();
         Menu = new ContextMenu(menuDesktopSettings);
 		Menu.init(e, this);
 	},

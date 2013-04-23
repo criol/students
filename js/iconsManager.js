@@ -91,36 +91,34 @@ iconsManagerModel = {
 		}
 	},
 	renameIcon:function(obj){
+		var icon;
 		if(this.icons.inArray(obj))
 		{	
-			console.log(obj.root);
-			obj.root.getElementsByClassName('text')[0].setAttribute('ContentEditable', 'true');
-			console.log(obj.root);
-			/*if(confirm("Вы уверены что хотите переименовать: "+obj.name+"?"))
-			{
-			obj.name = "RENAMED!!! " +obj.name;
-			this.writeStorage();
-			this.renderAll();
-			}*/
+			icon = obj.root.getElementsByClassName('text')[0];
+			icon.setAttribute('ContentEditable', 'true');
+			icon.toggleClass("editable");
 		}
 		else
 		{
 			for (var i = 0; i < this.icons.length; i++)
 			{
-				if (this.icons[i].root.getElementsByClassName('text')[0].getAttribute('contenteditable'))
+				icon = this.icons[i].root.getElementsByClassName('text')[0];
+				if (icon.getAttribute('contenteditable'))
 				{
-					this.icons[i].root.getElementsByClassName('text')[0].setAttribute('ContentEditable', 'false');
-					this.icons[i].name = this.icons[i].root.getElementsByClassName('text')[0].innerHTML;
+					icon.setAttribute('ContentEditable', 'false');
+					icon.toggleClass = "editable";
+					this.icons[i].name = icon.innerHTML;
 					this.writeStorage();
 					this.renderAll();
 				}
 			}	
 		}
 	},
-	addIcon:function(obj){
-		this.icons.push(new Icon({name:"olollo", type:"html", data:"oooooooo"}));
+	addIcon:function(type){
+		this.icons.push(new Icon({name:"Новый "+type, type:type, data:""}));
 			this.writeStorage();
 			this.renderAll();
+			os.renameIcon(this.icons[this.icons.length-1]);
 	}
 };
 

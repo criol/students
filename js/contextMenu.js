@@ -49,10 +49,18 @@ sender: {}
 var menuDesktopSettings= {list:[
    { 
 		name: 'Create',
-		title: 'Создать >',
-		callBack: function()
+		title: 'Создать',
+		callBack: function(e)
 		{
-			os.addIcon();
+			switch(e.target.innerHTML)
+			{
+			case 'text':
+				os.addIcon('text');
+			break;
+			case 'html':
+				os.addIcon('html');
+			break;
+			}
 		}
 	},
 	{
@@ -120,7 +128,14 @@ ContextMenu.prototype = {
 		{
 			if (!this.list.hasOwnProperty(i)) continue
 			li = document.createElement('li');
-			li.innerHTML = this.list[i].title;
+			if(this.list[i].name == "Create")
+			{
+				li.innerHTML = this.list[i].title + " >>" + "<ul><li>text</li><li>html</li></ul>";
+			}
+			else
+			{
+				li.innerHTML = this.list[i].title;
+			}
 			li.id = this.list[i].name;
 			this.sender = obj;
 			li.addEventListener('click', this.list[i].callBack.bind(this));
@@ -139,8 +154,10 @@ ContextMenu.prototype = {
         this.root.addEventListener('contextmenu', this.doIt.bind(this));
 	},
     
-    doIt: function()
+    doIt: function(e)
     {
+		e.stopPropagation();
+		os.closeContext();
 		//console.log(this);
     	//this.destroy();
     },
