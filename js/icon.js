@@ -54,6 +54,7 @@ Icon.prototype = {
         iconText.innerHTML = this.name;
 		iconText.addEventListener('dblclick', this.renameIcon.bind(this));
 		iconText.addEventListener('click', this.selectFocus);
+		iconText.addEventListener('mousedown', this.selectFocus);
 
         containerDiv.appendChild(iconImg);
         containerDiv.appendChild(iconText);
