@@ -63,3 +63,8 @@
     opacity: 1;
     z-index: 5;
 }
+#startMenuList li
+{
+    height:30px;
+
+}

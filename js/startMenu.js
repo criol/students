@@ -1,27 +1,21 @@
 
 var menuStartSettings= {
-    startMenuItems:[
-    {
-        music:{
-            name:'mPlayer',
-            type:'music',
-            data:''
-        }
+    menuStartList:[],
+    music:{
+        name:'mPlayer',
+        type:'music',
+        data:''
     },
-    {
-        browser:{
-            name:'Sofuri',
-            type:'html',
-            data:''
-        }
+    browser:{
+        name:'Sofuri',
+        type:'html',
+        data:''
     },
-    {
-        video:{
-            name:'vPlayer',
-            type:'video',
-            data:''
-        }
-    }]
+    video:{
+         name:'vPlayer',
+         type:'video',
+         data:''
+    }
 };
 	
 StartMenu = function (obj) {
@@ -29,6 +23,10 @@ StartMenu = function (obj) {
     for (a in obj){
         if (obj.hasOwnProperty(a)){
             this[a] = obj[a];
+            // заполнить коллекцию свойствами из obj menuStartList, саму себя во внутрь не ложить, УГ получилось, но работает
+            if(a!='menuStartList'){
+                this.menuStartList.push(obj[a]);
+            }
         }
     }
 };
@@ -43,7 +41,7 @@ StartMenu.prototype = {
         this.root==undefined?this.render():this.showMenu();
     },
     render: function(){
-        var container,divContent;
+        var container,divContent,menuContainer;
 
         container = document.createElement('div');
         container.className = 'startMenu';
@@ -51,6 +49,19 @@ StartMenu.prototype = {
         divContent = document.createElement('div');
         divContent.className ='startMenu content';
         container.appendChild(divContent);
+
+        menuContainer=document.createElement('ul');
+        menuContainer.id='startMenuList';
+        divContent.appendChild(menuContainer);
+
+
+        for(var i = 0 ; i<this.menuStartList.length;i+=1){
+            var  menuItem;
+            menuItem = document.createElement('li');
+            menuItem.className='startMenuItem '+this.menuStartList[i].type;
+            menuItem.textContent = this.menuStartList[i].name;
+            menuContainer.appendChild(menuItem);
+        }
 
         document.getElementById('StartPanel').appendChild(container);
         this.root = container;
