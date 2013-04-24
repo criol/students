@@ -1,0 +1,396 @@
+/*//////////////////////////////////////////
+///////////Main//////////////////////////
+//////////////////////////////////////////*/
+body {
+background: url('../images/bg.jpg');
+}
+
+li {
+list-style: none;
+}
+
+#main
+{
+    position:absolute;
+    width: 100%;
+    height:100%;
+}
+#desktop
+{
+    position:relative;
+    width:100%;
+    height: 95%;
+}
+
+/*//////////////////////////////////////
+/////////Icon////////////////////////////
+////////////////////////////////////////*/
+.icon *
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Tahoma', Times, serif;
+    font-style: normal;
+    font-size: 8pt;
+    color: #fff;
+    text-shadow: #000  0   0   4px,
+    #000  1px 1px 1px, #000 -1px -1px 1px,
+    #000 -1px 1px 1px, #000  1px -1px 1px;
+}
+
+.iconStart {
+    position: relative;
+    margin-top: 3px;
+    width:50px;
+    heght:35px;
+    float:left;
+}
+.iconStart.active {
+    border: 1px solid black;
+}
+.icon {
+    width: 64px;
+    height: 84px;
+    position: absolute;
+}
+
+.icon .img {
+    width: 64px;
+    height: 64px;
+}
+
+.icon .text {
+    width: 64px;
+    height: 40px;
+    text-align: center;
+	overflow: hidden;
+}
+
+.icon .text.editable {
+outline: 3px solid yellow;
+}
+
+.icon.active {
+    border: 1px solid black;
+}
+
+.music .img {
+    background: url(../images/music.png) no-repeat top left;
+}
+
+.text .img {
+    background: url(../images/text.png) no-repeat top left;
+}
+
+.folder .img {
+    background: url(../images/folder.png) no-repeat top left;
+}
+
+.html .img {
+    background: url(../images/firefox.png) no-repeat top left;
+}
+
+.link .img {
+    background: url(../images/link.png) no-repeat top left;
+}
+
+.none .img {
+    background: url(../images/none.png) no-repeat top left;
+}
+
+.video .img {
+    background: url(../images/video.jpg) no-repeat top left;
+    background-size: 64px 64px;
+}
+.iconStart .img {
+    width: 35px;
+    margin: 0 7px;
+    height: 35px;
+    border:1px solid greenyellow;
+    background-size: 35px 35px;
+}
+/*///////////////////////////////////////////////
+/////////Window////////////////////////////////
+//////////////////////////////////////////////*/
+
+.window.active
+{
+    z-index: 3;
+}
+
+.window{
+	z-index: 2;
+
+}
+
+.window.open
+{
+    resize: both;
+    top:150px;
+    left:200px;
+    position:absolute;
+    width: 500px;
+    height: 320px;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-width: 170px;
+    min-height: 80px;
+    border-radius: 4px;  /* свойство для тех кто его поддерживает */
+    -moz-border-radius: 4px;  /* для firefox */
+    -webkit-border-radius: 4px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ��� Firefox */
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ��� Safari � Chrome */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* ��������� ���� */
+    overflow: hidden;
+    resize: both;
+}
+.window.hide
+{
+    display:none;
+}
+.window.max
+{
+    width: 100%;
+    height:100%;
+    border:1px solid blue;
+
+}
+
+.winContent
+{
+    position:relative;
+    margin-left:1%;
+    width:98%;
+    height:280px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.winContent textarea
+{
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+}
+
+.winContent audio
+{
+    width: 100%;
+}
+
+.winContent iframe
+{
+    width: 100%;
+    height: 100%;
+}
+
+.header
+{
+    position: relative;
+    width:100%;
+    height: 30px;
+    vertical-align: top;
+
+}
+button
+{
+    position: relative;
+    float:right;
+    width: 30px;
+    height: 30px;
+    border:none;
+}
+.Min
+{
+    background:url('../images/winmin1.png') no-repeat top left;
+}
+.Max
+{
+    background:url('../images/winmax1.png') no-repeat top left;
+
+}
+.Close
+{
+    background:url('../images/winclose1.png') no-repeat top left;
+}
+.Min:hover
+{
+    background: #ececec url('../images/winmin1.png') no-repeat top left;
+}
+.Max:hover
+{
+    background: #ececec url('../images/winmax1.png') no-repeat top left;
+
+}
+.Close:hover
+{
+    background: #ececec url('../images/winclose1.png') no-repeat top left;
+}
+.Min:active
+{
+    background: #0099ff url('../images/winmin0.png') no-repeat top left;
+}
+.Max:active
+{
+    background: #0099ff url('../images/winmax0.png') no-repeat top left;
+
+}
+.Close:active
+{
+    background: #ff0000 url('../images/winclose0.png') no-repeat top left;
+}
+
+.labelHeader
+{
+    position:absolute;
+    margin:10px;
+    margin-top:10px !important;
+    color: #000 !important;
+    text-shadow: #fff 0 0 0px !important;
+}
+
+
+/*/////////////////////////////////////////////////
+////////////StartPanel///////////////////////////
+///////////////////////////////////////////////*/
+#StartPanel
+{
+    position: absolute;
+    min-width: 100%;
+    min-height: 40px;
+    bottom: 0%;
+    left: 0%;
+    z-index:500;
+    background: url('../images/bgStart.png') repeat-x;
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,0.5); /* ??? Firefox */
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.5); /* ??? Safari ? Chrome */
+    box-shadow: 0 0 4px rgba(0,0,0,0.5); /* ????????? ???? */
+}
+#btnStart{
+    position:relative;
+    margin-top: 3px;
+    width:  50px;
+    height: 35px;
+    /* border: 1px solid red; */
+    float:left;
+}
+#btnStart .img
+{
+    position: relative;
+    width:35px;
+    height:35px;
+    margin:0 7px;
+    background-size: 35px 35px;
+    background: url('../images/StartPanel.png');
+}
+#btnStart .img:hover
+{
+    background: url('../images/StartPanelActive.png');
+}
+.startMenu
+{
+    position: absolute;
+    width: 30%;
+    height: 1000%; /*не знаю почему такое значение*/ /*ахах, прикольно*/
+    bottom: 0%;
+    left:0%;
+    z-index: 5;
+    margin-bottom: 38px;
+    background: url('../images/bgStartMenu.png') repeat;
+    border-top-left-radius: 10px;/* свойство для тех кто его поддерживает */
+    border-top-right-radius: 10px;
+    -moz-border-radius-topleft:10px;  /* для firefox */
+    -moz-border-radius-topright:10px;
+    -webkit-border-radius-radius-topleft: 10px;
+    -webkit-border-radius-radius-topright: 10px;
+}
+.startMenu.hide
+{
+    display:none;
+}
+.startMenu.content
+{
+    position: relative;
+    margin: 5px;
+    background: white;
+    width: 200px;
+    height: 95%;
+    opacity: 1;
+    z-index: 5;
+}
+#startMenuList li
+{
+    height:35px;
+
+}
+.startMenuImg
+{
+    position: relative;
+    width:30px;
+    height: 30px;
+    float:left;
+}
+.startMenuImg.music
+{
+    background: url(../images/music.png) no-repeat top left;
+    background-size: 30px 30px;
+}
+.startMenuImg.video
+{
+    background: url(../images/video.jpg) no-repeat top left;
+    background-size: 30px 30px;
+}
+.startMenuImg.html
+{
+    background: url(../images/Firefox.png) no-repeat top left;
+    background-size: 30px 30px;
+}
+/*/////////////////////////////////////////////////
+/////////////ContextMenu/////////////////////////
+////////////////////////////////////////////////*/
+#contextMenu{
+	position: absolute;
+	background-color: #f0f0f7;
+	border: 1px solid #aaa;
+}
+
+#contextMenu > ul{
+	margin-left: 20px;
+	margin-right: 10px;
+	padding: 12px;
+	border-left: 1px solid #ccc;
+}
+
+#contextMenu ul ul{
+	display: none;
+}
+
+#contextMenu li:hover{
+	background-color: #e3e3ff;
+}
+
+
+#contextMenu li:hover ul{
+	display: block;
+}
+
+#contextMenu li
+{
+	color: #000 !important;
+	text-shadow: #fff 0 0 0px !important;
+}
+
+.widget.clock
+{
+position: fixed;
+right: 10px;
+}
+
+#select
+{
+position: absolute;
+border: 1px solid blue;
+background-color: #ccccff;
+opacity: 0.3;
+}
