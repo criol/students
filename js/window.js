@@ -112,9 +112,9 @@ Window.prototype = {
     removeHTML:function(){
         document.getElementById('desktop').removeChild(this.root);
     },
-    makeActive:function(){
-        //this.root.style.zIndex=3;
+    makeActive:function(event){
         this.root.addUniqClass('window','active');
+        event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true)
 
     },
     assignEvents:function(){

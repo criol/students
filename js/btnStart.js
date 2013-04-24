@@ -15,7 +15,7 @@ btnStartModel={
         var containerDiv,contentImg;
 
         containerDiv = document.createElement('div');
-        containerDiv.className = 'btnStart';
+        containerDiv.id = 'btnStart';
 
         contentImg = document.createElement('div');
         contentImg.className = 'img';

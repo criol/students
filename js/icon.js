@@ -73,13 +73,13 @@ Icon.prototype = {
         this.root.addEventListener('contextmenu', this.openContextMenu.bind(this));
         this.root.addEventListener('mousedown',dnd.dragStart);
     },
-    renameIcon: function(e) {
-		e.stopPropagation();
+    renameIcon: function(event) {
+        event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true)
         os.renameIcon(this);
     },
-	selectFocus: function(e)
+	selectFocus: function(event)
 	{
-		e.stopPropagation();
+        event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true)
 	},
 
 /*

@@ -37,6 +37,7 @@ startManagerModel = {
         if(state=='open'){
             this.startMenu.hide();
             this.btnStart.state='hide';
+
         } else {
             this.startMenu.open();
             this.btnStart.state='open';
