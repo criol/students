@@ -58,8 +58,15 @@ StartMenu.prototype = {
         for(var i = 0 ; i<this.menuStartList.length;i+=1){
             var  menuItem;
             menuItem = document.createElement('li');
-            menuItem.className='startMenuItem '+this.menuStartList[i].type;
-            menuItem.textContent = this.menuStartList[i].name;
+            menuItem.className='startMenuItem';
+            menuItemDiv=document.createElement('div');
+            menuItemLbl=document.createElement('label');
+
+            menuItemDiv.className = 'startMenuImg '+this.menuStartList[i].type;
+            menuItemLbl.textContent = this.menuStartList[i].name;
+
+            menuItem.appendChild(menuItemDiv);
+            menuItem.appendChild(menuItemLbl);
             menuContainer.appendChild(menuItem);
         }
 
