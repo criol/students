@@ -72,6 +72,9 @@ StartMenu.prototype = {
             menuItem.appendChild(menuItemDiv);
             menuItem.appendChild(menuItemLbl);
             menuContainer.appendChild(menuItem);
+
+            this.root = container;
+            this.assignEvents();
         }
 
         document.getElementById('StartPanel').appendChild(container);
@@ -95,6 +98,6 @@ StartMenu.prototype = {
         document.getElementsByClassName('startMenu')[0].addClass('hide');
     },
     assignEvents: function() {
-
+          this.root.addEventListener('click',function(e){e.stopPropagation();})
 	}
 };

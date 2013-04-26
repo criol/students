@@ -64,6 +64,7 @@ oSManagerModel = {
 	{
 		this.closeContext();
 		this.iconsManager.renameIcon();
+        this.startManager.hideStartMenu();
 
 	},
     hideStart:function(){
