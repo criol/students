@@ -66,6 +66,9 @@ oSManagerModel = {
 		this.iconsManager.renameIcon();
 
 	},
+    hideStart:function(){
+        this.startManager.hideStartMenu();
+    },
 	selectFiles: function(x1, y1, x2, y2)
 	{
 		for(var i in this.iconsManager.icons)

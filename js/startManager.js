@@ -43,6 +43,10 @@ startManagerModel = {
             this.btnStart.state='open';
         }
     },
+    hideStartMenu:function(){
+        this.startMenu.hide();
+        this.btnStart.state='hide';
+    },
     open:function(obj){
         //obj  -  иконка,которая вызвала
         var name = obj.name;

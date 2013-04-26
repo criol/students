@@ -54,11 +54,15 @@ StartMenu.prototype = {
         menuContainer.id='startMenuList';
         divContent.appendChild(menuContainer);
 
-
         for(var i = 0 ; i<this.menuStartList.length;i+=1){
             var  menuItem;
             menuItem = document.createElement('li');
             menuItem.className='startMenuItem';
+            //open win by click
+            menuItem.addEventListener('click',this.openWindow.bind(this.menuStartList[i]));
+            //hide startMenu
+            menuItem.addEventListener('click',this.hideMenu);
+
             menuItemDiv=document.createElement('div');
             menuItemLbl=document.createElement('label');
 
@@ -73,10 +77,21 @@ StartMenu.prototype = {
         document.getElementById('StartPanel').appendChild(container);
         this.root = container;
     },
+    openWindow:function(e){
+       // this - конкретная иконка,на которую нажали
+        os.openWindow(this);
+        e.stopPropagation();
+
+    },
     showMenu:function(){
         document.getElementsByClassName('startMenu')[0].removeClass('hide');
     },
+    hideMenu:function(){
+        //отсылает запрос к менеджеру
+        os.hideStart();
+    },
     hide:function(){
+        //скрыть отображение
         document.getElementsByClassName('startMenu')[0].addClass('hide');
     },
     assignEvents: function() {
