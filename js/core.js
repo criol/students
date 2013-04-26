@@ -141,10 +141,13 @@ move: function(e)
 	},
 stop: function(e)
 	{
-		document.getElementById('desktop').removeChild(document.getElementById('select'));
+        if(document.getElementById('select'))
+		    document.getElementById('desktop').removeChild(document.getElementById('select'));
 		select.on = false;
-		os.selectFiles(parseInt(select.divStyle.left), parseInt(select.divStyle.top), parseInt(select.divStyle.width), parseInt(select.divStyle.height));
-	}
+        if(select.on){
+	    	os.selectFiles(parseInt(select.divStyle.left), parseInt(select.divStyle.top), parseInt(select.divStyle.width), parseInt(select.divStyle.height));
+        }
+    }
 }
 
 function tmpl(str){

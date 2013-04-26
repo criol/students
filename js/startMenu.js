@@ -76,7 +76,6 @@ StartMenu.prototype = {
             this.root = container;
             this.assignEvents();
         }
-
         document.getElementById('StartPanel').appendChild(container);
         this.root = container;
     },
@@ -84,7 +83,6 @@ StartMenu.prototype = {
        // this - конкретная иконка,на которую нажали
         os.openWindow(this);
         e.stopPropagation();
-
     },
     showMenu:function(){
         document.getElementsByClassName('startMenu')[0].removeClass('hide');
@@ -95,7 +93,8 @@ StartMenu.prototype = {
     },
     hide:function(){
         //скрыть отображение
-        document.getElementsByClassName('startMenu')[0].addClass('hide');
+        if( document.getElementsByClassName('startMenu')[0]!=undefined)
+            document.getElementsByClassName('startMenu')[0].addClass('hide');
     },
     assignEvents: function() {
           this.root.addEventListener('click',function(e){e.stopPropagation();})
