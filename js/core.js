@@ -189,5 +189,5 @@ function getCurrentTime(){
     tempHour += ((minute < 10) ? ":0" : ":") + minute;
     clockDate.innerHTML = tempDay;
     clockTime.innerHTML = tempHour;
-    setTimeout("getCurrentTime()",1000);
+    setTimeout("getCurrentTime()",10000);
 }
