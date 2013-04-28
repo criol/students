@@ -40,25 +40,26 @@ list-style: none;
 
 .iconStart {
     position: relative;
-    margin-top: 3px;
+    margin-top: 2px;
+    margin-left: 3px;
     width:50px;
     heght:35px;
     float:left;
 }
 .iconStart.active {
-    border: 1px solid black;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: #dadada;
 }
 .icon {
     width: 64px;
     height: 95px;
     position: absolute;
 }
-
 .icon .img {
     width: 64px;
     height: 64px;
 }
-
 .icon .text {
     width: 64px;
     height: 40px;
@@ -108,7 +109,6 @@ outline: 3px solid yellow;
     width: 35px;
     margin: 0 7px;
     height: 35px;
-    border:1px solid greenyellow;
     background-size: 35px 35px;
 }
 /*///////////////////////////////////////////////
