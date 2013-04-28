@@ -15,6 +15,11 @@ var menuStartSettings= {
          name:'vPlayer',
          type:'video',
          data:''
+    },
+    txtEditor:{
+        name:'txtEditor',
+        type:'text',
+        data:''
     }
 };
 	

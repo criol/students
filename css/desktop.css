@@ -164,7 +164,6 @@ outline: 3px solid yellow;
 {
     width: 100%;
     height:100%;
-    border:1px solid blue;
 	opacity: 1.0;
 }
 
@@ -173,7 +172,7 @@ outline: 3px solid yellow;
     position:relative;
     margin-left:1%;
     width:98%;
-    height:280px;
+    height:93%;
     background: #fff;
     overflow: hidden;
 }
@@ -346,10 +345,20 @@ button
     opacity: 1;
     z-index: 5;
 }
+
 #startMenuList li
 {
+    position: relative;
     height:35px;
-
+    margin-top:5px;
+    margin-bottom:5px;
+    margin-left: -40px;
+}
+#startMenuList li:hover
+{
+    border:1px solid #aaaaaa;
+    margin:-1px 0;
+    margin-left: -40px;
 }
 .startMenuImg
 {
@@ -357,6 +366,7 @@ button
     width:30px;
     height: 30px;
     float:left;
+    margin: 0 5px;
 }
 .startMenuImg.music
 {
@@ -371,6 +381,10 @@ button
 .startMenuImg.html
 {
     background: url(../images/Firefox.png) no-repeat top left;
+    background-size: 30px 30px;
+}
+.startMenuImg.text {
+    background: url(../images/text.png) no-repeat top left;
     background-size: 30px 30px;
 }
 /*/////////////////////////////////////////////////
