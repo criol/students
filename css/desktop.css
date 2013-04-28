@@ -181,19 +181,7 @@ outline: 3px solid yellow;
 
 .window{
 	z-index: 2;
-	-moz-transition-property: all;
-    -o-transition-property: all;
-    -webkit-transition-property: all;
-    transition-property: all;
-    -moz-transition-duration: 1.0s;
-    -o-transition-duration: 1.0s;
-    -webkit-transition-duration: 1.0s;
-    transition-duration: 1.0s;
-    -moz-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-    -webkit-transition-timing-function: ease;
-    transition-timing-function: ease;
-  
+	resize: both;
     overflow: hidden;
 }
 
