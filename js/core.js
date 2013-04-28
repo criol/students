@@ -107,6 +107,9 @@ var dnd = {
 var select = {
 start: function(e)
 	{		
+	console.log(e.target);
+	if(e.target.id == "desktop")
+	{
         e.preventDefault();
 		select.root = document.createElement('div');
         select.root.id = 'select';
@@ -116,6 +119,7 @@ start: function(e)
 		select.x = (e.clientX-7);
 		document.getElementById('desktop').appendChild(select.root);
 		select.on = true;
+		}
 	},
 move: function(e)
 	{
@@ -189,5 +193,5 @@ function getCurrentTime(){
     tempHour += ((minute < 10) ? ":0" : ":") + minute;
     clockDate.innerHTML = tempDay;
     clockTime.innerHTML = tempHour;
-    setTimeout("getCurrentTime()",10000);
+    setTimeout("getCurrentTime()",1000);
 }
