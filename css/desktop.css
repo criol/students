@@ -106,6 +106,15 @@ list-style: none;
     height: 95px;
     position: absolute;
 }
+.icon:hover {
+    width: 64px;
+    height: 95px;
+    position: absolute;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: #dadada;
+    opacity: 0.9;
+}
 .icon .img {
     width: 64px;
     height: 64px;
