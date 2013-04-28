@@ -82,7 +82,9 @@ var dnd = {
         dnd.x = e.pageX - rect.left;
         dnd.y = e.pageY - rect.top;
         //отказаться от стд действий браузера
-        e.preventDefault();
+        e.preventDefault() // браузер - стоять
+        e.stopPropagation() // событие - не всплывать
+        return false // и вообще, мне больше ничего не надо
     },
     //перемещение
     //e - event obj

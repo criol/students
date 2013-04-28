@@ -120,6 +120,6 @@ Window.prototype = {
     assignEvents:function(){
         this.root.addEventListener('click',this.makeActive.bind(this));
         var winHeader=this.root.getElementsByClassName('header')[0];
-        winHeader.addEventListener('mousedown',dnd.dragStart);
+        winHeader.addEventListener('mousedown',dnd.dragStart,true);
     }
 };
