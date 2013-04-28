@@ -22,6 +22,42 @@ list-style: none;
     height: 95%;
 }
 
+/*/////////////////////////////////////
+////////Clock//////////////////////////
+/////////////////////////////////////*/
+#clock
+{
+    position: relative;
+    float: right;
+    height: 100%;
+    width:100px;
+}
+#clock:hover
+{
+    position: relative;
+    float: right;
+    height: 100%;
+    width:100px;
+    border-left:1px solid grey;
+    border-right:1px solid grey;
+}
+#date
+{
+    position: relative;
+    width: 100%;
+    height: 17px;
+    margin: 2px 0;
+    text-align: center;
+}
+#time
+{
+    position: relative;
+    width: 100%;
+    height: 17px;
+    margin: 2px 0;
+    text-align: center;
+}
+
 /*//////////////////////////////////////
 /////////Icon////////////////////////////
 ////////////////////////////////////////*/
@@ -46,6 +82,20 @@ list-style: none;
     heght:35px;
     float:left;
 }
+
+.iconStart:hover
+{
+    position: relative;
+    margin-top: 2px;
+    margin-left: 3px;
+    width:50px;
+    heght:35px;
+    float:left;
+    border-left:1px solid grey;
+    border-right:1px solid grey;
+
+}
+
 .iconStart.active {
     border: 1px solid grey;
     border-radius: 5px;

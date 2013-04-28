@@ -13,6 +13,7 @@ startManagerModel = {
         this.btnStart = new BtnStart(btnStartModel);
         this.startMenu = new StartMenu(menuStartSettings);
         this.btnStart.init();
+        this.initClock();
         this.create();
     },
     create: function(){
@@ -108,6 +109,9 @@ startManagerModel = {
             this.iconsStart.removeElement(obj);
             this.renderAll();
         }
+    },
+    initClock:function(){
+        getCurrentTime();
     }
 };
 

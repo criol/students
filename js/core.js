@@ -167,3 +167,27 @@ function tmpl(str){
 		.split("\r").join("\\'") + "');} return p.join('');");
 	return fn
 }
+function getCurrentTime(){
+    var clockDate,clockTime;
+    clockDate = document.getElementById('date');
+    clockTime = document.getElementById('time');
+
+    var TimezoneOffset = 4 // указать нужное смещение по Гринвичу
+    var localTime = new Date();
+    var ms = localTime.getTime() + (localTime.getTimezoneOffset() * 60000) + TimezoneOffset * 3600000;
+    var time = new Date(ms);
+    var hour = time.getHours();
+    var minute = time.getMinutes();
+
+    var day = localTime.getDate();
+    var month = localTime.getMonth()+1;
+    var year = localTime.getYear();
+    year<1900?year+=1900:year;
+
+    var tempDay= day + "." + month + "." + year;
+    var tempHour = ((hour < 10) ? "0" : "") + hour;
+    tempHour += ((minute < 10) ? ":0" : ":") + minute;
+    clockDate.innerHTML = tempDay;
+    clockTime.innerHTML = tempHour;
+    setTimeout("getCurrentTime()",1000);
+}
