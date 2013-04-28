@@ -45,35 +45,44 @@ blockquote, q {
     quotes: "" "";
 }
 
-
-.icon {
-    width: 64px;
-    height: 84px;
-    position: absolute;
-}
-
-.icon .img {
-    width: 64px;
-    height: 64px;
-}
-
-.icon .text {
-    width: 64px;
-    height: 20px;
-    text-align: center;
-}
-
 .icon.active {
     border: 1px solid black;
 }
 
-.music .img {
-    background: url(../images/music.png) no-repeat top left;
+.icon_img.music {
+    background: url("../images/music.png") no-repeat top left;
 }
 
-.text .img {
-    background: url(../images/text.png) no-repeat top left;
+.icon_img.text {
+    background: url("../images/text.png") no-repeat top left;
 }
 
+.icon_img.internet {
+    background: url("../images/explorer.png") no-repeat top left;
+}
 
+#workSpace {
+    position: absolute;
+    bottom: 40px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.icon_img{
+    width: 64px;
+    height: 64px;
+}
+
+.icon{
+    width: 64px;
+    position: absolute;
+}
+
+.icon_text{
+    width: 64px;
+    text-align: center;
+    font-family: segoue,sans-serif;
+    font-size: 11pt;
+}
 

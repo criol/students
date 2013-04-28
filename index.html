@@ -5,16 +5,34 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="css/desctop.css" />
     <link rel="stylesheet" href="css/window.css"/>
+    <link rel='stylesheet' href="css/taskBar.css">
     <title>windows</title>
 </head>
 <body>
-
-
+<!---------------Панель пуск---------------->
+    <div id="taskBar">
+        <div class="startBar"></div>
+        <div class="quickLaunchBar"></div>
+        <div class="clockBar"></div>
+    </div>
+<!------------------------------------------>
+<!--Рабочий стол-->
+<div id='workSpace'></div>
+<!---->
+<!--Шаблон для иконок-->
+<script type="text/html" id="icon_tmpl">
+    <div class="icon <%= type%>">
+        <div class="icon_img <%= type%>"></div>
+        <div class="icon_text"><%= name %></div>
+    </div>
+</script>
+<!---->
+<script src='js/template.js'></script>
+<script src="js/pubSub.js"></script>
 <script src="js/core.js"></script>
 <script src="js/icon.js"></script>
 <script src="js/window.js"></script>
-<script src="js/start.js"></script>
-
+<script src="js/taskBar.js"></script>
 <script src="js/common.js"></script>
 
 </body>

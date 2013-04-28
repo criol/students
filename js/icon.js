@@ -1,7 +1,9 @@
 var Icon,
     iconManager;
+var workSpace = document.getElementById('workSpace');
 
 iconManager = {
+
     iconSettings: {},
 
     icons: {},
@@ -20,7 +22,7 @@ iconManager = {
 
         for (a in this.iconSettings) {
 
-            new Icon(this.iconSettings[a]).init(this.position);
+            new Icon(this.iconSettings[a]).init(this.position,this.iconSettings[a]);
 
             this.position.top+=100;
             if (this.position.top > 500) {
@@ -42,14 +44,14 @@ Icon = function (obj) {
 };
 
 Icon.prototype = {
-    init: function(pos) {
+    init: function(pos, item) {
         iconManager.icons[this.name] = this;
-        this.render(pos);
+        this.render(pos,item);
         this.assignEvents();
     },
 
-    render: function (pos) {
-        var iconImg,
+    render: function (pos,item) {
+        /*var iconImg,
             iconText,
             containerDiv;
 
@@ -65,19 +67,30 @@ Icon.prototype = {
 
         containerDiv.appendChild(iconImg);
         containerDiv.appendChild(iconText);
+*/
 
-        containerDiv.style.top = pos.top + 'px';
-        containerDiv.style.left = pos.left + 'px';
+       // containerDiv.style.top = pos.top + 'px';
+       // containerDiv.style.left = pos.left + 'px';
 
-        this.root = containerDiv;
+       // this.root = containerDiv;
 
-        document.body.appendChild(containerDiv);
+       // document.body.appendChild(containerDiv);
+
+
+        workSpace.innerHTML= workSpace.innerHTML + (tmpl('icon_tmpl', this));
+        var containerDiv = document.getElementsByClassName("icon "+this.type);
+        containerDiv[0].style.top= pos.top +'px';
+        containerDiv[0].style.left= pos.left +'px';
+        this.root = containerDiv[0];
     },
 
     assignEvents: function() {
         this.root.addEventListener('click', this.makeActive.bind(this));
-        this.root.addEventListener('dblclick', this.openWindow.bind(this));
+      //  this.root.addEventListener('dblclick', this.openWindow.bind(this));
         this.root.addEventListener('click',this.toggleActive.bind(this));
+        this.root.on('dblclick', function () {
+            publisher.publish('windowOpen');
+        });
     },
 
 
@@ -87,14 +100,16 @@ Icon.prototype = {
 
     toggleActive :function() {
         this.root.addUniqClass('icon','active');
-    },
+    }
 
 
-    openWindow: function(){
+ /*   openWindow: function(){
         var win = new CustomWindow(this.windowOpt);
         win.init();
         win.open();
-    }
+    }*/
 };
+
+//publisher.subscribe('windowOpen',CustomWindow.open());
 
 

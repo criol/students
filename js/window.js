@@ -11,7 +11,6 @@ CWManager = {
 };
 
 
-//alert('');
 CustomWindow = function(obj){
     var a;
     for (a in obj){
@@ -25,7 +24,7 @@ CustomWindow.prototype = {
     init: function () {
         CWManager.windows[this.type] = this;
         this.render();
-        this.assignEvents()
+        this.assignEvents();
     },
 
     render: function(){
@@ -139,9 +138,24 @@ CustomWindow.prototype = {
     },
 
     close: function() {
-        this.root.closeWindow(CWManager.windows);
+        this.closeWindow(CWManager.windows);
+    },
+
+    closeWindow: function (windowsList) {
+    var a;
+      for ( a in windowsList) {
+        if (windowsList[a]== this) {
+            delete windowsList[a];
+            document.body.removeChild(this.root);
+
+        }
+      }
     }
 };
+
+
+
+
 
 
 

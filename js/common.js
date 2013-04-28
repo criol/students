@@ -27,6 +27,17 @@ iconManager.iconSettings = {
                 alert('opened!!!');
             }
         }
+    },
+
+    internet: {
+        name:'Internet Explorer',
+        type:'internet',
+        windowOpt: {
+            name:'InternetExplorer',
+            type: 'internet',
+            width:800,
+            height:600
+        }
     }
 
 };

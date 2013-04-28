@@ -22,6 +22,7 @@ HTMLElement.prototype.addUniqClass = function (shareClass, newClass) {
     this.className = this.className + ' ' + newClass;
 };
 
+/*
 HTMLElement.prototype.closeWindow = function (windowsList) {
     var a;
     for ( a in windowsList) {
@@ -31,6 +32,7 @@ HTMLElement.prototype.closeWindow = function (windowsList) {
         }
     }
 };
+*/
 
 
 
@@ -63,6 +65,16 @@ Array.prototype.removeActive = function (newClass) {
 
         }
 
+    }
+    return this;
+};
+
+HTMLElement.prototype.on = function (type, fn) {
+    var types = type.split(' '),
+        i;
+
+    for (i=0; i < types.length; i += 1){
+        this.addEventListener(types[i], fn);
     }
     return this;
 };
